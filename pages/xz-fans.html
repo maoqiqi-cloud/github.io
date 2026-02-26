@@ -1,0 +1,1760 @@
+<!DOCTYPE html><html lang="zh-CN"><head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>肖战与粉丝群体深度研究：基于&#34;循山野清风&#34;视角的分析框架</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <style>
+        :root {
+            --primary: #1a1a1a;
+            --secondary: #f5f5f5;
+            --accent: #8b7355;
+            --text: #2d2d2d;
+            --light: #fafafa;
+            --border: #e5e5e5;
+        }
+        
+        body {
+            font-family: 'Inter', 'Noto Sans SC', sans-serif;
+            line-height: 1.7;
+            color: var(--text);
+            background: var(--light);
+        }
+        
+        .serif {
+            font-family: 'Noto Serif SC', serif;
+        }
+        
+        .toc-fixed {
+            position: fixed;
+            left: 0;
+            top: 0;
+            height: 100vh;
+            width: 280px;
+            background: white;
+            border-right: 1px solid var(--border);
+            overflow-y: auto;
+            z-index: 40;
+            padding: 2rem 1.5rem;
+        }
+        
+        .main-content {
+            margin-left: 280px;
+            max-width: calc(100% - 280px);
+        }
+        
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            align-items: center;
+        }
+        
+        @media (max-width: 768px) {
+            .hero-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+        }
+        
+        .citation {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 500;
+            border-bottom: 1px dotted var(--accent);
+        }
+        
+        .citation:hover {
+            background: var(--accent);
+            color: white;
+            border-bottom: 1px solid var(--accent);
+        }
+        
+        .pullquote {
+            border-left: 4px solid var(--accent);
+            padding-left: 2rem;
+            margin: 2rem 0;
+            font-style: italic;
+            font-size: 1.1em;
+            color: var(--accent);
+        }
+        
+        .section-divider {
+            height: 1px;
+            background: linear-gradient(to right, transparent, var(--border), transparent);
+            margin: 4rem 0;
+        }
+        
+        .toc-link {
+            display: block;
+            padding: 0.5rem 0;
+            color: var(--text);
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: all 0.2s ease;
+        }
+        
+        .toc-link:hover {
+            color: var(--accent);
+            border-bottom-color: var(--accent);
+        }
+        
+        .toc-link.active {
+            color: var(--accent);
+            font-weight: 600;
+        }
+        
+        .mermaid-container {
+            display: flex;
+            justify-content: center;
+            min-height: 300px;
+            max-height: 800px;
+            background: #ffffff;
+            border: 2px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 30px;
+            margin: 30px 0;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .mermaid-container .mermaid {
+            width: 100%;
+            max-width: 100%;
+            height: 100%;
+            cursor: grab;
+            transition: transform 0.3s ease;
+            transform-origin: center center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            touch-action: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        .mermaid-container .mermaid svg {
+            max-width: 100%;
+            height: 100%;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .mermaid-container .mermaid:active {
+            cursor: grabbing;
+        }
+
+        .mermaid-container.zoomed .mermaid {
+            height: 100%;
+            width: 100%;
+            cursor: grab;
+        }
+
+        .mermaid-controls {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            display: flex;
+            gap: 10px;
+            z-index: 20;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 8px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .mermaid-control-btn {
+            background: #ffffff;
+            border: 1px solid #d1d5db;
+            border-radius: 6px;
+            padding: 10px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            color: #374151;
+            font-size: 14px;
+            min-width: 36px;
+            height: 36px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .mermaid-control-btn:hover {
+            background: #f8fafc;
+            border-color: #3b82f6;
+            color: #3b82f6;
+            transform: translateY(-1px);
+        }
+
+    .mermaid-control-btn:active {
+        transform: scale(0.95);
+    }
+
+    @media (max-width: 1024px) {
+        .toc-fixed {
+            display: none;
+        }
+        .main-content {
+            margin-left: 0;
+            max-width: 100%;
+        }
+        .mermaid-control-btn:not(.reset-zoom) {
+            display: none;
+        }
+        .mermaid-controls {
+            top: auto;
+            bottom: 15px;
+            right: 15px;
+        }
+    }
+
+    /* Mobile optimizations */
+    @media (max-width: 768px) {
+        .hero-grid .relative {
+            height: auto;
+        }
+        .hero-grid .relative img {
+            height: auto;
+            max-height: 280px;
+        }
+        .hero-grid .serif.text-4xl {
+            font-size: 2.25rem;
+            line-height: 2.5rem;
+        }
+        .hero-grid .prose-lg {
+            font-size: 0.875rem;
+            line-height: 1.5;
+        }
+        .grid-cols-2, .grid-cols-3, .grid-cols-4 {
+            grid-template-columns: 1fr;
+        }
+        .mermaid-container {
+            padding: 15px;
+        }
+    }
+    </style>
+  <base target="_blank">
+</head>
+
+  <body>
+    <!-- Fixed Table of Contents -->
+    <nav class="toc-fixed">
+      <div class="mb-8">
+        <h3 class="serif text-lg font-semibold mb-4 text-gray-800">目录</h3>
+        <div class="space-y-1 text-sm">
+          <a href="#hero" class="toc-link">封面概览</a>
+          <a href="#author-perspective" class="toc-link">1. 核心研究视角</a>
+          <a href="#xiao-zhan-traits" class="toc-link">2. 肖战个人特质</a>
+          <a href="#fan-labor" class="toc-link">3. 粉丝情感劳动</a>
+          <a href="#community-dynamics" class="toc-link">4. 粉丝社群组织</a>
+          <a href="#crisis-impact" class="toc-link">5. 危机事件影响</a>
+          <a href="#critical-reflection" class="toc-link">6. 批判性反思</a>
+          <a href="#conclusions" class="toc-link">7. 研究结论</a>
+        </div>
+      </div>
+
+      <div class="mt-12 pt-8 border-t border-gray-200">
+        <h4 class="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3">关键概念</h4>
+        <div class="space-y-2 text-xs text-gray-600">
+          <div class="flex items-center">
+            <div class="w-2 h-2 rounded-full bg-amber-600 mr-2"></div>
+            <span>情感劳动</span>
+          </div>
+          <div class="flex items-center">
+            <div class="w-2 h-2 rounded-full bg-amber-600 mr-2"></div>
+            <span>熵减哲学</span>
+          </div>
+          <div class="flex items-center">
+            <div class="w-2 h-2 rounded-full bg-amber-600 mr-2"></div>
+            <span>组织化特征</span>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- Hero Section -->
+      <section id="hero" class="min-h-screen bg-gradient-to-br from-gray-50 to-white">
+        <div class="container mx-auto px-8 py-16">
+          <div class="hero-grid">
+            <div class="space-y-8">
+              <div class="space-y-4">
+                <h1 class="serif text-4xl md:text-5xl font-bold leading-tight text-gray-900">
+                  肖战与粉丝群体
+                  <span class="block italic text-amber-700">深度研究</span>
+                </h1>
+                <p class="text-xl text-gray-600 font-light leading-relaxed">
+                  基于知乎用户&#34;循山野清风&#34;视角的分析框架
+                </p>
+              </div>
+
+              <div class="prose prose-lg max-w-none">
+                <p class="text-gray-700 leading-relaxed">
+                  本研究通过对知乎专栏&#34;爱战启示录&#34;的深度解析，揭示肖战粉丝文化的哲学化与组织化特征。
+                  研究发现，粉丝群体通过&#34;熵减&#34;&#34;天启&#34;等概念将追星行为升华为精神修行，
+                  其情感劳动构成完整经济闭环，并在&#34;227事件&#34;后实现从&#34;冲锋&#34;到&#34;守护&#34;的话语转型。
+                </p>
+              </div>
+
+              <div class="flex items-center space-x-6 text-sm text-gray-500">
+                <span class="flex items-center">
+                  <i class="fas fa-clock mr-2"></i>
+                  深度分析
+                </span>
+                <span class="flex items-center">
+                  <i class="fas fa-book mr-2"></i>
+                  学术框架
+                </span>
+                <span class="flex items-center">
+                  <i class="fas fa-users mr-2"></i>
+                  粉丝民族志
+                </span>
+              </div>
+            </div>
+
+            <div class="relative">
+              <img src="https://kimi-web-img.moonshot.cn/img/img.xingxiaoculture.com/ba24349aae10ee9b0dbdb84869adc7fe688bc085.jpg" alt="肖战肖像照" class="w-full h-80 object-cover rounded-lg shadow-lg" size="medium" aspect="wide" style="photo" query="肖战 肖像" referrerpolicy="no-referrer" data-modified="1" data-score="0.00"/>
+              <div class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent rounded-lg"></div>
+              <div class="absolute bottom-6 left-6 text-white">
+                <blockquote class="serif italic text-lg">
+                  &#34;终有轻舟越过万重山&#34;
+                </blockquote>
+                <cite class="text-sm opacity-80">— 循山野清风</cite>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Author Perspective Section -->
+      <section id="author-perspective" class="py-16 bg-white">
+        <div class="container mx-auto px-8">
+          <div class="max-w-4xl mx-auto">
+            <h2 class="serif text-3xl font-bold mb-8 text-gray-900">核心研究视角：知乎用户&#34;循山野清风&#34;的观察立场</h2>
+
+            <div class="space-y-12">
+              <div class="prose prose-lg max-w-none">
+                <h3 class="serif text-xl font-semibold mb-4">作者身份与写作背景</h3>
+                <p>
+                  知乎用户&#34;循山野清风&#34;是专栏&#34;爱战启示录&#34;的核心创作者，该专栏创建于2021年前后，
+                  截至研究时点共发布5篇内容，作者个人获得
+                  <a href="https://zhuanlan.zhihu.com/c_1436412899471917056" class="citation">1540次赞同、985次喜欢、474次收藏</a>。
+                  专栏名称&#34;爱战启示录&#34;本身即蕴含双重语义——&#34;爱战&#34;明确指向对肖战的支持立场，
+                  &#34;启示录&#34;则借用宗教经典的庄重感，暗示其写作具有见证录性质。
+                </p>
+              </div>
+
+              <div class="bg-gray-50 p-8 rounded-lg">
+                <h4 class="serif text-lg font-semibold mb-4">写作特征分析</h4>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                  <div class="space-y-2">
+                    <h5 class="font-semibold text-amber-700">碎片化记录</h5>
+                    <p class="text-sm text-gray-600">
+                      围绕特定触发点即时展开，具有事件驱动特征，但核心意象循环出现
+                    </p>
+                  </div>
+                  <div class="space-y-2">
+                    <h5 class="font-semibold text-amber-700">树洞式表达</h5>
+                    <p class="text-sm text-gray-600">
+                      预设读者为具有相似情感结构的&#34;同好&#34;，构建想象的共同体
+                    </p>
+                  </div>
+                  <div class="space-y-2">
+                    <h5 class="font-semibold text-amber-700">持续性观察</h5>
+                    <p class="text-sm text-gray-600">
+                      2020-2025年跨度形成具有时间纵深度的观察档案
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="pullquote">
+                &#34;在知乎断断续续写了不少关于肖战的文字，想到一点写一点，
+                知乎对我来说是一个类似树洞的存在&#34;
+                <cite class="block mt-2 text-sm not-italic">
+                  — <a href="https://zhuanlan.zhihu.com/p/500960342" class="citation">《爱肖战这件小事，关于熵减及天启》</a>
+                </cite>
+              </div>
+
+              <!-- Fan Economy Flow Diagram -->
+              <div class="bg-white p-8 rounded-lg shadow-sm border">
+                <h4 class="serif text-lg font-semibold mb-6 text-center">粉丝经济闭环结构图</h4>
+                <div class="mermaid-container">
+                  <div class="mermaid-controls">
+                    <button class="mermaid-control-btn zoom-in" title="放大">
+                      <i class="fas fa-search-plus"></i>
+                    </button>
+                    <button class="mermaid-control-btn zoom-out" title="缩小">
+                      <i class="fas fa-search-minus"></i>
+                    </button>
+                    <button class="mermaid-control-btn reset-zoom" title="重置">
+                      <i class="fas fa-expand-arrows-alt"></i>
+                    </button>
+                    <button class="mermaid-control-btn fullscreen" title="全屏查看">
+                      <i class="fas fa-expand"></i>
+                    </button>
+                  </div>
+                  <div class="mermaid">
+                    graph TB
+                    A[&#34;粉丝情感生产&#34;] --&gt; B[&#34;情感劳动投入&#34;]
+                    B --&gt; C[&#34;数据劳动&#34;]
+                    B --&gt; D[&#34;消费劳动&#34;]
+                    B --&gt; E[&#34;内容劳动&#34;]
+                    B --&gt; F[&#34;公益劳动&#34;]
+                    C --&gt; G[&#34;平台算法&#34;]
+                    D --&gt; H[&#34;品牌销售&#34;]
+                    E --&gt; I[&#34;内容生态&#34;]
+                    F --&gt; J[&#34;社会认可&#34;]
+                    G --&gt; K[&#34;偶像曝光&#34;]
+                    H --&gt; K
+                    I --&gt; K
+                    J --&gt; K
+                    K --&gt; L[&#34;情感资本再生产&#34;]
+                    L --&gt; A
+
+                    style A fill:#f8fafc,stroke:#8b7355,stroke-width:2px,color:#2d2d2d
+                    style B fill:#fef3c7,stroke:#8b7355,stroke-width:2px,color:#2d2d2d
+                    style K fill:#fef3c7,stroke:#8b7355,stroke-width:2px,color:#2d2d2d
+                    style L fill:#fef3c7,stroke:#8b7355,stroke-width:2px,color:#2d2d2d
+                    style C fill:#f8fafc,stroke:#8b7355,stroke-width:1px,color:#2d2d2d
+                    style D fill:#f8fafc,stroke:#8b7355,stroke-width:1px,color:#2d2d2d
+                    style E fill:#f8fafc,stroke:#8b7355,stroke-width:1px,color:#2d2d2d
+                    style F fill:#f8fafc,stroke:#8b7355,stroke-width:1px,color:#2d2d2d
+                    style G fill:#f1f5f9,stroke:#8b7355,stroke-width:1px,color:#2d2d2d
+                    style H fill:#f1f5f9,stroke:#8b7355,stroke-width:1px,color:#2d2d2d
+                    style I fill:#f1f5f9,stroke:#8b7355,stroke-width:1px,color:#2d2d2d
+                    style J fill:#f1f5f9,stroke:#8b7355,stroke-width:1px,color:#2d2d2d
+                  </div>
+                </div>
+              </div>
+
+              <div class="prose prose-lg max-w-none">
+                <h3 class="serif text-xl font-semibold mb-4">核心文本脉络分析</h3>
+
+                <div class="space-y-8">
+                  <div>
+                    <h4 class="font-semibold mb-2">
+                      <a href="https://zhuanlan.zhihu.com/p/500960342" class="citation">《爱肖战这件小事，关于熵减及天启》</a>
+                    </h4>
+                    <p class="text-gray-700">
+                      发表于2025年3月23日，标志着写作从情感记录向哲学阐释的跃迁。文章将热力学&#34;熵减&#34;概念引入粉丝研究，
+                      构建了一套理解偶像职业生涯的分析框架。对抗熵增需要&#34;开放系统&#34;与&#34;主动做功&#34;两个条件，
+                      肖战被塑造为完美践行这一生存策略的典范。
+                    </p>
+                  </div>
+
+                  <div>
+                    <h4 class="font-semibold mb-2">
+                      <a href="https://zhuanlan.zhihu.com/p/426042541" class="citation">《肖兔兔，和当下的力量》</a>
+                    </h4>
+                    <p class="text-gray-700">
+                      发表于2022年9月18日，标题融合了昵称&#34;肖兔兔&#34;与埃克哈特·托利畅销书《当下的力量》，
+                      构建了&#34;正念追星&#34;的实践哲学。通过将成年男性偶像转化为可爱动物形象，
+                      降低其距离感与威胁性，同时满足粉丝的保护欲与亲密渴望。
+                    </p>
+                  </div>
+
+                  <div>
+                    <h4 class="font-semibold mb-2">
+                      <a href="https://zhuanlan.zhihu.com/p/451453471" class="citation">《顾一野是我们2020年日夜想念却见不到的肖战啊》</a>
+                    </h4>
+                    <p class="text-gray-700">
+                      发表于2021年12月30日，聚焦于肖战在《王牌部队》中饰演的军人角色顾一野，
+                      探讨角色与演员之间的互文关系。&#34;2020年日夜想念却见不到&#34;直接指向&#34;227事件&#34;后的公众可见度骤降，
+                      顾一野角色的出现被体验为一种&#34;替代性满足&#34;。
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <!-- Xiao Zhan Traits Section -->
+      <section id="xiao-zhan-traits" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-8">
+          <div class="max-w-4xl mx-auto">
+            <h2 class="serif text-3xl font-bold mb-8 text-gray-900">肖战个人特质的多维解析</h2>
+
+            <div class="space-y-12">
+              <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div class="bg-white p-8 rounded-lg shadow-sm">
+                  <h3 class="serif text-xl font-semibold mb-4">外在形象与符号价值</h3>
+                  <div class="space-y-4">
+                    <div>
+                      <h4 class="font-semibold text-amber-700 mb-2">视觉资本运营</h4>
+                      <p class="text-sm text-gray-600">
+                        2020年位列&#34;全球最帅100张面孔&#34;第六名，在华人演员中排位最高。
+                        这一国际审美认证在粉丝话语中被转化为重要的&#34;视觉资本&#34;。
+                      </p>
+                    </div>
+                    <div>
+                      <h4 class="font-semibold text-amber-700 mb-2">古典美学气质</h4>
+                      <p class="text-sm text-gray-600">
+                        &#34;朗月清风&#34;的核心概括在中国文学传统中具有明朗、高洁、超脱世俗的稳定象征内涵。
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="bg-white p-8 rounded-lg shadow-sm">
+                  <img src="https://kimi-web-img.moonshot.cn/img/wx4.sinaimg.cn/059ba499e8658eec42f47f63610ff612c139b894.jpg" alt="肖战的红毯时尚造型" class="w-full h-48 object-cover rounded-lg mb-4" size="medium" aspect="wide" style="photo" query="肖战红毯照" referrerpolicy="no-referrer" data-modified="1" data-score="0.00"/>
+                  <blockquote class="serif italic text-gray-700 text-sm">
+                    &#34;终有轻舟越过万重山&#34;的签名将危机视为必须穿越的峡谷，
+                    将复出视为轻舟终点的开阔水域。
+                  </blockquote>
+                </div>
+              </div>
+
+              <div class="bg-white p-8 rounded-lg shadow-sm">
+                <h3 class="serif text-xl font-semibold mb-6">职业轨迹与转型路径</h3>
+
+                <div class="space-y-6">
+                  <div class="border-l-4 border-amber-600 pl-6">
+                    <h4 class="font-semibold mb-2">设计专业背景</h4>
+                    <p class="text-gray-700">
+                      24岁素人出道，重庆工商大学现代国际设计艺术学院毕业，
+                      大学期间担任班级文艺委员、校大学生艺术团声乐部部长，
+                      毕业后与朋友创办设计工作室。
+                      <a href="https://zhuanlan.zhihu.com/c_1436412899471917056" class="citation">这一背景被解读为&#34;选择权&#34;的象征</a>。
+                    </p>
+                  </div>
+
+                  <div class="border-l-4 border-amber-600 pl-6">
+                    <h4 class="font-semibold mb-2">《陈情令》爆红</h4>
+                    <p class="text-gray-700">
+                      2019年6月27日播出，累计播放量突破95亿，肖战微博粉丝从数百万飙升至超过2800万。
+                      <a href="https://zhuanlan.zhihu.com/c_1436412899471917056" class="citation">成为当年最具商业价值的艺人之一</a>。
+                    </p>
+                  </div>
+
+                  <div class="border-l-4 border-amber-600 pl-6">
+                    <h4 class="font-semibold mb-2">&#34;227事件&#34;危机</h4>
+                    <p class="text-gray-700">
+                      2020年2月27日前后，粉丝对AO3平台同人作品的大规模举报导致平台在中国大陆被屏蔽，
+                      引发多方力量联合抵制。
+                      <a href="https://zhuanlan.zhihu.com/c_1436412899471917056" class="citation">肖战陷入事实上的&#34;软封杀&#34;状态</a>。
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="bg-amber-50 p-8 rounded-lg border border-amber-200">
+                <h3 class="serif text-xl font-semibold mb-4">人格特质的粉丝建构</h3>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <h4 class="font-semibold mb-3">奋斗叙事</h4>
+                    <div class="space-y-2 text-sm text-gray-700">
+                      <p>&#34;励志活出顶配版的自己&#34;：将个人发展理解为配置升级的过程</p>
+                      <p>&#34;一路打怪升级&#34;：将职业挑战转化为可管理的任务序列</p>
+                      <p>&#34;最大的怪都是&#39;自己&#39;&#34;：将外部压力内化为自我超越的动力</p>
+                    </div>
+                  </div>
+
+                  <div>
+                    <h4 class="font-semibold mb-3">差异化定位</h4>
+                    <div class="space-y-2 text-sm text-gray-700">
+                      <p>&#34;只是和自己比&#34;：抵抗异化的竞争逻辑</p>
+                      <p>&#34;因循禀赋&#34;：选择&#34;少有人走的路&#34;</p>
+                      <p>&#34;想赢，但也不想别人输&#34;：在进取与友善间寻求平衡</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <!-- Fan Labor Section -->
+      <section id="fan-labor" class="py-16 bg-white">
+        <div class="container mx-auto px-8">
+          <div class="max-w-4xl mx-auto">
+            <h2 class="serif text-3xl font-bold mb-8 text-gray-900">粉丝群体的情感劳动机制</h2>
+
+            <div class="space-y-12">
+              <div class="prose prose-lg max-w-none">
+                <h3 class="serif text-xl font-semibold mb-4">情感劳动的理论框架</h3>
+                <p>
+                  根据学术研究
+                  <a href="http://ir.swupl.edu.cn:8080/xnzfdx/item/itemDetail/76432.shtml" class="citation">《从肖战微博&#34;超话&#34;看粉丝社群中的情感劳动》</a>，
+                  粉丝通过情感生产劳动&#34;逐步形成粉丝经济，提高社会经济效益&#34;，
+                  但&#34;粉丝的情感劳动是&#39;正在制造的商品&#39;，资本将粉丝作为商品打包二次销售给品牌商用以攫取高额利润&#34;。
+                </p>
+              </div>
+
+              <!-- Emotional Labor Types Diagram -->
+              <div class="bg-gray-50 p-8 rounded-lg">
+                <h4 class="serif text-lg font-semibold mb-6 text-center">积极情感驱动机制</h4>
+                <div class="mermaid-container">
+                  <div class="mermaid-controls">
+                    <button class="mermaid-control-btn zoom-in" title="放大">
+                      <i class="fas fa-search-plus"></i>
+                    </button>
+                    <button class="mermaid-control-btn zoom-out" title="缩小">
+                      <i class="fas fa-search-minus"></i>
+                    </button>
+                    <button class="mermaid-control-btn reset-zoom" title="重置">
+                      <i class="fas fa-expand-arrows-alt"></i>
+                    </button>
+                    <button class="mermaid-control-btn fullscreen" title="全屏查看">
+                      <i class="fas fa-expand"></i>
+                    </button>
+                  </div>
+                  <div class="mermaid">
+                    graph TD
+                    A[&#34;积极情感驱动&#34;] --&gt; B[&#34;仪式感&#34;]
+                    A --&gt; C[&#34;&#39;我们&#39;情感&#34;]
+                    A --&gt; D[&#34;祝愿情感&#34;]
+
+                    B --&gt; E[&#34;生日应援&#34;]
+                    B --&gt; F[&#34;出道纪念&#34;]
+                    B --&gt; G[&#34;剧集开播&#34;]
+
+                    C --&gt; H[&#34;群体标识&#34;]
+                    C --&gt; I[&#34;集体打榜&#34;]
+                    C --&gt; J[&#34;统一控评&#34;]
+
+                    D --&gt; K[&#34;平安祝福&#34;]
+                    D --&gt; L[&#34;星途祝愿&#34;]
+                    D --&gt; M[&#34;公益祈福&#34;]
+
+                    E --&gt; N[&#34;情感劳动&#34;]
+                    F --&gt; N
+                    G --&gt; N
+                    H --&gt; N
+                    I --&gt; N
+                    J --&gt; N
+                    K --&gt; N
+                    L --&gt; N
+                    M --&gt; N
+
+                    style A fill:#fef3c7,stroke:#8b7355,stroke-width:2px,color:#2d2d2d
+                    style B fill:#f8fafc,stroke:#8b7355,stroke-width:1px,color:#2d2d2d
+                    style C fill:#f8fafc,stroke:#8b7355,stroke-width:1px,color:#2d2d2d
+                    style D fill:#f8fafc,stroke:#8b7355,stroke-width:1px,color:#2d2d2d
+                    style N fill:#fef3c7,stroke:#8b7355,stroke-width:2px,color:#2d2d2d
+                  </div>
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-sm border">
+                  <h4 class="font-semibold mb-4">具体劳动形态</h4>
+                  <div class="space-y-4">
+                    <div>
+                      <h5 class="font-medium text-amber-700">数据劳动</h5>
+                      <p class="text-sm text-gray-600">集资、打榜、控评的技术化操作，粉丝研究利用算法推荐技术推广偶像</p>
+                    </div>
+                    <div>
+                      <h5 class="font-medium text-amber-700">消费劳动</h5>
+                      <p class="text-sm text-gray-600">代言购买与&#34;粉丝经济&#34;的闭环，代言产品的&#34;秒空&#34;现象</p>
+                    </div>
+                    <div>
+                      <h5 class="font-medium text-amber-700">内容劳动</h5>
+                      <p class="text-sm text-gray-600">二创生产与情感再生产，视频剪辑、图文创作、同人小说</p>
+                    </div>
+                    <div>
+                      <h5 class="font-medium text-amber-700">公益劳动</h5>
+                      <p class="text-sm text-gray-600">助农项目与社会正能量传递，以偶像名义发起捐款、助学等公益活动</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-sm border">
+                  <h4 class="font-semibold mb-4">三重意义维度</h4>
+                  <div class="space-y-4">
+                    <div>
+                      <h5 class="font-medium text-amber-700">经济维度</h5>
+                      <p class="text-sm text-gray-600">
+                        <a href="https://m.thepaper.cn/newsDetail_forward_6306042" class="citation">追星族超过5亿人，年市场规模高达900亿元</a>，
+                        粉丝经济形成完整闭环
+                      </p>
+                    </div>
+                    <div>
+                      <h5 class="font-medium text-amber-700">文化维度</h5>
+                      <p class="text-sm text-gray-600">生产快乐的情感机制，将满足粉丝情感需求的转移与寄托</p>
+                    </div>
+                    <div>
+                      <h5 class="font-medium text-amber-700">社会维度</h5>
+                      <p class="text-sm text-gray-600">促进粉丝自愿加入公益项目，助农扶贫以传递社会正能量</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="pullquote">
+                &#34;当喜爱的多巴胺、内啡肽褪去，留下的是什么？&#34;
+                <cite class="block mt-2 text-sm not-italic">
+                  — <a href="https://zhuanlan.zhihu.com/p/500960342" class="citation">《爱肖战这件小事，关于熵减及天启》</a>
+                </cite>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <!-- Community Dynamics Section -->
+      <section id="community-dynamics" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-8">
+          <div class="max-w-4xl mx-auto">
+            <h2 class="serif text-3xl font-bold mb-8 text-gray-900">粉丝社群的组织特征与行为模式</h2>
+
+            <div class="space-y-12">
+              <div class="bg-white p-8 rounded-lg shadow-sm">
+                <h3 class="serif text-xl font-semibold mb-6">社群结构分析</h3>
+
+                <div class="space-y-6">
+                  <div>
+                    <h4 class="font-semibold mb-3">微博&#34;超话&#34;作为核心组织场域</h4>
+                    <p class="text-gray-700 mb-4">
+                      微博&#34;超话&#34;是肖战粉丝社群的核心组织场域，功能设计高度适配粉丝需求：
+                      排名机制制造竞争激励，签到系统培养日常习惯，精华区提供内容沉淀，
+                      主持人体系实现层级控制。
+                    </p>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      <div class="bg-gray-50 p-4 rounded">
+                        <h5 class="font-medium text-sm mb-2">信息聚合</h5>
+                        <p class="text-xs text-gray-600">话题标签、精华帖子、置顶规则</p>
+                      </div>
+                      <div class="bg-gray-50 p-4 rounded">
+                        <h5 class="font-medium text-sm mb-2">身份标识</h5>
+                        <p class="text-xs text-gray-600">关注数、发帖数、等级徽章</p>
+                      </div>
+                      <div class="bg-gray-50 p-4 rounded">
+                        <h5 class="font-medium text-sm mb-2">行动协调</h5>
+                        <p class="text-xs text-gray-600">任务发布、进度汇报、集体动员</p>
+                      </div>
+                      <div class="bg-gray-50 p-4 rounded">
+                        <h5 class="font-medium text-sm mb-2">情感共鸣</h5>
+                        <p class="text-xs text-gray-600">评论区互动、点赞、转发</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Fan Organization Structure -->
+              <div class="bg-white p-8 rounded-lg shadow-sm">
+                <h4 class="serif text-lg font-semibold mb-6 text-center">粉丝社群组织结构图</h4>
+                <div class="mermaid-container">
+                  <div class="mermaid-controls">
+                    <button class="mermaid-control-btn zoom-in" title="放大">
+                      <i class="fas fa-search-plus"></i>
+                    </button>
+                    <button class="mermaid-control-btn zoom-out" title="缩小">
+                      <i class="fas fa-search-minus"></i>
+                    </button>
+                    <button class="mermaid-control-btn reset-zoom" title="重置">
+                      <i class="fas fa-expand-arrows-alt"></i>
+                    </button>
+                    <button class="mermaid-control-btn fullscreen" title="全屏查看">
+                      <i class="fas fa-expand"></i>
+                    </button>
+                  </div>
+                  <div class="mermaid">
+                    graph TD
+                    A[&#34;粉丝社群&#34;] --&gt; B[&#34;数据组&#34;]
+                    A --&gt; C[&#34;反黑组&#34;]
+                    A --&gt; D[&#34;文案组&#34;]
+                    A --&gt; E[&#34;美工组&#34;]
+                    A --&gt; F[&#34;公益组&#34;]
+
+                    B --&gt; B1[&#34;打榜&#34;]
+                    B --&gt; B2[&#34;控评&#34;]
+                    B --&gt; B3[&#34;热搜维护&#34;]
+
+                    C --&gt; C1[&#34;负面监测&#34;]
+                    C --&gt; C2[&#34;举报澄清&#34;]
+                    C --&gt; C3[&#34;危机应对&#34;]
+
+                    D --&gt; D1[&#34;宣传文案&#34;]
+                    D --&gt; D2[&#34;应援口号&#34;]
+                    D --&gt; D3[&#34;情感叙事&#34;]
+
+                    E --&gt; E1[&#34;视觉设计&#34;]
+                    E --&gt; E2[&#34;视频剪辑&#34;]
+                    E --&gt; E3[&#34;周边制作&#34;]
+
+                    F --&gt; F1[&#34;公益策划&#34;]
+                    F --&gt; F2[&#34;项目执行&#34;]
+                    F --&gt; F3[&#34;对接受助&#34;]
+
+                    style A fill:#fef3c7,stroke:#8b7355,stroke-width:2px,color:#2d2d2d
+                    style B fill:#f8fafc,stroke:#8b7355,stroke-width:1px,color:#2d2d2d
+                    style C fill:#f8fafc,stroke:#8b7355,stroke-width:1px,color:#2d2d2d
+                    style D fill:#f8fafc,stroke:#8b7355,stroke-width:1px,color:#2d2d2d
+                    style E fill:#f8fafc,stroke:#8b7355,stroke-width:1px,color:#2d2d2d
+                    style F fill:#f8fafc,stroke:#8b7355,stroke-width:1px,color:#2d2d2d
+                  </div>
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                  <h3 class="serif text-lg font-semibold mb-4">入坑路径的多样性</h3>
+                  <div class="space-y-4">
+                    <div class="flex items-start space-x-3">
+                      <div class="w-2 h-2 rounded-full bg-amber-600 mt-2"></div>
+                      <div>
+                        <h5 class="font-medium">作品入坑</h5>
+                        <p class="text-sm text-gray-600">《陈情令》剧集与花絮，提供情感投入对象和延伸空间</p>
+                      </div>
+                    </div>
+                    <div class="flex items-start space-x-3">
+                      <div class="w-2 h-2 rounded-full bg-amber-600 mt-2"></div>
+                      <div>
+                        <h5 class="font-medium">才艺入坑</h5>
+                        <p class="text-sm text-gray-600">歌声、演技、设计能力等多元才艺展示</p>
+                      </div>
+                    </div>
+                    <div class="flex items-start space-x-3">
+                      <div class="w-2 h-2 rounded-full bg-amber-600 mt-2"></div>
+                      <div>
+                        <h5 class="font-medium">细节入坑</h5>
+                        <p class="text-sm text-gray-600">手指、笑容等身体符号的精细化观察</p>
+                      </div>
+                    </div>
+                    <div class="flex items-start space-x-3">
+                      <div class="w-2 h-2 rounded-full bg-amber-600 mt-2"></div>
+                      <div>
+                        <h5 class="font-medium">事件入坑</h5>
+                        <p class="text-sm text-gray-600">危机中的&#34;虐粉&#34;效应，激发保护欲和忠诚承诺</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                  <img src="https://kimi-web-img.moonshot.cn/img/c-ssl.dtstatic.com/995947cf8ca7797323ea09f00918b6635bbaa0ea.jpeg" alt="肖战在《陈情令》中的角色造型" class="w-full h-32 object-cover rounded-lg mb-4" size="medium" aspect="wide" style="photo" query="肖战 陈情令 剧照" referrerpolicy="no-referrer" data-modified="1" data-score="0.00"/>
+                  <blockquote class="serif italic text-gray-700 text-sm">
+                    &#34;虽然我粉得太晚，没有2020年的感同身受，但通过了解历史来建立与社群的连接&#34;
+                  </blockquote>
+                </div>
+              </div>
+
+              <div class="bg-white p-8 rounded-lg shadow-sm">
+                <h3 class="serif text-xl font-semibold mb-6">粉丝认同的深层机制</h3>
+
+                <div class="space-y-6">
+                  <div class="border-l-4 border-amber-600 pl-6">
+                    <h4 class="font-semibold mb-2">偶像符号化与粉丝需求满足</h4>
+                    <p class="text-gray-700">
+                      <a href="http://ir.swupl.edu.cn:8080/xnzfdx/item/itemDetail/76432.shtml" class="citation">学术研究指出</a>，
+                      粉丝对偶像的情感起源于&#34;偶像符号化满足粉丝需求&#34;。艺人并非作为&#34;真实个人&#34;被喜爱，
+                      而是作为特定符号（美貌、才华、性格、经历等）的载体。
+                      在肖战粉丝群体中，这一符号化过程表现为情感需求、价值需求、审美需求、社会需求的叠加。
+                    </p>
+                  </div>
+
+                  <div class="border-l-4 border-amber-600 pl-6">
+                    <h4 class="font-semibold mb-2">偶像-粉丝的双重表演策略</h4>
+                    <p class="text-gray-700">
+                      粉丝认同并非单向的&#34;粉丝投射&#34;，而是偶像与粉丝共同参与的表演互动：
+                      偶像表演&#34;值得爱&#34;的形象，粉丝表演&#34;深爱&#34;的情感，双方的表演相互强化，
+                      构成一种自我实现的预言。
+                    </p>
+                  </div>
+
+                  <div class="border-l-4 border-amber-600 pl-6">
+                    <h4 class="font-semibold mb-2">虚拟情感的转移投射</h4>
+                    <p class="text-gray-700">
+                      粉丝对偶像的&#34;了解&#34;主要通过媒介中介，这种了解在性质上不同于面对面的人际关系。
+                      然而，粉丝体验到的情感强度却与&#34;真实&#34;情感难以区分。
+                      这种混淆是粉丝经济的设计特征——偶像工业刻意模糊公共与私人的边界。
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <!-- Crisis Impact Section -->
+      <section id="crisis-impact" class="py-16 bg-white">
+        <div class="container mx-auto px-8">
+          <div class="max-w-4xl mx-auto">
+            <h2 class="serif text-3xl font-bold mb-8 text-gray-900">危机事件与粉丝文化的演变</h2>
+
+            <div class="space-y-12">
+              <div class="bg-red-50 p-8 rounded-lg border border-red-200">
+                <h3 class="serif text-xl font-semibold mb-4 text-red-800">&#34;227事件&#34;的结构性影响</h3>
+
+                <div class="space-y-6">
+                  <div>
+                    <h4 class="font-semibold mb-2 text-red-700">事件起因</h4>
+                    <p class="text-gray-700">
+                      2020年2月24日，同人作者&#34;迪迪出逃记&#34;在AO3平台发布《下坠》，
+                      设定肖战为&#34;有性别认知障碍的发廊妹&#34;；
+                      2月26-27日，肖战粉丝发起集中举报，导致AO3在中国大陆被屏蔽；
+                      2月27日后，同人爱好者发起&#34;227大团结&#34;抵制运动。
+                    </p>
+                  </div>
+
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                      <h4 class="font-semibold mb-2 text-red-700">舆论反转</h4>
+                      <p class="text-sm text-gray-600">
+                        从&#34;受害者&#34;到&#34;加害者&#34;的身份困境：
+                        最初以&#34;维护偶像名誉&#34;的&#34;受害者&#34;姿态出现，
+                        随后被重新定义为滥用举报机制、破坏创作自由的&#34;加害者&#34;
+                      </p>
+                    </div>
+                    <div>
+                      <h4 class="font-semibold mb-2 text-red-700">回应策略</h4>
+                      <p class="text-sm text-gray-600">
+                        沉默期（2-3月）→ 道歉期（3月后）→ 公益引导期（2020年全年）
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Crisis Timeline Diagram -->
+              <div class="bg-white p-8 rounded-lg shadow-sm border">
+                <h4 class="serif text-lg font-semibold mb-6 text-center">&#34;227事件&#34;发展时间线</h4>
+                <div class="mermaid-container">
+                  <div class="mermaid-controls">
+                    <button class="mermaid-control-btn zoom-in" title="放大">
+                      <i class="fas fa-search-plus"></i>
+                    </button>
+                    <button class="mermaid-control-btn zoom-out" title="缩小">
+                      <i class="fas fa-search-minus"></i>
+                    </button>
+                    <button class="mermaid-control-btn reset-zoom" title="重置">
+                      <i class="fas fa-expand-arrows-alt"></i>
+                    </button>
+                    <button class="mermaid-control-btn fullscreen" title="全屏查看">
+                      <i class="fas fa-expand"></i>
+                    </button>
+                  </div>
+                  <div class="mermaid">
+                    timeline
+                    title &#34;227事件&#34;发展时间线
+
+                    2020年2月24日 : &#34;同人作品《下坠》发布&#34;
+                    2020年2月26-27日 : &#34;粉丝发起集中举报&#34;
+                    : &#34;AO3在中国大陆被屏蔽&#34;
+
+                    2020年2月27日后 : &#34;同人爱好者发起抵制&#34;
+                    : &#34;227大团结运动开始&#34;
+
+                    2020年3月1日 : &#34;工作室发布道歉声明&#34;
+                    2020年5月6日 : &#34;肖战接受《中新经纬》采访&#34;
+                    : &#34;首次公开道歉&#34;
+
+                    2020年下半年 : &#34;公益项目试探复出&#34;
+                    : &#34;日常见肖战&#34;系列推出
+                  </div>
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-sm border">
+                  <h3 class="serif text-lg font-semibold mb-4">危机后的文化调适</h3>
+                  <div class="space-y-4">
+                    <div>
+                      <h4 class="font-medium text-amber-700 mb-2">亲密化运营</h4>
+                      <p class="text-sm text-gray-600">
+                        <a href="https://zhuanlan.zhihu.com/p/500960342" class="citation">&#34;日常见肖战&#34;</a>系列推出，
+                        从依赖外部平台转向自主内容生产，从&#34;事件驱动&#34;到&#34;日常陪伴&#34;
+                      </p>
+                    </div>
+                    <div>
+                      <h4 class="font-medium text-amber-700 mb-2">话语策略转向</h4>
+                      <p class="text-sm text-gray-600">
+                        从&#34;冲锋&#34;到&#34;守护&#34;：从&#34;战斗&#34;&#34;出征&#34;等攻击性隐喻，
+                        转向&#34;守护&#34;&#34;陪伴&#34;&#34;静待花开&#34;等温和表述
+                      </p>
+                    </div>
+                    <div>
+                      <h4 class="font-medium text-amber-700 mb-2">疗愈叙事</h4>
+                      <p class="text-sm text-gray-600">
+                        <a href="https://zhuanlan.zhihu.com/c_1436412899471917056" class="citation">&#34;终有轻舟越过万重山&#34;</a>
+                        将危机重新框架为&#34;历练&#34;&#34;考验&#34;&#34;成长&#34;
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-sm border">
+                  <img src="https://kimi-web-img.moonshot.cn/img/pic.ibaotu.com/d40cdc33bf0b7744a35a40b3265fd0b8e6d67ee4.jpg!ww7006" alt="象征重生与希望的凤凰涅槃" class="w-full h-32 object-cover rounded-lg mb-4" size="medium" aspect="wide" query="凤凰涅槃 重生" referrerpolicy="no-referrer" data-modified="1" data-score="0.00"/>
+                  <blockquote class="serif italic text-gray-700 text-sm">
+                    &#34;磨难，渡劫，涅槃，再上层楼，都只是老来谈资而已。
+                    重要的是经历过这些之后，自己内在留下的东西。&#34;
+                  </blockquote>
+                </div>
+              </div>
+
+              <div class="bg-amber-50 p-8 rounded-lg border border-amber-200">
+                <h3 class="serif text-xl font-semibold mb-6">共生关系的重构</h3>
+
+                <div class="space-y-6">
+                  <div class="border-l-4 border-amber-600 pl-6">
+                    <h4 class="font-semibold mb-2">利益共同体强化</h4>
+                    <p class="text-gray-700">
+                      <a href="https://zhuanlan.zhihu.com/c_1436412899471917056" class="citation">&#34;盘根错节共生共荣&#34;</a>
+                      标志着双方利益绑定程度的深化。从经济角度，粉丝消费直接决定偶像的商业价值；
+                      从声誉角度，粉丝行为持续影响偶像的公众形象；从情感角度，双方的认同互为条件。
+                    </p>
+                  </div>
+
+                  <div class="border-l-4 border-amber-600 pl-6">
+                    <h4 class="font-semibold mb-2">流量威力的&#34;隐忍&#34;</h4>
+                    <p class="text-gray-700">
+                      &#34;手握巨大流量是他的原罪&#34;——流量既是商业价值的源泉，也是公众批评的靶心。
+                      策略转向&#34;隐忍&#34;：克制使用流量的攻击性功能，转而强调其建设性应用（公益、文化传播）。
+                    </p>
+                  </div>
+
+                  <div class="border-l-4 border-amber-600 pl-6">
+                    <h4 class="font-semibold mb-2">公益作为合法性工具</h4>
+                    <p class="text-gray-700">
+                      公益劳动的战略地位显著提升，其功能超越单纯的社会贡献，
+                      成为合法性建构的核心工具。粉丝公益的规模化产出为追星行为提供了&#34;正能量&#34;的背书。
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <!-- Critical Reflection Section -->
+      <section id="critical-reflection" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-8">
+          <div class="max-w-4xl mx-auto">
+            <h2 class="serif text-3xl font-bold mb-8 text-gray-900">批判性反思：粉丝情感劳动的异化风险</h2>
+
+            <div class="space-y-12">
+              <div class="bg-white p-8 rounded-lg shadow-sm">
+                <h3 class="serif text-xl font-semibold mb-6">资本剥削机制</h3>
+
+                <div class="space-y-6">
+                  <div class="border-l-4 border-red-500 pl-6">
+                    <h4 class="font-semibold mb-2 text-red-700">情感劳动被无偿占有</h4>
+                    <p class="text-gray-700">
+                      粉丝情感劳动的核心悖论在于：其产出被多方主体无偿或低价占有，
+                      而劳动者仅获得情感满足等非物质回报。
+                      <a href="http://ir.swupl.edu.cn:8080/xnzfdx/item/itemDetail/76432.shtml" class="citation">数据劳动生产的排名、热度、流量</a>，
+                      成为平台估值和广告定价的基础。
+                    </p>
+                  </div>
+
+                  <div class="border-l-4 border-red-500 pl-6">
+                    <h4 class="font-semibold mb-2 text-red-700">数据二次销售与利润攫取</h4>
+                    <p class="text-gray-700">
+                      粉丝数据的商品化链条：原始数据被平台收集、加工为用户画像，
+                      再销售给广告商和品牌方。情感劳动的&#34;成果&#34;成为偶像商业谈判的筹码，
+                      但劳动者本身被排除在价值分配之外。
+                    </p>
+                  </div>
+
+                  <div class="border-l-4 border-red-500 pl-6">
+                    <h4 class="font-semibold mb-2 text-red-700">技术平台作为异化孵化器</h4>
+                    <p class="text-gray-700">
+                      社交媒体平台的技术架构对粉丝情感劳动具有塑造作用：
+                      算法推荐制造信息茧房，强化群体极化；游戏化设计将情感投入转化为可量化的竞争；
+                      实时反馈机制创造间歇性强化，形成行为成瘾。
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Exploitation Chain Diagram -->
+              <div class="bg-white p-8 rounded-lg shadow-sm border">
+                <h4 class="serif text-lg font-semibold mb-6 text-center">粉丝经济剥削链条图</h4>
+                <div class="mermaid-container">
+                  <div class="mermaid-controls">
+                    <button class="mermaid-control-btn zoom-in" title="放大">
+                      <i class="fas fa-search-plus"></i>
+                    </button>
+                    <button class="mermaid-control-btn zoom-out" title="缩小">
+                      <i class="fas fa-search-minus"></i>
+                    </button>
+                    <button class="mermaid-control-btn reset-zoom" title="重置">
+                      <i class="fas fa-expand-arrows-alt"></i>
+                    </button>
+                    <button class="mermaid-control-btn fullscreen" title="全屏查看">
+                      <i class="fas fa-expand"></i>
+                    </button>
+                  </div>
+                  <div class="mermaid">
+                    graph TD
+                    A[&#34;粉丝情感投入&#34;] --&gt; B[&#34;情感劳动&#34;]
+                    B --&gt; C[&#34;数据生产&#34;]
+                    B --&gt; D[&#34;消费行为&#34;]
+                    B --&gt; E[&#34;内容创作&#34;]
+
+                    C --&gt; F[&#34;平台算法&#34;]
+                    D --&gt; G[&#34;品牌销售&#34;]
+                    E --&gt; H[&#34;内容生态&#34;]
+
+                    F --&gt; I[&#34;商业价值&#34;]
+                    G --&gt; I
+                    H --&gt; I
+
+                    I --&gt; J[&#34;资本获利&#34;]
+                    J --&gt; K[&#34;平台方&#34;]
+                    J --&gt; L[&#34;经纪公司&#34;]
+                    J --&gt; M[&#34;品牌商&#34;]
+
+                    K --&gt; N[&#34;股东收益&#34;]
+                    L --&gt; O[&#34;艺人分成&#34;]
+                    M --&gt; P[&#34;企业利润&#34;]
+
+                    style A fill:#fef3c7,stroke:#8b7355,stroke-width:2px,color:#2d2d2d
+                    style B fill:#fef3c7,stroke:#8b7355,stroke-width:2px,color:#2d2d2d
+                    style I fill:#fee2e2,stroke:#dc2626,stroke-width:2px,color:#2d2d2d
+                    style J fill:#fee2e2,stroke:#dc2626,stroke-width:2px,color:#2d2d2d
+                    style K fill:#fee2e2,stroke:#dc2626,stroke-width:1px,color:#2d2d2d
+                    style L fill:#fee2e2,stroke:#dc2626,stroke-width:1px,color:#2d2d2d
+                    style M fill:#fee2e2,stroke:#dc2626,stroke-width:1px,color:#2d2d2d
+                    style N fill:#fee2e2,stroke:#dc2626,stroke-width:1px,color:#2d2d2d
+                    style O fill:#fee2e2,stroke:#dc2626,stroke-width:1px,color:#2d2d2d
+                    style P fill:#fee2e2,stroke:#dc2626,stroke-width:1px,color:#2d2d2d
+                    style C fill:#f8fafc,stroke:#8b7355,stroke-width:1px,color:#2d2d2d
+                    style D fill:#f8fafc,stroke:#8b7355,stroke-width:1px,color:#2d2d2d
+                    style E fill:#f8fafc,stroke:#8b7355,stroke-width:1px,color:#2d2d2d
+                    style F fill:#f1f5f9,stroke:#8b7355,stroke-width:1px,color:#2d2d2d
+                    style G fill:#f1f5f9,stroke:#8b7355,stroke-width:1px,color:#2d2d2d
+                    style H fill:#f1f5f9,stroke:#8b7355,stroke-width:1px,color:#2d2d2d
+                  </div>
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                  <h3 class="serif text-lg font-semibold mb-4">粉丝主体的困境</h3>
+                  <div class="space-y-4">
+                    <div>
+                      <h4 class="font-medium text-amber-700 mb-2">情感与理性边界模糊</h4>
+                      <p class="text-sm text-gray-600">
+                        消费动员常常模糊情感表达与理性决策的边界，
+                        &#34;量力而行&#34;与&#34;买一张是路人，买一百张才是粉丝&#34;的隐性规范并存
+                      </p>
+                    </div>
+                    <div>
+                      <h4 class="font-medium text-amber-700 mb-2">群体极化与信息茧房</h4>
+                      <p class="text-sm text-gray-600">
+                        <a href="https://m.thepaper.cn/newsDetail_forward_6306042" class="citation">&#34;私域流量&#34;的构建</a>
+                        虽然提高了组织效率，但也强化了信息茧房效应
+                      </p>
+                    </div>
+                    <div>
+                      <h4 class="font-medium text-amber-700 mb-2">身份认同侵蚀自主性</h4>
+                      <p class="text-sm text-gray-600">
+                        粉丝身份的过度投入可能导致个体自主性的侵蚀，
+                        理性的价值判断让位于情感的防御反应
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                  <h3 class="serif text-lg font-semibold mb-4">治理建议与优化路径</h3>
+                  <div class="space-y-4">
+                    <div>
+                      <h4 class="font-medium text-amber-700 mb-2">平台责任</h4>
+                      <p class="text-sm text-gray-600">
+                        提高媒介素养与社区规范建设，
+                        帮助用户理解算法机制、识别情感操纵
+                      </p>
+                    </div>
+                    <div>
+                      <h4 class="font-medium text-amber-700 mb-2">行业规范</h4>
+                      <p class="text-sm text-gray-600">
+                        打击资本操纵，限制集资平台的金融风险，
+                        规范数据造假的法律责任
+                      </p>
+                    </div>
+                    <div>
+                      <h4 class="font-medium text-amber-700 mb-2">偶像引导</h4>
+                      <p class="text-sm text-gray-600">
+                        合理引导粉丝与正能量宣传，
+                        明确反对非理性消费和数据造假
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="pullquote">
+                &#34;资本将粉丝作为商品打包二次销售给品牌商用以攫取高额利润&#34;
+                <cite class="block mt-2 text-sm not-italic">
+                  — <a href="http://ir.swupl.edu.cn:8080/xnzfdx/item/itemDetail/76432.shtml" class="citation">学术研究《从肖战微博&#34;超话&#34;看粉丝社群中的情感劳动》</a>
+                </cite>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <!-- Conclusions Section -->
+      <section id="conclusions" class="py-16 bg-white">
+        <div class="container mx-auto px-8">
+          <div class="max-w-4xl mx-auto">
+            <h2 class="serif text-3xl font-bold mb-8 text-gray-900">研究结论与理论贡献</h2>
+
+            <div class="space-y-12">
+              <div class="bg-amber-50 p-8 rounded-lg border border-amber-200">
+                <h3 class="serif text-xl font-semibold mb-6">&#34;循山野清风&#34;个案的方法论意义</h3>
+
+                <div class="space-y-6">
+                  <div>
+                    <h4 class="font-semibold mb-2">粉丝自叙作为研究资料的合法性</h4>
+                    <p class="text-gray-700">
+                      &#34;循山野清风&#34;的写作实践验证了粉丝自叙作为研究资料的合法性。
+                      与外部观察者的&#34;客观&#34;分析相比，粉丝自叙提供了情感运作的内部视角，
+                      揭示了意义建构的微观机制。这种资料需要与学术分析、媒体报道等相互印证，
+                      以避免过度认同的风险。
+                    </p>
+                  </div>
+
+                  <div>
+                    <h4 class="font-semibold mb-2">情感劳动理论的本土化验证</h4>
+                    <p class="text-gray-700">
+                      本研究通过文本分析，验证了情感劳动理论在中国粉丝文化语境中的适用性。
+                      粉丝的情感投入确实被转化为具有经济价值的劳动形式，
+                      但其具体运作机制（如&#34;仪式感&#34;&#34;我们情感&#34;的文化特异性）需要本土化的理论调整。
+                    </p>
+                  </div>
+
+                  <div>
+                    <h4 class="font-semibold mb-2">流量明星研究的微观视角补充</h4>
+                    <p class="text-gray-700">
+                      &#34;循山野清风&#34;的个案为流量明星研究提供了微观视角的补充。
+                      宏观的产业分析和量化的数据研究，需要与微观的情感分析相互补充，
+                      才能完整把握数字时代偶像-粉丝关系的复杂性。
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="bg-white p-8 rounded-lg shadow-sm border">
+                <h3 class="serif text-xl font-semibold mb-6">肖战现象的普遍性启示</h3>
+
+                <div class="space-y-6">
+                  <div class="border-l-4 border-amber-600 pl-6">
+                    <h4 class="font-semibold mb-2">数字时代偶像-粉丝关系的典型形态</h4>
+                    <p class="text-gray-700">
+                      肖战案例揭示了数字时代偶像-粉丝关系的典型形态：
+                      情感投入与资本剥削的共生、群体认同与个体自主的张力、
+                      亚文化实践与主流价值的协商。这一形态并非中国特有，
+                      但在特定的制度环境中呈现出独特性。
+                    </p>
+                  </div>
+
+                  <div class="border-l-4 border-amber-600 pl-6">
+                    <h4 class="font-semibold mb-2">情感经济在文化产业的运作逻辑</h4>
+                    <p class="text-gray-700">
+                      肖战粉丝文化展示了情感经济在文化产业的完整运作逻辑：
+                      从情感生产到劳动投入，从价值实现到反馈强化，形成自我循环的闭环。
+                      理解这一逻辑，对于文化政策的制定、产业模式的创新、
+                      以及消费者权益的保护，均具有重要参考价值。
+                    </p>
+                  </div>
+
+                  <div class="border-l-4 border-amber-600 pl-6">
+                    <h4 class="font-semibold mb-2">青年亚文化与社会主流价值的协商机制</h4>
+                    <p class="text-gray-700">
+                      肖战粉丝文化的演变——从&#34;227事件&#34;的冲突到&#34;公益正能量&#34;的转向——
+                      揭示了青年亚文化与社会主流价值的协商机制。
+                      粉丝群体并非被动的文化消费者，而是积极的能动者，
+                      通过策略性的话语调整和实践创新，寻求亚文化空间的合法性与扩展可能。
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="bg-gradient-to-r from-amber-50 to-white p-8 rounded-lg border">
+                <h3 class="serif text-xl font-semibold mb-6">核心发现总结</h3>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div class="space-y-3">
+                    <h4 class="font-semibold text-amber-700">理论创新</h4>
+                    <ul class="text-sm text-gray-700 space-y-1">
+                      <li>• 熵减哲学框架的引入</li>
+                      <li>• 情感劳动理论的本土化</li>
+                      <li>• 粉丝民族志方法的应用</li>
+                    </ul>
+                  </div>
+
+                  <div class="space-y-3">
+                    <h4 class="font-semibold text-amber-700">实践启示</h4>
+                    <ul class="text-sm text-gray-700 space-y-1">
+                      <li>• 情感经济的闭环机制</li>
+                      <li>• 危机应对的话语转型</li>
+                      <li>• 亚文化合法性的建构路径</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="text-center py-8">
+                <blockquote class="serif text-2xl italic text-gray-800 mb-4">
+                  &#34;热爱可抵岁月漫长&#34;
+                </blockquote>
+                <cite class="text-sm text-gray-600">
+                  — 粉丝社群集体智慧的结晶，也是数字时代文化现象的生动写照
+                </cite>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-8">
+          <div class="max-w-4xl mx-auto">
+            <div class="text-center">
+              <h3 class="serif text-xl font-semibold mb-4">研究声明</h3>
+              <p class="text-gray-400 text-sm leading-relaxed max-w-2xl mx-auto">
+                本研究基于公开可得的网络文本进行分析，旨在探讨数字时代的粉丝文化现象。
+                研究遵循学术伦理，不涉及个人隐私侵犯，所有引用均已标注来源。
+                感谢知乎用户&#34;循山野清风&#34;等创作者提供的宝贵研究材料。
+              </p>
+
+              <div class="mt-8 pt-8 border-t border-gray-800">
+                <div class="flex flex-wrap justify-center gap-4 text-xs text-gray-500">
+                  <span>学术研究用途</span>
+                  <span>•</span>
+                  <span>文化现象分析</span>
+                  <span>•</span>
+                  <span>非商业性质</span>
+                  <span>•</span>
+                  <span>2025年6月</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </main>
+
+    <script>
+        // Initialize Mermaid with improved theme and contrast
+        mermaid.initialize({ 
+            startOnLoad: true,
+            theme: 'base',
+            themeVariables: {
+                // Primary colors with good contrast
+                primaryColor: '#fef3c7',
+                primaryTextColor: '#2d2d2d',
+                primaryBorderColor: '#8b7355',
+                lineColor: '#374151',
+                
+                // Secondary colors for variety while maintaining contrast
+                secondaryColor: '#f8fafc',
+                secondaryTextColor: '#2d2d2d',
+                secondaryBorderColor: '#8b7355',
+                
+                // Tertiary colors
+                tertiaryColor: '#f1f5f9',
+                tertiaryTextColor: '#2d2d2d',
+                tertiaryBorderColor: '#8b7355',
+                
+                // Background and general styling
+                background: '#ffffff',
+                mainBkg: '#ffffff',
+                secondBkg: '#f8fafc',
+                tertiaryBkg: '#f1f5f9',
+                
+                // Node styling with high contrast
+                nodeBkg: '#ffffff',
+                nodeTextColor: '#2d2d2d',
+                nodeBorder: '#8b7355',
+                
+                // Cluster styling
+                clusterBkg: '#f8fafc',
+                clusterBorder: '#8b7355',
+                
+                // Special nodes with high contrast colors
+                specialBkg: '#fef3c7',
+                specialTextColor: '#2d2d2d',
+                specialBorderColor: '#8b7355',
+                
+                // Error nodes (kept for completeness, not used in our diagrams)
+                errorBkg: '#fee2e2',
+                errorTextColor: '#2d2d2d',
+                errorBorderColor: '#dc2626',
+                
+                // Text styling for readability
+                textColor: '#2d2d2d',
+                fontFamily: 'Inter, Noto Sans SC, sans-serif',
+                fontSize: '14px',
+                
+                // Edge and arrow styling
+                edgeLabelBackground: '#ffffff',
+                edgeLabelText: '#2d2d2d',
+                
+                // Title and heading contrast
+                titleColor: '#2d2d2d',
+                
+                // Timeline specific colors
+                cScale0: '#fef3c7',
+                cScale1: '#f8fafc', 
+                cScale2: '#f1f5f9',
+                cScale3: '#fafafa',
+                cScale4: '#ffffff'
+            },
+            flowchart: {
+                useMaxWidth: false,
+                htmlLabels: true,
+                curve: 'basis',
+                padding: 20,
+                nodeSpacing: 50,
+                rankSpacing: 50
+            },
+            timeline: {
+                useMaxWidth: false,
+                padding: 20
+            },
+            // Set reasonable size limits
+            gantt: {
+                useMaxWidth: false
+            }
+        });
+
+        // Initialize Mermaid Controls for zoom and pan
+        function initializeMermaidControls() {
+            const containers = document.querySelectorAll('.mermaid-container');
+
+            containers.forEach(container => {
+            const mermaidElement = container.querySelector('.mermaid');
+            let scale = 1;
+            let isDragging = false;
+            let startX, startY, translateX = 0, translateY = 0;
+
+            // 触摸相关状态
+            let isTouch = false;
+            let touchStartTime = 0;
+            let initialDistance = 0;
+            let initialScale = 1;
+            let isPinching = false;
+
+            // Zoom controls
+            const zoomInBtn = container.querySelector('.zoom-in');
+            const zoomOutBtn = container.querySelector('.zoom-out');
+            const resetBtn = container.querySelector('.reset-zoom');
+            const fullscreenBtn = container.querySelector('.fullscreen');
+
+            function updateTransform() {
+                mermaidElement.style.transform = `translate(${translateX}px, ${translateY}px) scale(${scale})`;
+
+                if (scale > 1) {
+                container.classList.add('zoomed');
+                } else {
+                container.classList.remove('zoomed');
+                }
+
+                mermaidElement.style.cursor = isDragging ? 'grabbing' : 'grab';
+            }
+
+            if (zoomInBtn) {
+                zoomInBtn.addEventListener('click', () => {
+                scale = Math.min(scale * 1.25, 4);
+                updateTransform();
+                });
+            }
+
+            if (zoomOutBtn) {
+                zoomOutBtn.addEventListener('click', () => {
+                scale = Math.max(scale / 1.25, 0.3);
+                if (scale <= 1) {
+                    translateX = 0;
+                    translateY = 0;
+                }
+                updateTransform();
+                });
+            }
+
+            if (resetBtn) {
+                resetBtn.addEventListener('click', () => {
+                scale = 1;
+                translateX = 0;
+                translateY = 0;
+                updateTransform();
+                });
+            }
+
+            if (fullscreenBtn) {
+                fullscreenBtn.addEventListener('click', () => {
+                if (container.requestFullscreen) {
+                    container.requestFullscreen();
+                } else if (container.webkitRequestFullscreen) {
+                    container.webkitRequestFullscreen();
+                } else if (container.msRequestFullscreen) {
+                    container.msRequestFullscreen();
+                }
+                });
+            }
+
+            // Mouse Events
+            mermaidElement.addEventListener('mousedown', (e) => {
+                if (isTouch) return; // 如果是触摸设备，忽略鼠标事件
+
+                isDragging = true;
+                startX = e.clientX - translateX;
+                startY = e.clientY - translateY;
+                mermaidElement.style.cursor = 'grabbing';
+                updateTransform();
+                e.preventDefault();
+            });
+
+            document.addEventListener('mousemove', (e) => {
+                if (isDragging && !isTouch) {
+                translateX = e.clientX - startX;
+                translateY = e.clientY - startY;
+                updateTransform();
+                }
+            });
+
+            document.addEventListener('mouseup', () => {
+                if (isDragging && !isTouch) {
+                isDragging = false;
+                mermaidElement.style.cursor = 'grab';
+                updateTransform();
+                }
+            });
+
+            document.addEventListener('mouseleave', () => {
+                if (isDragging && !isTouch) {
+                isDragging = false;
+                mermaidElement.style.cursor = 'grab';
+                updateTransform();
+                }
+            });
+
+            // 获取两点之间的距离
+            function getTouchDistance(touch1, touch2) {
+                return Math.hypot(
+                touch2.clientX - touch1.clientX,
+                touch2.clientY - touch1.clientY
+                );
+            }
+
+            // Touch Events - 触摸事件处理
+            mermaidElement.addEventListener('touchstart', (e) => {
+                isTouch = true;
+                touchStartTime = Date.now();
+
+                if (e.touches.length === 1) {
+                // 单指拖动
+                isPinching = false;
+                isDragging = true;
+
+                const touch = e.touches[0];
+                startX = touch.clientX - translateX;
+                startY = touch.clientY - translateY;
+
+                } else if (e.touches.length === 2) {
+                // 双指缩放
+                isPinching = true;
+                isDragging = false;
+
+                const touch1 = e.touches[0];
+                const touch2 = e.touches[1];
+                initialDistance = getTouchDistance(touch1, touch2);
+                initialScale = scale;
+                }
+
+                e.preventDefault();
+            }, { passive: false });
+
+            mermaidElement.addEventListener('touchmove', (e) => {
+                if (e.touches.length === 1 && isDragging && !isPinching) {
+                // 单指拖动
+                const touch = e.touches[0];
+                translateX = touch.clientX - startX;
+                translateY = touch.clientY - startY;
+                updateTransform();
+
+                } else if (e.touches.length === 2 && isPinching) {
+                // 双指缩放
+                const touch1 = e.touches[0];
+                const touch2 = e.touches[1];
+                const currentDistance = getTouchDistance(touch1, touch2);
+
+                if (initialDistance > 0) {
+                    const newScale = Math.min(Math.max(
+                    initialScale * (currentDistance / initialDistance),
+                    0.3
+                    ), 4);
+                    scale = newScale;
+                    updateTransform();
+                }
+                }
+
+                e.preventDefault();
+            }, { passive: false });
+
+            mermaidElement.addEventListener('touchend', (e) => {
+                // 重置状态
+                if (e.touches.length === 0) {
+                isDragging = false;
+                isPinching = false;
+                initialDistance = 0;
+
+                // 延迟重置isTouch，避免鼠标事件立即触发
+                setTimeout(() => {
+                    isTouch = false;
+                }, 100);
+                } else if (e.touches.length === 1 && isPinching) {
+                // 从双指变为单指，切换为拖动模式
+                isPinching = false;
+                isDragging = true;
+
+                const touch = e.touches[0];
+                startX = touch.clientX - translateX;
+                startY = touch.clientY - translateY;
+                }
+
+                updateTransform();
+            });
+
+            mermaidElement.addEventListener('touchcancel', (e) => {
+                isDragging = false;
+                isPinching = false;
+                initialDistance = 0;
+
+                setTimeout(() => {
+                isTouch = false;
+                }, 100);
+
+                updateTransform();
+            });
+
+            // Enhanced wheel zoom with better center point handling
+            container.addEventListener('wheel', (e) => {
+                e.preventDefault();
+                const rect = container.getBoundingClientRect();
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+
+                const delta = e.deltaY > 0 ? 0.9 : 1.1;
+                const newScale = Math.min(Math.max(scale * delta, 0.3), 4);
+
+                // Adjust translation to zoom towards center
+                if (newScale !== scale) {
+                const scaleDiff = newScale / scale;
+                translateX = translateX * scaleDiff;
+                translateY = translateY * scaleDiff;
+                scale = newScale;
+
+                if (scale <= 1) {
+                    translateX = 0;
+                    translateY = 0;
+                }
+
+                updateTransform();
+                }
+            });
+
+            // Initialize display
+            updateTransform();
+            });
+        }
+
+        // Call the function to initialize controls
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeMermaidControls();
+        });
+
+        // Smooth scrolling for TOC links
+        document.querySelectorAll('.toc-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Update active TOC link on scroll
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('section[id]');
+            const tocLinks = document.querySelectorAll('.toc-link');
+            
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (window.scrollY >= sectionTop - 200) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            tocLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // Add loading animation for images
+        document.querySelectorAll('img').forEach(img => {
+            img.addEventListener('load', function() {
+                this.style.opacity = '1';
+            });
+            img.style.opacity = '0';
+            img.style.transition = 'opacity 0.3s ease';
+        });
+
+        // Add intersection observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Apply fade-in animation to main sections
+        document.querySelectorAll('section').forEach(section => {
+            section.style.opacity = '0';
+            section.style.transform = 'translateY(20px)';
+            section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(section);
+        });
+    </script>
+  
+
+</body></html>
