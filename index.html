@@ -1,1850 +1,219 @@
-<!DOCTYPE html><html lang="zh-CN"><head>
-    <meta charset="utf-8"/>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <title>肖战与粉丝的双向奔赴：一种隐性文化算法的深度解析</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&amp;family=Noto+Sans+SC:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
-    <script src="https://cdn.jsdelivr.net/npm/mermaid@10.6.1/dist/mermaid.min.js"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        'serif': ['Noto Serif SC', 'serif'],
-                        'sans': ['Noto Sans SC', 'sans-serif'],
-                    },
-                    colors: {
-                        'warm-beige': '#F5F1EB',
-                        'deep-blue': '#1E3A5F',
-                        'soft-gray': '#6B7280',
-                        'accent-gold': '#D4AF37',
-                        'muted-red': '#B91C1C',
-                    }
-                }
-            }
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>maoqiqi-cloud · 杂志主页</title>
+  <meta name="description" content="一份持续生长的个人杂志：观察、洞察、写作与长期主义。" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@500;600;700&family=Noto+Sans+SC:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            serif: ['Noto Serif SC', 'serif'],
+            sans: ['Noto Sans SC', 'sans-serif'],
+          }
         }
-    </script>
-    <style>
-        body {
-            background: linear-gradient(135deg, #F5F1EB 0%, #E8E2D5 100%);
-            font-family: 'Noto Sans SC', sans-serif;
-        }
-        .hero-gradient {
-            background: linear-gradient(135deg, rgba(30, 58, 95, 0.9) 0%, rgba(217, 119, 6, 0.8) 50%, rgba(185, 28, 28, 0.7) 100%);
-        }
-        .text-shadow {
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-        }
-        .glass-effect {
-            backdrop-filter: blur(10px);
-            background: rgba(255, 255, 255, 0.1);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-        }
-        .citation-link {
-            color: #D4AF37;
-            text-decoration: none;
-            border-bottom: 1px dotted #D4AF37;
-        }
-        .citation-link:hover {
-            background-color: rgba(212, 175, 55, 0.1);
-        }
-        
-        /* Mermaid chart styling */
-        .mermaid-container {
-            display: flex;
-            justify-content: center;
-            min-height: 300px;
-            max-height: 800px;
-            background: #ffffff;
-            border: 2px solid #e5e7eb;
-            border-radius: 12px;
-            padding: 30px;
-            margin: 30px 0;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .mermaid-container .mermaid {
-            width: 100%;
-            max-width: 100%;
-            height: 100%;
-            cursor: grab;
-            transition: transform 0.3s ease;
-            transform-origin: center center;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            touch-action: none;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
-            user-select: none;
-        }
-
-        .mermaid-container .mermaid svg {
-            max-width: 100%;
-            height: 100%;
-            display: block;
-            margin: 0 auto;
-        }
-
-        .mermaid-container .mermaid:active {
-            cursor: grabbing;
-        }
-
-        .mermaid-container.zoomed .mermaid {
-            height: 100%;
-            width: 100%;
-            cursor: grab;
-        }
-
-        .mermaid-controls {
-            position: absolute;
-            top: 15px;
-            right: 15px;
-            display: flex;
-            gap: 10px;
-            z-index: 20;
-            background: rgba(255, 255, 255, 0.95);
-            padding: 8px;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        .mermaid-control-btn {
-            background: #ffffff;
-            border: 1px solid #d1d5db;
-            border-radius: 6px;
-            padding: 10px;
-            cursor: pointer;
-            transition: all 0.2s ease;
-            color: #374151;
-            font-size: 14px;
-            min-width: 36px;
-            height: 36px;
-            text-align: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .mermaid-control-btn:hover {
-            background: #f8fafc;
-            border-color: #3b82f6;
-            color: #3b82f6;
-            transform: translateY(-1px);
-        }
-
-    .mermaid-control-btn:active {
-        transform: scale(0.95);
+      }
     }
-
-    @media (max-width: 1024px) {
-        .mermaid-control-btn:not(.reset-zoom) {
-            display: none;
-        }
-        .mermaid-controls {
-            top: auto;
-            bottom: 15px;
-            right: 15px;
-        }
-    }
-</style>
-  <base target="_blank">
+  </script>
 </head>
 
-  <body class="bg-warm-beige text-gray-800">
-    <!-- Hamburger button for mobile -->
-    <button id="toc-toggle" class="fixed top-4 left-4 z-50 p-2 bg-deep-blue text-white rounded-md shadow-lg md:hidden">
-      <i class="fas fa-bars"></i>
-    </button>
-
-    <!-- Fixed Table of Contents -->
-    <nav id="toc-nav" class="fixed left-0 top-0 h-full w-80 bg-white/90 backdrop-blur-lg border-r border-gray-200 z-50 overflow-y-auto transform -translate-x-full md:translate-x-0 transition-transform duration-300">
-      <div class="p-6">
-        <h3 class="font-serif font-bold text-deep-blue text-lg mb-4">目录导航</h3>
-        <ul class="space-y-2 text-sm">
-          <li>
-            <a class="block py-2 px-3 text-soft-gray hover:text-deep-blue hover:bg-gray-50 rounded transition-colors" href="#hero">引言与概述</a>
-          </li>
-          <li>
-            <a class="block py-2 px-3 text-soft-gray hover:text-deep-blue hover:bg-gray-50 rounded transition-colors" href="#framework">核心框架：三重共振</a>
-          </li>
-          <li>
-            <a class="block py-2 px-3 text-soft-gray hover:text-deep-blue hover:bg-gray-50 rounded transition-colors" href="#individual">肖战的个体特质</a>
-          </li>
-          <li>
-            <a class="block py-2 px-3 text-soft-gray hover:text-deep-blue hover:bg-gray-50 rounded transition-colors" href="#psychology">粉丝心理机制</a>
-          </li>
-          <li>
-            <a class="block py-2 px-3 text-soft-gray hover:text-deep-blue hover:bg-gray-50 rounded transition-colors" href="#ecosystem">粉丝生态组织</a>
-          </li>
-          <li>
-            <a class="block py-2 px-3 text-soft-gray hover:text-deep-blue hover:bg-gray-50 rounded transition-colors" href="#interaction">双向奔赴机制</a>
-          </li>
-          <li>
-            <a class="block py-2 px-3 text-soft-gray hover:text-deep-blue hover:bg-gray-50 rounded transition-colors" href="#visualization">可视化呈现</a>
-          </li>
-          <li>
-            <a class="block py-2 px-3 text-soft-gray hover:text-deep-blue hover:bg-gray-50 rounded transition-colors" href="#theory">理论延伸</a>
-          </li>
-        </ul>
+<body class="bg-neutral-50 text-neutral-900 font-sans">
+  <!-- Top bar -->
+  <header class="sticky top-0 z-50 backdrop-blur bg-neutral-50/80 border-b border-neutral-200">
+    <div class="max-w-6xl mx-auto px-5 py-4 flex items-center justify-between">
+      <div class="flex items-baseline gap-3">
+        <a href="index.html" class="font-serif text-xl font-semibold tracking-tight">maoqiqi-cloud</a>
+        <span class="text-sm text-neutral-500 hidden sm:inline">个人杂志 · 长期沉淀</span>
       </div>
-    </nav>
+      <nav class="flex items-center gap-4 text-sm">
+        <a class="hover:underline" href="#featured">精选</a>
+        <a class="hover:underline" href="#columns">栏目</a>
+        <a class="hover:underline" href="#latest">最新</a>
+        <a class="hover:underline" href="pages/about.html">关于</a>
+      </nav>
+    </div>
+  </header>
 
-    <!-- Toggle TOC on mobile -->
-    <script>
-        document.getElementById('toc-toggle').addEventListener('click', function() {
-            const tocNav = document.getElementById('toc-nav');
-            tocNav.classList.toggle('-translate-x-full');
-            tocNav.classList.toggle('translate-x-0');
-        });
+  <main class="max-w-6xl mx-auto px-5 py-10">
+    <!-- Hero / cover -->
+    <section class="grid lg:grid-cols-12 gap-6 items-stretch">
+      <div class="lg:col-span-8 rounded-3xl border border-neutral-200 bg-white p-7 shadow-sm">
+        <div class="flex items-center gap-3 text-xs text-neutral-500">
+          <span class="inline-flex items-center rounded-full bg-neutral-100 px-3 py-1">本期封面</span>
+          <span>结构分析 · 隐性机制 · 文化算法</span>
+        </div>
 
-        // Close TOC when clicking outside on mobile
-        document.addEventListener('click', function(event) {
-            const tocNav = document.getElementById('toc-nav');
-            const tocToggle = document.getElementById('toc-toggle');
-            
-            // Only if we are in mobile view and TOC is open
-            if (window.innerWidth < 768 && !tocNav.classList.contains('-translate-x-full')) {
-                // Check if click is outside TOC and not on toggle button
-                if (!tocNav.contains(event.target) && event.target !== tocToggle) {
-                    tocNav.classList.add('-translate-x-full');
-                    tocNav.classList.remove('translate-x-0');
-                }
-            }
-        });
-    </script>
+        <h1 class="mt-5 font-serif text-3xl sm:text-4xl font-semibold leading-tight">
+          肖战与粉丝的双向奔赴：一种隐性文化算法的深度解析
+        </h1>
 
-    <!-- Main Content -->
-    <main class="ml-0 md:ml-80 min-h-screen">
-      <!-- Hero Section -->
-      <section class="relative min-h-screen flex items-center" id="hero">
-        <div class="hero-gradient absolute inset-0 z-0"></div>
-        <img alt="肖战舞台表演艺术光影视效" class="absolute inset-0 w-full h-full object-cover opacity-30 z-0" src="https://kimi-web-img.moonshot.cn/img/k.sinaimg.cn/9d9b94e74ffc9c7809fe90046ed4e98040583e23.jpg" size="wallpaper" aspect="wide" style="photo" query="肖战 舞台 艺术 光影" referrerpolicy="no-referrer" data-modified="1" data-score="0.00"/>
+        <p class="mt-4 text-neutral-600 leading-relaxed">
+          不止是“喜欢”，而是一套可复制的连接机制：信任如何生成、群体如何自组织、意义如何在互动中被共同生产。
+          这篇文章试图把那条看不见的“算法”，用结构化语言说清楚。
+        </p>
 
-        <div class="relative z-10 max-w-6xl mx-auto px-4 sm:px-8 py-16">
-          <!-- Bento Grid Layout -->
-          <div class="grid grid-cols-1 md:grid-cols-12 gap-6 mb-12">
-            <!-- Main Title -->
-            <div class="md:col-span-8 glass-effect rounded-2xl p-4 sm:p-8">
-              <h1 class="font-serif font-bold text-4xl sm:text-5xl lg:text-6xl text-white mb-6 text-shadow italic leading-tight">
-                肖战与粉丝的双向奔赴
-              </h1>
-              <p class="text-lg sm:text-xl text-white/90 mb-4 font-light">
-                一种隐性文化算法的深度解析
-              </p>
-              <div class="text-base sm:text-lg text-white/80 font-serif">
-                个体特质、粉丝心理、时代情绪的三重共振机制
-              </div>
-            </div>
+        <div class="mt-6 flex flex-wrap items-center gap-3">
+          <a href="pages/xz-algorithm.html"
+             class="inline-flex items-center justify-center rounded-full bg-neutral-900 px-5 py-2.5 text-sm text-white hover:bg-neutral-800">
+            阅读封面文章 →
+          </a>
+          <a href="#latest"
+             class="inline-flex items-center justify-center rounded-full border border-neutral-300 px-5 py-2.5 text-sm hover:bg-neutral-100">
+            浏览最新
+          </a>
+          <span class="text-xs text-neutral-500">阅读时长：约 12–18 分钟（可自行调整）</span>
+        </div>
 
-            <!-- Key Metrics -->
-            <div class="md:col-span-4 space-y-4">
-              <div class="glass-effect rounded-xl p-4 sm:p-6 text-center">
-                <div class="text-2xl sm:text-3xl font-bold text-accent-gold mb-2">9741万</div>
-                <div class="text-xs sm:text-sm text-white/80">超话热力值峰值</div>
-              </div>
-              <div class="glass-effect rounded-xl p-4 sm:p-6 text-center">
-                <div class="text-2xl sm:text-3xl font-bold text-accent-gold mb-2">7年</div>
-                <div class="text-xs sm:text-sm text-white/80">长情陪伴周期</div>
-              </div>
-              <div class="glass-effect rounded-xl p-4 sm:p-6 text-center">
-                <div class="text-2xl sm:text-3xl font-bold text-accent-gold mb-2">30.6万</div>
-                <div class="text-xs sm:text-sm text-white/80">单日发帖量记录</div>
-              </div>
-            </div>
-          </div>
+        <div class="mt-7 flex flex-wrap gap-2 text-xs">
+          <span class="rounded-full bg-neutral-100 px-3 py-1">#文化机制</span>
+          <span class="rounded-full bg-neutral-100 px-3 py-1">#群体心理</span>
+          <span class="rounded-full bg-neutral-100 px-3 py-1">#品牌与叙事</span>
+          <span class="rounded-full bg-neutral-100 px-3 py-1">#隐性算法</span>
+        </div>
+      </div>
 
-          <!-- Executive Summary -->
-          <div class="glass-effect rounded-2xl p-4 sm:p-8 w-full">
-            <h2 class="font-serif font-bold text-2xl text-white mb-6">核心洞察</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-white/90">
-              <div class="space-y-3">
-                <h3 class="font-semibold text-accent-gold">隐性文化算法</h3>
-                <p class="text-sm leading-relaxed">
-                  肖战与粉丝的&#34;双向奔赴&#34;构成可解析的文化算法，以作品矩阵与人格魅力为输入，通过粉丝组织化的情感劳动处理，输出可持续的影响力生态。
-                </p>
-              </div>
-              <div class="space-y-3">
-                <h3 class="font-semibold text-accent-gold">三重共振机制</h3>
-                <p class="text-sm leading-relaxed">
-                  个体特质、粉丝心理、时代情绪的协同共振，形成不可复制的算法核心。时机窗口、危机转化能力与气质独特性的叠加构成算法壁垒。
-                </p>
-              </div>
-              <div class="space-y-3">
-                <h3 class="font-semibold text-accent-gold">情感成分分析</h3>
-                <p class="text-sm leading-relaxed">
-                  粉丝情感包含审美、认同、保护、成就四重成分，深嵌于中国文化背景与网络社会结构之中，构建&#34;情感共同体&#34;的独特形态。
-                </p>
-              </div>
+      <!-- Sidebar -->
+      <aside class="lg:col-span-4 rounded-3xl border border-neutral-200 bg-white p-7 shadow-sm">
+        <h2 class="font-serif text-lg font-semibold">编辑部</h2>
+        <p class="mt-3 text-sm text-neutral-600 leading-relaxed">
+          这里是一份个人杂志：把“生活、商业、意识、文化”的隐线拆开，
+          用更清醒、更温柔、更可用的方式重新编织。
+        </p>
+
+        <div class="mt-6 space-y-3">
+          <a class="block rounded-2xl border border-neutral-200 p-4 hover:bg-neutral-50" href="pages/about.html">
+            <div class="text-sm font-medium">关于我</div>
+            <div class="text-xs text-neutral-500 mt-1">我写什么，以及为什么写。</div>
+          </a>
+
+          <!-- 简易“订阅”入口：先用 mailto，未来可换成 Beehiiv/Substack/微信等 -->
+          <a class="block rounded-2xl border border-neutral-200 p-4 hover:bg-neutral-50"
+             href="mailto:your@email.com?subject=Subscribe%20maoqiqi-cloud&body=Hi%2C%20I%20want%20to%20subscribe.">
+            <div class="text-sm font-medium">订阅更新</div>
+            <div class="text-xs text-neutral-500 mt-1">先用邮箱占位，后续可升级为真正订阅。</div>
+          </a>
+
+          <div class="rounded-2xl bg-neutral-50 p-4 border border-neutral-200">
+            <div class="text-sm font-medium">栏目导航</div>
+            <div class="mt-2 flex flex-wrap gap-2 text-xs">
+              <a href="#columns" class="rounded-full bg-white px-3 py-1 border border-neutral-200 hover:bg-neutral-100">脱NPC实验室</a>
+              <a href="#columns" class="rounded-full bg-white px-3 py-1 border border-neutral-200 hover:bg-neutral-100">如梦之梦</a>
+              <a href="#columns" class="rounded-full bg-white px-3 py-1 border border-neutral-200 hover:bg-neutral-100">商业洞察</a>
+              <a href="#columns" class="rounded-full bg-white px-3 py-1 border border-neutral-200 hover:bg-neutral-100">生活智慧</a>
             </div>
           </div>
         </div>
-      </section>
+      </aside>
+    </section>
 
-      <!-- Core Framework Section -->
-      <section class="py-20 bg-white" id="framework">
-        <div class="max-w-6xl mx-auto px-8">
-          <h2 class="font-serif font-bold text-4xl text-deep-blue mb-12 text-center">核心框架：三重共振作为文化算法原型</h2>
+    <!-- Featured -->
+    <section id="featured" class="mt-12">
+      <div class="flex items-end justify-between gap-4">
+        <h2 class="font-serif text-2xl font-semibold">精选</h2>
+        <a href="#latest" class="text-sm text-neutral-600 hover:underline">查看全部 →</a>
+      </div>
 
-          <!-- Triple Resonance Model -->
-          <div class="mb-16">
-            <div class="mermaid-container">
-              <div class="mermaid-controls">
-                <button class="mermaid-control-btn zoom-in" title="放大">
-                  <i class="fas fa-search-plus"></i>
-                </button>
-                <button class="mermaid-control-btn zoom-out" title="缩小">
-                  <i class="fas fa-search-minus"></i>
-                </button>
-                <button class="mermaid-control-btn reset-zoom" title="重置">
-                  <i class="fas fa-expand-arrows-alt"></i>
-                </button>
-                <button class="mermaid-control-btn fullscreen" title="全屏查看">
-                  <i class="fas fa-expand"></i>
-                </button>
-              </div>
-              <div class="mermaid">
-                graph TB
-                A[&#34;三重共振模型&#34;] --&gt; B[&#34;个体特质层&#34;]
-                A --&gt; C[&#34;粉丝心理层&#34;]
-                A --&gt; D[&#34;时代情绪层&#34;]
-
-                B --&gt; B1[&#34;作品矩阵&#34;]
-                B --&gt; B2[&#34;人格魅力&#34;]
-                B --&gt; B3[&#34;真实感营造&#34;]
-
-                C --&gt; C1[&#34;情感联结&#34;]
-                C --&gt; C2[&#34;价值共创&#34;]
-                C --&gt; C3[&#34;群体认同&#34;]
-
-                D --&gt; D1[&#34;草根逆袭叙事&#34;]
-                D --&gt; D2[&#34;君子人格回响&#34;]
-                D --&gt; D3[&#34;正能量偶像&#34;]
-
-                B1 --&gt; E[&#34;隐性文化算法&#34;]
-                B2 --&gt; E
-                B3 --&gt; E
-                C1 --&gt; E
-                C2 --&gt; E
-                C3 --&gt; E
-                D1 --&gt; E
-                D2 --&gt; E
-                D3 --&gt; E
-
-                style A fill:#1E3A5F,stroke:#ffffff,stroke-width:3px,color:#ffffff
-                style E fill:#D4AF37,stroke:#1E3A5F,stroke-width:3px,color:#1E3A5F
-                style B fill:#f8fafc,stroke:#1E3A5F,stroke-width:2px,color:#1E3A5F
-                style C fill:#f8fafc,stroke:#D4AF37,stroke-width:2px,color:#1E3A5F
-                style D fill:#f8fafc,stroke:#B91C1C,stroke-width:2px,color:#1E3A5F
-              </div>
-            </div>
+      <div class="mt-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <!-- Card 1 -->
+        <a href="pages/xz-algorithm.html" class="group rounded-3xl border border-neutral-200 bg-white p-6 shadow-sm hover:shadow-md transition">
+          <div class="text-xs text-neutral-500">封面 · 结构分析</div>
+          <div class="mt-2 font-serif text-lg font-semibold group-hover:underline">
+            肖战与粉丝的双向奔赴：隐性文化算法
           </div>
+          <p class="mt-3 text-sm text-neutral-600 leading-relaxed">
+            从“情感”走向“机制”：理解双向奔赴如何被稳定生产与自我强化。
+          </p>
+          <div class="mt-4 text-xs text-neutral-500">#文化机制 #群体心理</div>
+        </a>
 
-          <!-- Individual Trait Layer -->
-          <div class="bg-gray-50 rounded-2xl p-8 mb-12">
-            <h3 class="font-serif font-bold text-2xl text-deep-blue mb-6">个体特质层：作品矩阵与人格魅力的协同输出</h3>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div>
-                <h4 class="font-semibold text-lg mb-4 text-soft-gray">作品矩阵构建</h4>
-                <p class="text-gray-700 leading-relaxed mb-4">
-                  肖战构建了跨越古装、现代、军旅、武侠等多元题材的&#34;职业护城河&#34;：
-                  <a class="citation-link" href="https://m.yule.360.com/content/4841751">2019年《陈情令》中的魏无羡成为现象级IP符号</a>，
-                  <a class="citation-link" href="https://m.yule.360.com/content/4841751">2023年《梦中的那片海》的肖春生映照时代群像</a>，
-                  <a class="citation-link" href="https://m.yule.360.com/content/4841751">2024年《藏海传》融入非遗元素的角色被《人民日报》认证为文化输出标杆</a>，
-                  <a class="citation-link" href="https://m.yule.360.com/content/4841751">2025年徐克执导的《射雕英雄传：侠之大者》登顶武侠片票房冠军</a>。
-                </p>
-                <div class="bg-white p-4 rounded-lg">
-                  <div class="text-sm text-soft-gray mb-2">2025年成就</div>
-                  <div class="text-2xl font-bold text-deep-blue">10亿+</div>
-                  <div class="text-sm text-gray-600">全年一番电影票房突破</div>
-                </div>
-              </div>
-              <div>
-                <h4 class="font-semibold text-lg mb-4 text-soft-gray">人格魅力编码</h4>
-                <p class="text-gray-700 leading-relaxed mb-4">
-                  肖战实现了<strong>&#34;角色与本人特质共振&#34;</strong>的演绎方式。
-                  <a class="citation-link" href="https://m.yule.360.com/content/4841751">徐克导演选中其出演郭靖，正是看中其气质与角色内核的高度契合</a>。
-                  这种契合源于肖战个人经历与角色设定的深层同构：从设计师到演员的跨界转型、素人出道的平民底色、舆论风暴中的情绪稳定表现。
-                </p>
-                <div class="space-y-3">
-                  <div class="flex items-center space-x-3">
-                    <div class="w-3 h-3 bg-accent-gold rounded-full"></div>
-                    <span class="text-sm">坚韧内核：危机中的情绪稳定性示范</span>
-                  </div>
-                  <div class="flex items-center space-x-3">
-                    <div class="w-3 h-3 bg-accent-gold rounded-full"></div>
-                    <span class="text-sm">谦逊姿态：公众场合的自我降级策略</span>
-                  </div>
-                  <div class="flex items-center space-x-3">
-                    <div class="w-3 h-3 bg-accent-gold rounded-full"></div>
-                    <span class="text-sm">专业主义：片场敬业与角色沉浸的可见性</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+        <!-- Card placeholders -->
+        <div class="rounded-3xl border border-dashed border-neutral-300 bg-white p-6">
+          <div class="text-xs text-neutral-500">即将上线</div>
+          <div class="mt-2 font-serif text-lg font-semibold">下一篇精选</div>
+          <p class="mt-3 text-sm text-neutral-600 leading-relaxed">
+            你把新文章放到 pages/，然后在这里加一个卡片链接即可。
+          </p>
+          <div class="mt-4 text-xs text-neutral-500">#占位</div>
+        </div>
 
-          <!-- Fan Psychology Layer -->
-          <div class="bg-gray-50 rounded-2xl p-8 mb-12">
-            <h3 class="font-serif font-bold text-2xl text-deep-blue mb-6">粉丝心理层：情感联结与价值共创的反馈机制</h3>
-            <div class="mb-6">
-              <p class="text-gray-700 leading-relaxed">
-                <a class="citation-link" href="http://ir.swupl.edu.cn:8080/xnzfdx/item/itemDetail/76432.shtml">西南政法大学的学术研究揭示了粉丝对肖战情感的三重起源机制</a>：
-                偶像符号化满足粉丝需求、偶像—粉丝的双重表演策略、粉丝虚拟情感的转移投射。
-                <a class="citation-link" href="https://www.ecnu.edu.cn/info/1095/2132.htm">华东师范大学的研究指出，粉丝群体通过统一的粉丝名称、应援色、应援物、打榜做数据、购买代言等行为，获得了强烈的群体认同感</a>。
-              </p>
-            </div>
+        <div class="rounded-3xl border border-dashed border-neutral-300 bg-white p-6">
+          <div class="text-xs text-neutral-500">即将上线</div>
+          <div class="mt-2 font-serif text-lg font-semibold">专题集合</div>
+          <p class="mt-3 text-sm text-neutral-600 leading-relaxed">
+            未来你可以做“专题页”：把同一系列文章聚合成一个入口。
+          </p>
+          <div class="mt-4 text-xs text-neutral-500">#专题</div>
+        </div>
+      </div>
+    </section>
 
-            <!-- Emotional Labor Types -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              <div class="bg-white p-6 rounded-xl border border-gray-200">
-                <div class="text-accent-gold text-2xl mb-3">
-                  <i class="fas fa-chart-line"></i>
-                </div>
-                <h4 class="font-semibold mb-2">数据劳动</h4>
-                <p class="text-sm text-gray-600">打榜、控评、热搜维护的仪式化实践</p>
-                <div class="text-xs text-muted-red mt-2">
-                  <a class="citation-link" href="https://www.sina.cn/news/detail/5256332626363703.html">2026年&#34;超话连爆7小时&#34;事件</a>
-                </div>
-              </div>
-              <div class="bg-white p-6 rounded-xl border border-gray-200">
-                <div class="text-accent-gold text-2xl mb-3">
-                  <i class="fas fa-shopping-cart"></i>
-                </div>
-                <h4 class="font-semibold mb-2">消费劳动</h4>
-                <p class="text-sm text-gray-600">代言购买、专辑冲销量的经济支持</p>
-                <div class="text-xs text-muted-red mt-2">
-                  <a class="citation-link" href="https://www.jiemian.com/article/4683059.html">《光点》专辑吉尼斯世界纪录</a>
-                </div>
-              </div>
-              <div class="bg-white p-6 rounded-xl border border-gray-200">
-                <div class="text-accent-gold text-2xl mb-3">
-                  <i class="fas fa-paint-brush"></i>
-                </div>
-                <h4 class="font-semibold mb-2">内容劳动</h4>
-                <p class="text-sm text-gray-600">二创生产、安利文案、表情包制作</p>
-                <div class="text-xs text-muted-red mt-2">
-                  1117个原创视频博主
-                </div>
-              </div>
-              <div class="bg-white p-6 rounded-xl border border-gray-200">
-                <div class="text-accent-gold text-2xl mb-3">
-                  <i class="fas fa-heart"></i>
-                </div>
-                <h4 class="font-semibold mb-2">公益劳动</h4>
-                <p class="text-sm text-gray-600">以偶像名义开展的捐赠与志愿服务</p>
-                <div class="text-xs text-muted-red mt-2">
-                  <a class="citation-link" href="https://www.jiemian.com/article/4115924.html">2020年疫情捐助2778次</a>
-                </div>
-              </div>
-            </div>
-          </div>
+    <!-- Columns -->
+    <section id="columns" class="mt-14">
+      <h2 class="font-serif text-2xl font-semibold">栏目</h2>
+      <p class="mt-2 text-sm text-neutral-600">杂志的骨架：你未来写作的长期容器。</p>
 
-          <!-- Era Emotion Layer -->
-          <div class="bg-gray-50 rounded-2xl p-8">
-            <h3 class="font-serif font-bold text-2xl text-deep-blue mb-6">时代情绪层：社会心理需求与集体认同的共振场域</h3>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div class="text-center">
-                <div class="bg-accent-gold/20 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <i class="fas fa-seedling text-2xl text-accent-gold"></i>
-                </div>
-                <h4 class="font-semibold mb-2">草根逆袭叙事</h4>
-                <p class="text-sm text-gray-600">素人出道的平民底色激活&#34;寒门出贵子&#34;的文化脚本</p>
-              </div>
-              <div class="text-center">
-                <div class="bg-accent-gold/20 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <i class="fas fa-balance-scale text-2xl text-accent-gold"></i>
-                </div>
-                <h4 class="font-semibold mb-2">君子人格回响</h4>
-                <p class="text-sm text-gray-600">温润如玉的传统美学与现代专业主义的融合</p>
-              </div>
-              <div class="text-center">
-                <div class="bg-accent-gold/20 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <i class="fas fa-star text-2xl text-accent-gold"></i>
-                </div>
-                <h4 class="font-semibold mb-2">正能量偶像</h4>
-                <p class="text-sm text-gray-600">主流话语契合与家国情怀的嫁接策略</p>
-              </div>
+      <div class="mt-6 grid md:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div class="rounded-3xl border border-neutral-200 bg-white p-6 shadow-sm">
+          <div class="text-xs text-neutral-500">COLUMN 01</div>
+          <div class="mt-2 font-serif text-lg font-semibold">脱NPC实验室</div>
+          <p class="mt-3 text-sm text-neutral-600 leading-relaxed">意识、选择、自由、显化：把“觉醒”落地为方法。</p>
+        </div>
+
+        <div class="rounded-3xl border border-neutral-200 bg-white p-6 shadow-sm">
+          <div class="text-xs text-neutral-500">COLUMN 02</div>
+          <div class="mt-2 font-serif text-lg font-semibold">如梦之梦</div>
+          <p class="mt-3 text-sm text-neutral-600 leading-relaxed">梦中人互为镜像：叙事、宿命、慈悲与自他交换。</p>
+        </div>
+
+        <div class="rounded-3xl border border-neutral-200 bg-white p-6 shadow-sm">
+          <div class="text-xs text-neutral-500">COLUMN 03</div>
+          <div class="mt-2 font-serif text-lg font-semibold">商业洞察</div>
+          <p class="mt-3 text-sm text-neutral-600 leading-relaxed">周期、结构、系统套利：把判断力做成可复用模型。</p>
+        </div>
+
+        <div class="rounded-3xl border border-neutral-200 bg-white p-6 shadow-sm">
+          <div class="text-xs text-neutral-500">COLUMN 04</div>
+          <div class="mt-2 font-serif text-lg font-semibold">生活智慧</div>
+          <p class="mt-3 text-sm text-neutral-600 leading-relaxed">身体、关系、秩序：在琐碎里修炼清明与自由。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Latest -->
+    <section id="latest" class="mt-14">
+      <h2 class="font-serif text-2xl font-semibold">最新</h2>
+      <div class="mt-6 rounded-3xl border border-neutral-200 bg-white overflow-hidden shadow-sm">
+        <div class="divide-y divide-neutral-200">
+          <a href="pages/xz-algorithm.html" class="block p-6 hover:bg-neutral-50">
+            <div class="flex flex-wrap items-center justify-between gap-3">
+              <div class="font-medium">肖战与粉丝的双向奔赴：一种隐性文化算法的深度解析</div>
+              <div class="text-xs text-neutral-500">2026-02-26 · 结构分析</div>
             </div>
+            <div class="mt-2 text-sm text-neutral-600">把双向奔赴拆成“机制”，而不是停留在“情绪”。</div>
+          </a>
+
+          <!-- 复制这段作为新文章条目 -->
+          <div class="p-6 text-sm text-neutral-500">
+            提示：以后你每新增一篇文章，就在 <code class="bg-neutral-100 px-1 rounded">pages/</code> 放一个 html，
+            然后在这里加一条链接。
           </div>
         </div>
-      </section>
-
-      <!-- Individual Traits Section -->
-      <section class="py-20 bg-gradient-to-br from-gray-50 to-warm-beige" id="individual">
-        <div class="max-w-6xl mx-auto px-8">
-          <h2 class="font-serif font-bold text-4xl text-deep-blue mb-12 text-center">肖战的个体特质：不可复制的算法核心</h2>
-
-          <!-- Growth Timeline -->
-          <div class="bg-white rounded-2xl p-8 mb-12">
-            <h3 class="font-serif font-bold text-2xl text-deep-blue mb-6">成长轨迹的跨界独特性</h3>
-            <div class="relative">
-              <!-- Timeline visualization using Mermaid -->
-              <div class="mermaid-container">
-                <div class="mermaid-controls">
-                  <button class="mermaid-control-btn zoom-in" title="放大">
-                    <i class="fas fa-search-plus"></i>
-                  </button>
-                  <button class="mermaid-control-btn zoom-out" title="缩小">
-                    <i class="fas fa-search-minus"></i>
-                  </button>
-                  <button class="mermaid-control-btn reset-zoom" title="重置">
-                    <i class="fas fa-expand-arrows-alt"></i>
-                  </button>
-                  <button class="mermaid-control-btn fullscreen" title="全屏查看">
-                    <i class="fas fa-expand"></i>
-                  </button>
-                </div>
-                <div class="mermaid">
-                  timeline
-                  title &#34;肖战成长轨迹时间线&#34;
-
-                  1991-2010 : &#34;艺术教育期&#34;
-                  : &#34;画画、小提琴学习&#34;
-                  : &#34;审美基础、艺术感知&#34;
-
-                  2010-2015 : &#34;设计专业期&#34;
-                  : &#34;艺术学院学习、创业工作室&#34;
-                  : &#34;视觉设计、项目管理、商业运营&#34;
-
-                  2015-2016 : &#34;选秀突围期&#34;
-                  : &#34;《燃烧吧少年》训练营&#34;
-                  : &#34;唱跳技能、舞台表现、抗压能力&#34;
-
-                  2016-2018 : &#34;积累沉淀期&#34;
-                  : &#34;网剧配角、综艺曝光&#34;
-                  : &#34;表演经验、观众认知、行业人脉&#34;
-
-                  2019-2020 : &#34;爆红跃升期&#34;
-                  : &#34;《陈情令》现象级成功&#34;
-                  : &#34;顶流地位、粉丝生态构建&#34;
-
-                  2020-2021 : &#34;危机转化期&#34;
-                  : &#34;227事件应对与修复&#34;
-                  : &#34;创伤共同体、韧性展示&#34;
-
-                  2021-2026 : &#34;主流认可期&#34;
-                  : &#34;作品矩阵完善、主流奖项&#34;
-                  : &#34;文化输出、长红机制确立&#34;
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Personality Dimensions -->
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-            <div class="bg-white rounded-2xl p-8">
-              <h3 class="font-serif font-bold text-xl text-deep-blue mb-6">人格魅力的多维构成</h3>
-              <div class="space-y-6">
-                <div class="border-l-4 border-accent-gold pl-4">
-                  <h4 class="font-semibold text-soft-gray mb-2">坚韧内核</h4>
-                  <p class="text-sm text-gray-700">
-                    <a class="citation-link" href="https://m.thepaper.cn/newsDetail_forward_6368595">2020年227事件中的情绪稳定性示范</a>，
-                    以作品回应舆论风暴，为粉丝提供情绪管理参照模板。
-                  </p>
-                </div>
-                <div class="border-l-4 border-accent-gold pl-4">
-                  <h4 class="font-semibold text-soft-gray mb-2">谦逊姿态</h4>
-                  <p class="text-sm text-gray-700">
-                    公众场合的自我降级策略，契合&#34;满招损，谦受益&#34;的文化心理结构。
-                  </p>
-                </div>
-                <div class="border-l-4 border-accent-gold pl-4">
-                  <h4 class="font-semibold text-soft-gray mb-2">专业主义</h4>
-                  <p class="text-sm text-gray-700">
-                    片场敬业与角色沉浸的可见性管理，通过合作者评价与作品质量建立专业形象。
-                  </p>
-                </div>
-                <div class="border-l-4 border-accent-gold pl-4">
-                  <h4 class="font-semibold text-soft-gray mb-2">真实感营造</h4>
-                  <p class="text-sm text-gray-700">
-                    <a class="citation-link" href="https://zhuanlan.zhihu.com/p/507523413">社交媒体中的&#34;去滤镜化&#34;呈现</a>，
-                    微博IP地址事件展示技术验证对信任建构的作用。
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div class="bg-white rounded-2xl p-8">
-              <h3 class="font-serif font-bold text-xl text-deep-blue mb-6">不可复制性的算法壁垒</h3>
-              <div class="space-y-6">
-                <div class="bg-gray-50 p-4 rounded-lg">
-                  <h4 class="font-semibold text-soft-gray mb-2 flex items-center">
-                    <i class="fas fa-clock text-accent-gold mr-2"></i>
-                    时机窗口
-                  </h4>
-                  <p class="text-sm text-gray-700">
-                    2019年《陈情令》的爆款不可重现，多重因素协同作用的产物，
-                    构成肖战符号系统的&#34;初始参数&#34;。
-                  </p>
-                </div>
-                <div class="bg-gray-50 p-4 rounded-lg">
-                  <h4 class="font-semibold text-soft-gray mb-2 flex items-center">
-                    <i class="fas fa-shield-alt text-accent-gold mr-2"></i>
-                    危机转化
-                  </h4>
-                  <p class="text-sm text-gray-700">
-                    227事件的创伤性共同体建构，共同经历的危机强化群体情感联结，
-                    形成超越日常互动的深层纽带。
-                  </p>
-                </div>
-                <div class="bg-gray-50 p-4 rounded-lg">
-                  <h4 class="font-semibold text-soft-gray mb-2 flex items-center">
-                    <i class="fas fa-gem text-accent-gold mr-2"></i>
-                    气质独特性
-                  </h4>
-                  <p class="text-sm text-gray-700">
-                    温润与锋芒的平衡点位，传统文化的现代回响与个人经历的独特整合，
-                    构成核心情感共鸣机制。
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Uniqueness Matrix -->
-          <div class="bg-white rounded-2xl p-8">
-            <h3 class="font-serif font-bold text-xl text-deep-blue mb-6">不可复制性来源矩阵</h3>
-            <div class="overflow-x-auto">
-              <table class="w-full text-sm">
-                <thead>
-                  <tr class="border-b border-gray-200">
-                    <th class="text-left py-3 px-4 font-semibold text-soft-gray">成长阶段</th>
-                    <th class="text-left py-3 px-4 font-semibold text-soft-gray">关键事件</th>
-                    <th class="text-left py-3 px-4 font-semibold text-soft-gray">能力积累</th>
-                    <th class="text-left py-3 px-4 font-semibold text-soft-gray">不可复制性来源</th>
-                  </tr>
-                </thead>
-                <tbody class="text-gray-700">
-                  <tr class="border-b border-gray-100">
-                    <td class="py-3 px-4">艺术教育期</td>
-                    <td class="py-3 px-4">画画、小提琴学习</td>
-                    <td class="py-3 px-4">审美基础、艺术感知</td>
-                    <td class="py-3 px-4">个人禀赋的早期培养</td>
-                  </tr>
-                  <tr class="border-b border-gray-100">
-                    <td class="py-3 px-4">设计专业期</td>
-                    <td class="py-3 px-4">艺术学院学习、创业工作室</td>
-                    <td class="py-3 px-4">视觉设计、项目管理、商业运营</td>
-                    <td class="py-3 px-4">非科班路径的稀缺性</td>
-                  </tr>
-                  <tr class="border-b border-gray-100">
-                    <td class="py-3 px-4">选秀突围期</td>
-                    <td class="py-3 px-4">《燃烧吧少年》训练营</td>
-                    <td class="py-3 px-4">唱跳技能、舞台表现、抗压能力</td>
-                    <td class="py-3 px-4">素人选秀窗口的闭合</td>
-                  </tr>
-                  <tr class="border-b border-gray-100">
-                    <td class="py-3 px-4">积累沉淀期</td>
-                    <td class="py-3 px-4">网剧配角、综艺曝光</td>
-                    <td class="py-3 px-4">表演经验、观众认知、行业人脉</td>
-                    <td class="py-3 px-4">长期蛰伏的叙事张力</td>
-                  </tr>
-                  <tr>
-                    <td class="py-3 px-4">爆红跃升期</td>
-                    <td class="py-3 px-4">《陈情令》及后续作品</td>
-                    <td class="py-3 px-4">顶流地位、作品矩阵、跨界发展</td>
-                    <td class="py-3 px-4">时机窗口与危机转化的叠加</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Fan Psychology Section -->
-      <section class="py-20 bg-white" id="psychology">
-        <div class="max-w-6xl mx-auto px-8">
-          <h2 class="font-serif font-bold text-4xl text-deep-blue mb-12 text-center">粉丝心理机制：爱的成分与深层投射</h2>
-
-          <!-- Emotional Components -->
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-            <div class="bg-gradient-to-br from-pink-50 to-rose-100 rounded-2xl p-6">
-              <div class="text-3xl text-pink-500 mb-4">
-                <i class="fas fa-eye"></i>
-              </div>
-              <h3 class="font-serif font-bold text-lg text-deep-blue mb-3">审美之爱</h3>
-              <p class="text-sm text-gray-700 mb-4">颜值与气质的视觉消费，从&#34;看脸&#34;到&#34;氛围感&#34;的深度化演进</p>
-              <div class="text-xs text-muted-red">
-                激活条件：颜值暴露、造型更新
-              </div>
-            </div>
-            <div class="bg-gradient-to-br from-blue-50 to-indigo-100 rounded-2xl p-6">
-              <div class="text-3xl text-blue-500 mb-4">
-                <i class="fas fa-handshake"></i>
-              </div>
-              <h3 class="font-serif font-bold text-lg text-deep-blue mb-3">认同之爱</h3>
-              <p class="text-sm text-gray-700 mb-4">价值观与人生态度的共鸣，超越表层审美进入价值判断</p>
-              <div class="text-xs text-muted-red">
-                强化机制：主动寻找证据、选择性注意
-              </div>
-            </div>
-            <div class="bg-gradient-to-br from-green-50 to-emerald-100 rounded-2xl p-6">
-              <div class="text-3xl text-green-500 mb-4">
-                <i class="fas fa-shield-alt"></i>
-              </div>
-              <h3 class="font-serif font-bold text-lg text-deep-blue mb-3">保护之爱</h3>
-              <p class="text-sm text-gray-700 mb-4">&#34;犊子情结&#34;与母性/父性本能激活，227事件后的防御动机</p>
-              <div class="text-xs text-muted-red">
-                表达形式：数据冲刺、消费支持、舆论反击
-              </div>
-            </div>
-            <div class="bg-gradient-to-br from-purple-50 to-violet-100 rounded-2xl p-6">
-              <div class="text-3xl text-purple-500 mb-4">
-                <i class="fas fa-trophy"></i>
-              </div>
-              <h3 class="font-serif font-bold text-lg text-deep-blue mb-3">成就之爱</h3>
-              <p class="text-sm text-gray-700 mb-4">参与偶像成长的&#34;养成系&#34;满足，从选秀到爆红的全程投入</p>
-              <div class="text-xs text-muted-red">
-                <a class="citation-link" href="https://www.jiemian.com/article/4683059.html">《光点》专辑吉尼斯世界纪录</a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Psychological Projection -->
-          <div class="bg-gray-50 rounded-2xl p-8 mb-12">
-            <h3 class="font-serif font-bold text-2xl text-deep-blue mb-6">心理投射的具体维度</h3>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div class="bg-white p-6 rounded-xl">
-                <div class="text-accent-gold text-2xl mb-4">
-                  <i class="fas fa-briefcase"></i>
-                </div>
-                <h4 class="font-semibold text-lg mb-3">职业理想投射</h4>
-                <p class="text-sm text-gray-700 mb-4">
-                  对跨界成功的羡慕与效仿，从设计师到演员的心理模板作用。
-                  <a class="citation-link" href="https://zhuanlan.zhihu.com/p/464921555">粉丝访谈中的&#34;因为他我...&#34;叙事</a>。
-                </p>
-                <div class="text-xs text-muted-red">目标群体：职场人士、转型期个体</div>
-              </div>
-              <div class="bg-white p-6 rounded-xl">
-                <div class="text-accent-gold text-2xl mb-4">
-                  <i class="fas fa-heart"></i>
-                </div>
-                <h4 class="font-semibold text-lg mb-3">情感关系投射</h4>
-                <p class="text-sm text-gray-700 mb-4">
-                  对&#34;完美伴侣&#34;想象的替代性满足，安全的情感演练场域。
-                  <a class="citation-link" href="https://www.rmlt.com.cn/2020/1201/600323.shtml">79.4%单身状态的粉丝结构</a>。
-                </p>
-                <div class="text-xs text-muted-red">目标群体：年轻女性、单身群体</div>
-              </div>
-              <div class="bg-white p-6 rounded-xl">
-                <div class="text-accent-gold text-2xl mb-4">
-                  <i class="fas fa-phoenix-rising"></i>
-                </div>
-                <h4 class="font-semibold text-lg mb-3">自我救赎投射</h4>
-                <p class="text-sm text-gray-700 mb-4">
-                  从肖战逆境重生中汲取resilience，创伤叙事的意义重构。
-                  <a class="citation-link" href="http://www.sohu.com/a/941330886_121116705?scm=10001.325_13-325_13.0.0-0-0-0-0.5_32">&#34;陪他走过低谷&#34;的双重意义</a>。
-                </p>
-                <div class="text-xs text-muted-red">目标群体：经历挫折、寻求意义的个体</div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Cultural Background -->
-          <div class="bg-white rounded-2xl p-8">
-            <h3 class="font-serif font-bold text-2xl text-deep-blue mb-6">集体潜意识与中国文化背景</h3>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div class="space-y-6">
-                <div class="border-l-4 border-accent-gold pl-6">
-                  <h4 class="font-semibold text-lg mb-2">&#34;君子&#34;人格的现代回响</h4>
-                  <p class="text-gray-700 text-sm leading-relaxed">
-                    肖战形象与儒家&#34;君子&#34;人格理想的符号对应：仁（关怀他人）、义（坚持原则）、
-                    礼（谦逊有礼）、智（明辨是非）、信（诚实守信）。
-                    <a class="citation-link" href="https://cj.sina.cn/articles/view/7879776328/1d5abd848068017wui?froms=ggmp">2026年CMG盛典的&#34;引路者而非布道者&#34;姿态</a>。
-                  </p>
-                </div>
-                <div class="border-l-4 border-accent-gold pl-6">
-                  <h4 class="font-semibold text-lg mb-2">草根逆袭的集体记忆</h4>
-                  <p class="text-gray-700 text-sm leading-relaxed">
-                    &#34;素人出道&#34;叙事激活&#34;寒门出贵子&#34;的文化脚本，
-                    <a class="citation-link" href="https://zhuanlan.zhihu.com/p/464921555">粉丝对草根逆袭叙事的投入涉及对自身命运的象征性处理</a>。
-                  </p>
-                </div>
-              </div>
-              <div class="space-y-6">
-                <div class="border-l-4 border-accent-gold pl-6">
-                  <h4 class="font-semibold text-lg mb-2">家国情怀的嫁接</h4>
-                  <p class="text-gray-700 text-sm leading-relaxed">
-                    正能量偶像定位与主流话语的契合，
-                    <a class="citation-link" href="https://cj.sina.cn/articles/view/7879776328/1d5abd848068017wui?froms=ggmp">《藏海传》被《人民日报》认证为文化输出标杆</a>，
-                    粉丝情感获得公共合法性。
-                  </p>
-                </div>
-                <div class="border-l-4 border-accent-gold pl-6">
-                  <h4 class="font-semibold text-lg mb-2">网络时代的孤独疗愈</h4>
-                  <p class="text-gray-700 text-sm leading-relaxed">
-                    为原子化个体提供社群归属，
-                    <a class="citation-link" href="https://yule.360.com/detail/4853598">&#34;用热爱证明真正的顶流从不在热搜里，而在人心深处&#34;</a>。
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Fan Ecosystem Section -->
-      <section class="py-20 bg-gradient-to-br from-gray-50 to-warm-beige" id="ecosystem">
-        <div class="max-w-6xl mx-auto px-8">
-          <h2 class="font-serif font-bold text-4xl text-deep-blue mb-12 text-center">粉丝生态：组织化情感劳动与网络行为</h2>
-
-          <!-- Fan Structure -->
-          <div class="bg-white rounded-2xl p-8 mb-12">
-            <h3 class="font-serif font-bold text-2xl text-deep-blue mb-6">粉丝群体的结构分层</h3>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              <div class="bg-gradient-to-br from-red-50 to-pink-100 rounded-xl p-6">
-                <h4 class="font-semibold text-lg mb-3 text-deep-blue">核心层</h4>
-                <div class="space-y-3 text-sm">
-                  <div class="flex items-center space-x-2">
-                    <i class="fas fa-database text-red-500"></i>
-                    <span>数据组：榜单维护</span>
-                  </div>
-                  <div class="flex items-center space-x-2">
-                    <i class="fas fa-comment-dots text-red-500"></i>
-                    <span>控评组：舆论引导</span>
-                  </div>
-                  <div class="flex items-center space-x-2">
-                    <i class="fas fa-shield-alt text-red-500"></i>
-                    <span>反黑组：危机应对</span>
-                  </div>
-                </div>
-                <div class="text-xs text-muted-red mt-4">
-                  <a class="citation-link" href="https://m.thepaper.cn/newsDetail_forward_6366610?from=sohu">职能分工堪比成熟企业</a>
-                </div>
-              </div>
-              <div class="bg-gradient-to-br from-blue-50 to-indigo-100 rounded-xl p-6">
-                <h4 class="font-semibold text-lg mb-3 text-deep-blue">中间层</h4>
-                <div class="space-y-3 text-sm">
-                  <div class="flex items-center space-x-2">
-                    <i class="fas fa-cut text-blue-500"></i>
-                    <span>剪刀手：视频剪辑</span>
-                  </div>
-                  <div class="flex items-center space-x-2">
-                    <i class="fas fa-paint-brush text-blue-500"></i>
-                    <span>画手：同人绘画</span>
-                  </div>
-                  <div class="flex items-center space-x-2">
-                    <i class="fas fa-pen text-blue-500"></i>
-                    <span>写手：同人文案</span>
-                  </div>
-                </div>
-                <div class="text-xs text-muted-red mt-4">
-                  1117个原创视频博主
-                </div>
-              </div>
-              <div class="bg-gradient-to-br from-green-50 to-emerald-100 rounded-xl p-6">
-                <h4 class="font-semibold text-lg mb-3 text-deep-blue">外围层</h4>
-                <div class="space-y-3 text-sm">
-                  <div class="flex items-center space-x-2">
-                    <i class="fas fa-user text-green-500"></i>
-                    <span>散粉：弹性参与</span>
-                  </div>
-                  <div class="flex items-center space-x-2">
-                    <i class="fas fa-thumbs-up text-green-500"></i>
-                    <span>路好：情境性关注</span>
-                  </div>
-                  <div class="flex items-center space-x-2">
-                    <i class="fas fa-users text-green-500"></i>
-                    <span>潜在转化对象</span>
-                  </div>
-                </div>
-                <div class="text-xs text-muted-red mt-4">
-                  超话连爆的主要动员力量
-                </div>
-              </div>
-              <div class="bg-gradient-to-br from-purple-50 to-violet-100 rounded-xl p-6">
-                <h4 class="font-semibold text-lg mb-3 text-deep-blue">跨圈层</h4>
-                <div class="space-y-3 text-sm">
-                  <div class="flex items-center space-x-2">
-                    <i class="fas fa-female text-purple-500"></i>
-                    <span>妈妈粉：母性投射</span>
-                  </div>
-                  <div class="flex items-center space-x-2">
-                    <i class="fas fa-male text-purple-500"></i>
-                    <span>男性粉：实力认可</span>
-                  </div>
-                  <div class="flex items-center space-x-2">
-                    <i class="fas fa-gamepad text-purple-500"></i>
-                    <span>二次元群体</span>
-                  </div>
-                </div>
-                <div class="text-xs text-muted-red mt-4">
-                  <a class="citation-link" href="https://m.yule.360.com/content/4841751">&#34;一人即军团&#34;传播效应</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Network Maintenance -->
-          <div class="bg-white rounded-2xl p-8">
-            <h3 class="font-serif font-bold text-2xl text-deep-blue mb-6">网络维护的集体行动</h3>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div class="space-y-4">
-                <h4 class="font-semibold text-lg text-deep-blue">舆情监测与快速响应</h4>
-                <p class="text-gray-700 text-sm leading-relaxed">
-                  <a class="citation-link" href="https://journal.kci.go.kr/clsyn/archive/articlePdf?artiId=ART003201436">韩国学术期刊研究显示</a>，
-                  粉丝借助&#34;侦察组&#34;监控舆情走向，&#34;大粉&#34;充当&#34;前线指挥&#34;，
-                  发出控评文案模板作为&#34;作战要领&#34;。
-                </p>
-                <div class="bg-gray-50 p-4 rounded-lg">
-                  <div class="text-xs text-muted-red mb-2">响应流程</div>
-                  <div class="space-y-2 text-sm">
-                    <div class="flex items-center space-x-2">
-                      <div class="w-2 h-2 bg-red-500 rounded-full"></div>
-                      <span>监测预警：关键词搜索</span>
-                    </div>
-                    <div class="flex items-center space-x-2">
-                      <div class="w-2 h-2 bg-yellow-500 rounded-full"></div>
-                      <span>快速评估：威胁等级判断</span>
-                    </div>
-                    <div class="flex items-center space-x-2">
-                      <div class="w-2 h-2 bg-green-500 rounded-full"></div>
-                      <span>集体行动：统一话术反击</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="space-y-4">
-                <h4 class="font-semibold text-lg text-deep-blue">黑粉应对策略演化</h4>
-                <p class="text-gray-700 text-sm leading-relaxed">
-                  从直接对骂到举报封禁，再到舆论反制，
-                  <a class="citation-link" href="https://cj.sina.cn/articles/view/7879776328/1d5abd848068018oig?froms=ggmp&amp;vt=4">&#34;不回复、不点赞、权证链取证&#34;的维权路径</a>。
-                </p>
-                <div class="bg-gray-50 p-4 rounded-lg">
-                  <div class="text-xs text-muted-red mb-2">策略阶段</div>
-                  <div class="space-y-2 text-sm">
-                    <div class="text-gray-500 line-through">情绪化反击</div>
-                    <div class="text-gray-500 line-through">规则利用</div>
-                    <div class="text-deep-blue font-semibold">精细化应对</div>
-                  </div>
-                </div>
-              </div>
-              <div class="space-y-4">
-                <h4 class="font-semibold text-lg text-deep-blue">&#34;清朗&#34;行动后的调适</h4>
-                <p class="text-gray-700 text-sm leading-relaxed">
-                  从公开平台转向私密社群，从量化指标转向质性互动，
-                  <a class="citation-link" href="https://www.sina.cn/news/detail/5256332626363703.html">&#34;用热爱证明真正的顶流从不在热搜里，而在人心深处&#34;</a>。
-                </p>
-                <div class="bg-gray-50 p-4 rounded-lg">
-                  <div class="text-xs text-muted-red mb-2">调适方向</div>
-                  <div class="space-y-2 text-sm">
-                    <div class="flex items-center space-x-2">
-                      <i class="fas fa-arrow-right text-green-500"></i>
-                      <span>私密化：微信群、QQ群</span>
-                    </div>
-                    <div class="flex items-center space-x-2">
-                      <i class="fas fa-arrow-right text-green-500"></i>
-                      <span>质性化：内容创作、公益</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Interaction Mechanism Section -->
-      <section class="py-20 bg-white" id="interaction">
-        <div class="max-w-6xl mx-auto px-8">
-          <h2 class="font-serif font-bold text-4xl text-deep-blue mb-12 text-center">双向奔赴：互动机制与典型案例</h2>
-
-          <!-- Interaction Matrix -->
-          <div class="bg-gray-50 rounded-2xl p-8 mb-12">
-            <h3 class="font-serif font-bold text-2xl text-deep-blue mb-6">双向奔赴互动矩阵</h3>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              <div class="bg-white p-6 rounded-xl shadow-sm">
-                <div class="text-accent-gold text-2xl mb-4">
-                  <i class="fas fa-film"></i>
-                </div>
-                <h4 class="font-semibold mb-3">作品维度</h4>
-                <p class="text-sm text-gray-700 mb-3">高质量产出作为信任基础</p>
-                <div class="text-xs text-muted-red">
-                  <a class="citation-link" href="https://m.yule.360.com/content/4841751">《藏海传》文化输出认证</a>
-                </div>
-              </div>
-              <div class="bg-white p-6 rounded-xl shadow-sm">
-                <div class="text-accent-gold text-2xl mb-4">
-                  <i class="fas fa-heart"></i>
-                </div>
-                <h4 class="font-semibold mb-3">情感维度</h4>
-                <p class="text-sm text-gray-700 mb-3">&#34;小作文&#34;与仪式感互动</p>
-                <div class="text-xs text-muted-red">
-                  <a class="citation-link" href="https://k.sina.com.cn/article_7879776328_1d5abd84806801995i.html">新年手势六年迭代</a>
-                </div>
-              </div>
-              <div class="bg-white p-6 rounded-xl shadow-sm">
-                <div class="text-accent-gold text-2xl mb-4">
-                  <i class="fas fa-star"></i>
-                </div>
-                <h4 class="font-semibold mb-3">形象维度</h4>
-                <p class="text-sm text-gray-700 mb-3">公众致谢与主流认可</p>
-                <div class="text-xs text-muted-red">
-                  <a class="citation-link" href="https://cj.sina.cn/articles/view/7879776328/1d5abd848068017wui?froms=ggmp">CMG盛典压轴讲述</a>
-                </div>
-              </div>
-              <div class="bg-white p-6 rounded-xl shadow-sm">
-                <div class="text-accent-gold text-2xl mb-4">
-                  <i class="fas fa-shield-alt"></i>
-                </div>
-                <h4 class="font-semibold mb-3">危机维度</h4>
-                <p class="text-sm text-gray-700 mb-3">共同成长叙事构建</p>
-                <div class="text-xs text-muted-red">
-                  红海应援：创伤共同体的仪式化确认
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Key Cases -->
-          <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
-            <!-- Red Sea Support -->
-            <div class="bg-gradient-to-br from-red-50 to-pink-100 rounded-2xl p-8">
-              <h3 class="font-serif font-bold text-xl text-deep-blue mb-4">标志性事件：红海应援</h3>
-              <img alt="2020年星光大赏演唱会现场红色灯光海洋" class="w-full h-48 object-cover rounded-lg mb-4" src="https://kimi-web-img.moonshot.cn/imagegen/20260226/02177208196694477fce418cd3a659821a063326c55dce3efe31a_0.jpeg" size="medium" aspect="wide" color="red" style="photo" query="2020星光大赏红海应援" referrerpolicy="no-referrer" data-modified="1" data-score="0.00"/>
-              <p class="text-gray-700 text-sm leading-relaxed mb-4">
-                2020年星光大赏的&#34;红海应援&#34;成为双向奔赴的标志性符号。
-                在肖战因227事件陷入舆论低谷的背景下，粉丝以统一的红色灯海完成了一次情感宣言，
-                公开挑战&#34;肖战已凉&#34;的舆论判断。
-              </p>
-              <div class="bg-white/50 p-4 rounded-lg">
-                <div class="text-xs text-muted-red mb-2">符号意义</div>
-                <div class="space-y-2 text-sm">
-                  <div>• 红色：中国文化中的吉祥寓意</div>
-                  <div>• &#34;战&#34;字隐喻：姓名与颜色的关联</div>
-                  <div>• 视觉冲击：统一灯海的视觉奇观</div>
-                  <div>• 共同体确认：创伤经历的仪式化转化</div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Daily Interaction -->
-            <div class="bg-gradient-to-br from-blue-50 to-indigo-100 rounded-2xl p-8">
-              <h3 class="font-serif font-bold text-xl text-deep-blue mb-4">日常互动：树洞式对话</h3>
-              <img alt="明星与粉丝在微博评论区的温暖互动" class="w-full h-48 object-cover rounded-lg mb-4" src="https://kimi-web-img.moonshot.cn/img/placeholder-0620/%E5%9B%BE%E7%89%8720.png" size="medium" aspect="wide" style="photo" query="微博评论区互动" referrerpolicy="no-referrer" data-modified="1" data-score="0.00"/>
-              <p class="text-gray-700 text-sm leading-relaxed mb-4">
-                微博评论区的&#34;树洞&#34;式对话是双向奔赴的常规形态。
-                粉丝分享生活琐事、喜怒哀乐；肖战偶尔的回复或点赞被赋予特殊意义，
-                成为&#34;被看见&#34;的证明。
-              </p>
-              <div class="bg-white/50 p-4 rounded-lg">
-                <div class="text-xs text-muted-red mb-2">互动特征</div>
-                <div class="space-y-2 text-sm">
-                  <div>• 准亲密关系：可预期的互动脚本</div>
-                  <div>• 仪式化参与：特定模式的集体留言</div>
-                  <div>• 日常生活嵌入：追星与生活的交织</div>
-                  <div>• 情感可见性：&#34;被偶像看见&#34;的证明</div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- 2026 Case Study -->
-          <div class="bg-white rounded-2xl p-8">
-            <h3 class="font-serif font-bold text-2xl text-deep-blue mb-6">2026年超话连爆现象：自维持能力的验证</h3>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div>
-                <h4 class="font-semibold text-lg mb-4 text-soft-gray">现象描述</h4>
-                <p class="text-gray-700 text-sm leading-relaxed mb-4">
-                  <a class="citation-link" href="https://www.sina.cn/news/detail/5256689902160395.html">2026年1月的&#34;超话连爆7小时&#34;事件</a>，
-                  在无新戏播出、无公开露面的&#34;日常&#34;状态下，粉丝通过自发组织创造了
-                  单日30.6万帖子、592万互动、9741万热力值的记录。
-                  这一现象证明了粉丝生态的&#34;自维持&#34;能力。
-                </p>
-                <div class="bg-gray-50 p-4 rounded-lg">
-                  <div class="text-xs text-muted-red mb-2">核心数据</div>
-                  <div class="grid grid-cols-2 gap-4 text-sm">
-                    <div>
-                      <div class="font-bold text-deep-blue">30.6万</div>
-                      <div class="text-gray-600">单日发帖量</div>
-                    </div>
-                    <div>
-                      <div class="font-bold text-deep-blue">592万</div>
-                      <div class="text-gray-600">互动量</div>
-                    </div>
-                    <div>
-                      <div class="font-bold text-deep-blue">9741万</div>
-                      <div class="text-gray-600">热力值</div>
-                    </div>
-                    <div>
-                      <div class="font-bold text-deep-blue">7小时</div>
-                      <div class="text-gray-600">连续爆发</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div>
-                <h4 class="font-semibold text-lg mb-4 text-soft-gray">机制分析</h4>
-                <div class="space-y-4">
-                  <div class="border-l-4 border-accent-gold pl-4">
-                    <h5 class="font-semibold text-sm mb-1">目标设定</h5>
-                    <p class="text-xs text-gray-700">微博之夜抢座101的12张门票作为具体目标</p>
-                  </div>
-                  <div class="border-l-4 border-accent-gold pl-4">
-                    <h5 class="font-semibold text-sm mb-1">动员结构</h5>
-                    <p class="text-xs text-gray-700">定闹钟、互相提醒、统一话术的协作模式</p>
-                  </div>
-                  <div class="border-l-4 border-accent-gold pl-4">
-                    <h5 class="font-semibold text-sm mb-1">激励设计</h5>
-                    <p class="text-xs text-gray-700">群体认同、成就满足、娱乐体验的组合</p>
-                  </div>
-                  <div class="border-l-4 border-accent-gold pl-4">
-                    <h5 class="font-semibold text-sm mb-1">文化生产</h5>
-                    <p class="text-xs text-gray-700">
-                      <a class="citation-link" href="https://www.sina.cn/news/detail/5256332626363703.html">应援曲《虾爬还在手搓》的创作</a>，
-                      将劳动转化为文化对象
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Visualization Section -->
-      <section class="py-20 bg-gradient-to-br from-gray-50 to-warm-beige" id="visualization">
-        <div class="max-w-6xl mx-auto px-8">
-          <h2 class="font-serif font-bold text-4xl text-deep-blue mb-12 text-center">可视化呈现：网站架构与图表系统</h2>
-
-          <!-- Website Architecture -->
-          <div class="bg-white rounded-2xl p-8 mb-12">
-            <h3 class="font-serif font-bold text-2xl text-deep-blue mb-6">网站整体架构</h3>
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              <div>
-                <h4 class="font-semibold text-lg mb-4 text-soft-gray">叙事主线</h4>
-                <p class="text-gray-700 text-sm leading-relaxed mb-4">
-                  采用<strong>时间轴与主题轴的双轨并行</strong>结构：
-                  时间轴呈现肖战成长与粉丝生态演进的关键节点；
-                  主题轴横向展开三重共振的各个维度。
-                </p>
-                <div class="space-y-3">
-                  <div class="flex items-center space-x-3">
-                    <div class="w-3 h-3 bg-deep-blue rounded-full"></div>
-                    <span class="text-sm">时间轴：2015选秀 → 2019爆款 → 2020危机 → 2026长红</span>
-                  </div>
-                  <div class="flex items-center space-x-3">
-                    <div class="w-3 h-3 bg-accent-gold rounded-full"></div>
-                    <span class="text-sm">主题轴：个体特质 → 粉丝心理 → 时代情绪</span>
-                  </div>
-                </div>
-              </div>
-              <div>
-                <h4 class="font-semibold text-lg mb-4 text-soft-gray">交互设计</h4>
-                <p class="text-gray-700 text-sm leading-relaxed mb-4">
-                  采用<strong>节点式信息图谱</strong>的交互设计，
-                  用户可点击展开各维度子节点，链接到具体案例、数据可视化、文本引用。
-                </p>
-                <div class="bg-gray-50 p-4 rounded-lg">
-                  <div class="text-xs text-muted-red mb-2">交互功能</div>
-                  <div class="space-y-2 text-sm">
-                    <div>• 时间滑块：观察共振强度变化</div>
-                    <div>• 情感曲线：显示关键事件波动</div>
-                    <div>• 网络缩放：从个体到群体结构</div>
-                    <div>• 文本检索：基于关键词搜索</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Core Charts -->
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-            <div class="bg-white rounded-2xl p-8">
-              <h3 class="font-serif font-bold text-xl text-deep-blue mb-6">三重共振动态模型</h3>
-              <div class="mermaid-container">
-                <div class="mermaid-controls">
-                  <button class="mermaid-control-btn zoom-in" title="放大">
-                    <i class="fas fa-search-plus"></i>
-                  </button>
-                  <button class="mermaid-control-btn zoom-out" title="缩小">
-                    <i class="fas fa-search-minus"></i>
-                  </button>
-                  <button class="mermaid-control-btn reset-zoom" title="重置">
-                    <i class="fas fa-expand-arrows-alt"></i>
-                  </button>
-                  <button class="mermaid-control-btn fullscreen" title="全屏查看">
-                    <i class="fas fa-expand"></i>
-                  </button>
-                </div>
-                <div class="mermaid">
-                  graph TB
-                  subgraph &#34;三重共振动态模型&#34;
-                  A[&#34;个体特质&#34;] --&gt; B[&#34;粉丝心理&#34;]
-                  B --&gt; C[&#34;时代情绪&#34;]
-                  C --&gt; A
-                  A --&gt; D[&#34;共振效应&#34;]
-                  B --&gt; D
-                  C --&gt; D
-                  D --&gt; E[&#34;影响力输出&#34;]
-                  E --&gt; F[&#34;反馈调节&#34;]
-                  F --&gt; A
-                  F --&gt; B
-                  F --&gt; C
-                  end
-
-                  style A fill:#1E3A5F,color:#ffffff,stroke:#D4AF37,stroke-width:3px
-                  style B fill:#D4AF37,color:#1E3A5F,stroke:#1E3A5F,stroke-width:3px
-                  style C fill:#B91C1C,color:#ffffff,stroke:#D4AF37,stroke-width:3px
-                  style D fill:#f8fafc,color:#1E3A5F,stroke:#D4AF37,stroke-width:3px
-                  style E fill:#f8fafc,color:#1E3A5F,stroke:#B91C1C,stroke-width:3px
-                  style F fill:#f8fafc,color:#1E3A5F,stroke:#1E3A5F,stroke-width:3px
-                </div>
-              </div>
-              <p class="text-xs text-gray-600 mt-4">
-                用户可通过时间滑块观察三要素强度的动态变化，调整参数模拟不同条件下的系统演化
-              </p>
-            </div>
-
-            <div class="bg-white rounded-2xl p-8">
-              <h3 class="font-serif font-bold text-xl text-deep-blue mb-6">文化算法流程图</h3>
-              <div class="mermaid-container">
-                <div class="mermaid-controls">
-                  <button class="mermaid-control-btn zoom-in" title="放大">
-                    <i class="fas fa-search-plus"></i>
-                  </button>
-                  <button class="mermaid-control-btn zoom-out" title="缩小">
-                    <i class="fas fa-search-minus"></i>
-                  </button>
-                  <button class="mermaid-control-btn reset-zoom" title="重置">
-                    <i class="fas fa-expand-arrows-alt"></i>
-                  </button>
-                  <button class="mermaid-control-btn fullscreen" title="全屏查看">
-                    <i class="fas fa-expand"></i>
-                  </button>
-                </div>
-                <div class="mermaid">
-                  flowchart TD
-                  A[&#34;输入端：偶像符号编码&#34;] --&gt; B[&#34;作品编码&#34;]
-                  A --&gt; C[&#34;人格编码&#34;]
-                  A --&gt; D[&#34;互动编码&#34;]
-
-                  B --&gt; E[&#34;处理端：粉丝情感劳动&#34;]
-                  C --&gt; E
-                  D --&gt; E
-
-                  E --&gt; F[&#34;数据劳动&#34;]
-                  E --&gt; G[&#34;消费劳动&#34;]
-                  E --&gt; H[&#34;内容劳动&#34;]
-                  E --&gt; I[&#34;公益劳动&#34;]
-
-                  F --&gt; J[&#34;输出端：影响力生态&#34;]
-                  G --&gt; J
-                  H --&gt; J
-                  I --&gt; J
-
-                  J --&gt; K[&#34;商业影响力&#34;]
-                  J --&gt; L[&#34;社会影响力&#34;]
-                  J --&gt; M[&#34;文化影响力&#34;]
-
-                  K --&gt; N[&#34;反馈循环&#34;]
-                  L --&gt; N
-                  M --&gt; N
-                  N --&gt; A
-
-                  style A fill:#1E3A5F,color:#ffffff,stroke:#D4AF37,stroke-width:3px
-                  style E fill:#D4AF37,color:#1E3A5F,stroke:#1E3A5F,stroke-width:3px
-                  style J fill:#B91C1C,color:#ffffff,stroke:#D4AF37,stroke-width:3px
-                  style N fill:#f8fafc,color:#1E3A5F,stroke:#1E3A5F,stroke-width:3px
-                  style B fill:#f8fafc,color:#1E3A5F,stroke:#D4AF37,stroke-width:2px
-                  style C fill:#f8fafc,color:#1E3A5F,stroke:#D4AF37,stroke-width:2px
-                  style D fill:#f8fafc,color:#1E3A5F,stroke:#D4AF37,stroke-width:2px
-                  style F fill:#f8fafc,color:#1E3A5F,stroke:#B91C1C,stroke-width:2px
-                  style G fill:#f8fafc,color:#1E3A5F,stroke:#B91C1C,stroke-width:2px
-                  style H fill:#f8fafc,color:#1E3A5F,stroke:#B91C1C,stroke-width:2px
-                  style I fill:#f8fafc,color:#1E3A5F,stroke:#B91C1C,stroke-width:2px
-                  style K fill:#f8fafc,color:#1E3A5F,stroke:#1E3A5F,stroke-width:2px
-                  style L fill:#f8fafc,color:#1E3A5F,stroke:#1E3A5F,stroke-width:2px
-                  style M fill:#f8fafc,color:#1E3A5F,stroke:#1E3A5F,stroke-width:2px
-                </div>
-              </div>
-              <p class="text-xs text-gray-600 mt-4">
-                用户可&#34;注入&#34;变量观察系统响应，理解文化算法的动态性与适应性
-              </p>
-            </div>
-          </div>
-
-          <!-- Data Sources -->
-          <div class="bg-white rounded-2xl p-8">
-            <h3 class="font-serif font-bold text-2xl text-deep-blue mb-6">数据来源与处理方法</h3>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div class="bg-gray-50 p-6 rounded-xl">
-                <h4 class="font-semibold text-lg mb-3">微博超话文本挖掘</h4>
-                <p class="text-sm text-gray-700 mb-4">
-                  采集2019-2026年肖战超话粉丝留言，包括精华帖、热门评论、互动回复等多类型文本。
-                </p>
-                <div class="space-y-2 text-xs">
-                  <div class="flex items-center space-x-2">
-                    <i class="fas fa-chart-bar text-blue-500"></i>
-                    <span>高频词分析与情感计算</span>
-                  </div>
-                  <div class="flex items-center space-x-2">
-                    <i class="fas fa-project-diagram text-green-500"></i>
-                    <span>主题模型与语义网络构建</span>
-                  </div>
-                </div>
-              </div>
-              <div class="bg-gray-50 p-6 rounded-xl">
-                <h4 class="font-semibold text-lg mb-3">知乎粉丝文章分析</h4>
-                <p class="text-sm text-gray-700 mb-4">
-                  聚焦&#34;循山野清风&#34;等代表性账号的长文，以及相关问题下的高赞回答。
-                </p>
-                <div class="space-y-2 text-xs">
-                  <div class="flex items-center space-x-2">
-                    <i class="fas fa-search text-purple-500"></i>
-                    <span>修辞结构分析与论证模式识别</span>
-                  </div>
-                  <div class="flex items-center space-x-2">
-                    <i class="fas fa-lightbulb text-yellow-500"></i>
-                    <span>归纳-演绎结合的主题分析</span>
-                  </div>
-                </div>
-              </div>
-              <div class="bg-gray-50 p-6 rounded-xl">
-                <h4 class="font-semibold text-lg mb-3">情感计算技术路径</h4>
-                <p class="text-sm text-gray-700 mb-4">
-                  处理中文社交媒体语言的特异性，包括粉丝用语、网络流行语等。
-                </p>
-                <div class="space-y-2 text-xs">
-                  <div class="flex items-center space-x-2">
-                    <i class="fas fa-cogs text-red-500"></i>
-                    <span>领域特定词典与规则库构建</span>
-                  </div>
-                  <div class="flex items-center space-x-2">
-                    <i class="fas fa-brain text-indigo-500"></i>
-                    <span>无监督学习方法自动学习语义</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Theory Extension Section -->
-      <section class="py-20 bg-white" id="theory">
-        <div class="max-w-6xl mx-auto px-8">
-          <h2 class="font-serif font-bold text-4xl text-deep-blue mb-12 text-center">理论延伸：社会计算视角的范式意义</h2>
-
-          <!-- Theoretical Framework -->
-          <div class="bg-gradient-to-br from-gray-50 to-warm-beige rounded-2xl p-8 mb-12">
-            <h3 class="font-serif font-bold text-2xl text-deep-blue mb-6">对偶像工业研究的贡献</h3>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div class="space-y-6">
-                <div class="bg-white p-6 rounded-xl">
-                  <h4 class="font-semibold text-lg mb-3 text-deep-blue">概念升级：从&#34;粉丝经济&#34;到&#34;情感共同体&#34;</h4>
-                  <p class="text-gray-700 text-sm leading-relaxed">
-                    传统的粉丝经济分析侧重商业价值的提取机制，而&#34;情感共同体&#34;框架强调
-                    粉丝群体的社会整合功能和意义建构作用。
-                    粉丝投入不仅是消费行为，更是参与共同体建构的实践。
-                  </p>
-                </div>
-                <div class="bg-white p-6 rounded-xl">
-                  <h4 class="font-semibold text-lg mb-3 text-deep-blue">差异化模型：长红机制 vs 爆红机制</h4>
-                  <p class="text-gray-700 text-sm leading-relaxed">
-                    肖战现象展示了&#34;长红&#34;与&#34;爆红&#34;的差异化机制：
-                    爆红依赖外部资源集中注入，追求峰值；
-                    长红依赖内部系统自我维持，追求稳态。
-                  </p>
-                </div>
-              </div>
-              <div>
-                <div class="bg-white p-6 rounded-xl">
-                  <h4 class="font-semibold text-lg mb-4 text-deep-blue">机制对比矩阵</h4>
-                  <div class="overflow-x-auto">
-                    <table class="w-full text-xs">
-                      <thead>
-                        <tr class="border-b border-gray-200">
-                          <th class="text-left py-2 px-3 font-semibold">维度</th>
-                          <th class="text-left py-2 px-3 font-semibold">爆红机制</th>
-                          <th class="text-left py-2 px-3 font-semibold">长红机制</th>
-                          <th class="text-left py-2 px-3 font-semibold">肖战案例</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr class="border-b border-gray-100">
-                          <td class="py-2 px-3">核心驱动</td>
-                          <td class="py-2 px-3">外部资源注入</td>
-                          <td class="py-2 px-3">内部系统维持</td>
-                          <td class="py-2 px-3">三重共振循环</td>
-                        </tr>
-                        <tr class="border-b border-gray-100">
-                          <td class="py-2 px-3">时间策略</td>
-                          <td class="py-2 px-3">峰值追求</td>
-                          <td class="py-2 px-3">稳态维持</td>
-                          <td class="py-2 px-3">7年长情陪伴</td>
-                        </tr>
-                        <tr class="border-b border-gray-100">
-                          <td class="py-2 px-3">关键能力</td>
-                          <td class="py-2 px-3">话题制造</td>
-                          <td class="py-2 px-3">质量保障</td>
-                          <td class="py-2 px-3">作品+人格+危机转化</td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Network Society Implications -->
-          <div class="bg-gradient-to-br from-blue-50 to-indigo-100 rounded-2xl p-8 mb-12">
-            <h3 class="font-serif font-bold text-2xl text-deep-blue mb-6">对网络社会研究的启示</h3>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div class="space-y-6">
-                <div class="bg-white p-6 rounded-xl">
-                  <h4 class="font-semibold text-lg mb-3 text-deep-blue">情感劳动的数字剥削与自愿性悖论</h4>
-                  <p class="text-gray-700 text-sm leading-relaxed mb-3">
-                    <a class="citation-link" href="http://ir.swupl.edu.cn:8080/xnzfdx/item/itemDetail/76432.shtml">粉丝的情感劳动成为&#34;被剥削&#34;的&#34;免费劳工&#34;</a>，
-                    但粉丝在劳动过程中确实获得了多重满足：情感表达、群体归属、成就感等。
-                  </p>
-                  <div class="bg-red-50 p-3 rounded text-xs text-red-700">
-                    <strong>悖论核心：</strong>劳动投入既是&#34;自由的&#34;（无人强迫），
-                    又是&#34;被建构的&#34;（情感需求被激活、群体规范被内化）
-                  </div>
-                </div>
-                <div class="bg-white p-6 rounded-xl">
-                  <h4 class="font-semibold text-lg mb-3 text-deep-blue">算法时代的人机协同</h4>
-                  <p class="text-gray-700 text-sm leading-relaxed">
-                    粉丝发展出<strong>&#34;算法素养&#34;</strong>——理解平台规则、优化操作策略、
-                    规避监管限制的能力。但代价是主体性的让渡：
-                    行动目标、节奏、形式越来越由平台逻辑塑造。
-                  </p>
-                </div>
-              </div>
-              <div class="bg-white p-6 rounded-xl">
-                <h4 class="font-semibold text-lg mb-3 text-deep-blue">张力分析</h4>
-                <div class="space-y-4">
-                  <div class="flex items-start space-x-3">
-                    <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
-                      <i class="fas fa-robot text-blue-600 text-sm"></i>
-                    </div>
-                    <div>
-                      <div class="font-semibold text-sm mb-1">平台逻辑塑造</div>
-                      <div class="text-xs text-gray-600">
-                        数据劳动回应算法激励，创意产出被算法捕获
-                      </div>
-                    </div>
-                  </div>
-                  <div class="flex items-start space-x-3">
-                    <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
-                      <i class="fas fa-users text-green-600 text-sm"></i>
-                    </div>
-                    <div>
-                      <div class="font-semibold text-sm mb-1">粉丝主体性</div>
-                      <div class="text-xs text-gray-600">
-                        2026年超话连爆展示算法素养的高级形态
-                      </div>
-                    </div>
-                  </div>
-                  <div class="flex items-start space-x-3">
-                    <div class="w-8 h-8 bg-yellow-100 rounded-full flex items-center justify-center flex-shrink-0">
-                      <i class="fas fa-exclamation-triangle text-yellow-600 text-sm"></i>
-                    </div>
-                    <div>
-                      <div class="font-semibold text-sm mb-1">真实性焦虑</div>
-                      <div class="text-xs text-gray-600">
-                        &#34;手搓数据&#34;强调与机器刷量的对立
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Cultural Export -->
-          <div class="bg-white rounded-2xl p-8">
-            <h3 class="font-serif font-bold text-2xl text-deep-blue mb-6">对中国文化输出的参照</h3>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div class="space-y-6">
-                <div class="bg-gradient-to-br from-green-50 to-emerald-100 p-6 rounded-xl">
-                  <h4 class="font-semibold text-lg mb-3 text-deep-blue">本土偶像的全球化潜力</h4>
-                  <p class="text-gray-700 text-sm leading-relaxed mb-4">
-                    肖战案例为评估本土偶像的全球化潜力提供参照：
-                    海外粉丝组织化程度、国际媒体关注度、作品跨文化传播效果。
-                  </p>
-                  <div class="bg-white/70 p-4 rounded-lg">
-                    <div class="text-xs text-muted-red mb-2">关键指标</div>
-                    <div class="space-y-2 text-sm">
-                      <div class="flex items-center space-x-2">
-                        <i class="fas fa-globe text-blue-500"></i>
-                        <span>&#34;全球购刊接力&#34;的组织化程度</span>
-                      </div>
-                      <div class="flex items-center space-x-2">
-                        <i class="fas fa-award text-yellow-500"></i>
-                        <span>
-                          <a class="citation-link" href="https://m.yule.360.com/content/4841751">《藏海传》文化输出认证</a>
-                        </span>
-                      </div>
-                      <div class="flex items-center space-x-2">
-                        <i class="fas fa-handshake text-green-500"></i>
-                        <span>官方背书与奖项积累</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="space-y-6">
-                <div class="bg-gradient-to-br from-purple-50 to-violet-100 p-6 rounded-xl">
-                  <h4 class="font-semibold text-lg mb-3 text-deep-blue">传统文化符号的现代转化</h4>
-                  <p class="text-gray-700 text-sm leading-relaxed mb-4">
-                    &#34;君子&#34;人格的激活、家国情怀的嫁接展示了
-                    传统资源在当代语境中的适应性重构。
-                  </p>
-                  <div class="space-y-3">
-                    <div class="bg-white/70 p-3 rounded">
-                      <div class="font-semibold text-xs mb-1">转化策略</div>
-                      <div class="text-xs text-gray-600">
-                        符号抽象化 → 表达当代化 → 功能情感化
-                      </div>
-                    </div>
-                    <div class="bg-white/70 p-3 rounded">
-                      <div class="font-semibold text-xs mb-1">风险控制</div>
-                      <div class="text-xs text-gray-600">
-                        避免符号空洞化，在传统尊重与创新间平衡
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Footer -->
-      <footer class="bg-deep-blue text-white py-12">
-        <div class="max-w-6xl mx-auto px-8">
-          <div class="text-center">
-            <h3 class="font-serif font-bold text-2xl mb-4">肖战与粉丝的双向奔赴</h3>
-            <p class="text-white/80 mb-6">一种隐性文化算法的深度解析</p>
-            <div class="text-sm text-white/60">
-              基于微博超话文本与知乎粉丝文章的社会计算研究
-            </div>
-          </div>
-        </div>
-      </footer>
-    </main>
-
-    <script>
-        // Initialize Mermaid
-        mermaid.initialize({
-            startOnLoad: true,
-            theme: 'base',
-            themeVariables: {
-                primaryColor: '#1E3A5F',
-                primaryTextColor: '#ffffff',
-                primaryBorderColor: '#D4AF37',
-                lineColor: '#6B7280',
-                secondaryColor: '#f8fafc',
-                tertiaryColor: '#F5F1EB',
-                background: '#ffffff',
-                mainBkg: '#ffffff',
-                secondBkg: '#f8fafc',
-                tertiaryBkg: '#F5F1EB'
-            },
-            flowchart: {
-                useMaxWidth: false,
-                htmlLabels: true,
-                curve: 'basis'
-            },
-            timeline: {
-                useMaxWidth: false
-            }
-        });
-
-        // Initialize Mermaid Controls for zoom and pan
-        function initializeMermaidControls() {
-            const containers = document.querySelectorAll('.mermaid-container');
-
-            containers.forEach(container => {
-                const mermaidElement = container.querySelector('.mermaid');
-                let scale = 1;
-                let isDragging = false;
-                let startX, startY, translateX = 0, translateY = 0;
-
-                // 触摸相关状态
-                let isTouch = false;
-                let touchStartTime = 0;
-                let initialDistance = 0;
-                let initialScale = 1;
-                let isPinching = false;
-
-                // Zoom controls
-                const zoomInBtn = container.querySelector('.zoom-in');
-                const zoomOutBtn = container.querySelector('.zoom-out');
-                const resetBtn = container.querySelector('.reset-zoom');
-                const fullscreenBtn = container.querySelector('.fullscreen');
-
-                function updateTransform() {
-                    mermaidElement.style.transform = `translate(${translateX}px, ${translateY}px) scale(${scale})`;
-
-                    if (scale > 1) {
-                        container.classList.add('zoomed');
-                    } else {
-                        container.classList.remove('zoomed');
-                    }
-
-                    mermaidElement.style.cursor = isDragging ? 'grabbing' : 'grab';
-                }
-
-                if (zoomInBtn) {
-                    zoomInBtn.addEventListener('click', () => {
-                        scale = Math.min(scale * 1.25, 4);
-                        updateTransform();
-                    });
-                }
-
-                if (zoomOutBtn) {
-                    zoomOutBtn.addEventListener('click', () => {
-                        scale = Math.max(scale / 1.25, 0.3);
-                        if (scale <= 1) {
-                            translateX = 0;
-                            translateY = 0;
-                        }
-                        updateTransform();
-                    });
-                }
-
-                if (resetBtn) {
-                    resetBtn.addEventListener('click', () => {
-                        scale = 1;
-                        translateX = 0;
-                        translateY = 0;
-                        updateTransform();
-                    });
-                }
-
-                if (fullscreenBtn) {
-                    fullscreenBtn.addEventListener('click', () => {
-                        if (container.requestFullscreen) {
-                            container.requestFullscreen();
-                        } else if (container.webkitRequestFullscreen) {
-                            container.webkitRequestFullscreen();
-                        } else if (container.msRequestFullscreen) {
-                            container.msRequestFullscreen();
-                        }
-                    });
-                }
-
-                // Mouse Events
-                mermaidElement.addEventListener('mousedown', (e) => {
-                    if (isTouch) return; // 如果是触摸设备，忽略鼠标事件
-
-                    isDragging = true;
-                    startX = e.clientX - translateX;
-                    startY = e.clientY - translateY;
-                    mermaidElement.style.cursor = 'grabbing';
-                    updateTransform();
-                    e.preventDefault();
-                });
-
-                document.addEventListener('mousemove', (e) => {
-                    if (isDragging && !isTouch) {
-                        translateX = e.clientX - startX;
-                        translateY = e.clientY - startY;
-                        updateTransform();
-                    }
-                });
-
-                document.addEventListener('mouseup', () => {
-                    if (isDragging && !isTouch) {
-                        isDragging = false;
-                        mermaidElement.style.cursor = 'grab';
-                        updateTransform();
-                    }
-                });
-
-                document.addEventListener('mouseleave', () => {
-                    if (isDragging && !isTouch) {
-                        isDragging = false;
-                        mermaidElement.style.cursor = 'grab';
-                        updateTransform();
-                    }
-                });
-
-                // 获取两点之间的距离
-                function getTouchDistance(touch1, touch2) {
-                    return Math.hypot(
-                        touch2.clientX - touch1.clientX,
-                        touch2.clientY - touch1.clientY
-                    );
-                }
-
-                // Touch Events - 触摸事件处理
-                mermaidElement.addEventListener('touchstart', (e) => {
-                    isTouch = true;
-                    touchStartTime = Date.now();
-
-                    if (e.touches.length === 1) {
-                        // 单指拖动
-                        isPinching = false;
-                        isDragging = true;
-
-                        const touch = e.touches[0];
-                        startX = touch.clientX - translateX;
-                        startY = touch.clientY - translateY;
-
-                    } else if (e.touches.length === 2) {
-                        // 双指缩放
-                        isPinching = true;
-                        isDragging = false;
-
-                        const touch1 = e.touches[0];
-                        const touch2 = e.touches[1];
-                        initialDistance = getTouchDistance(touch1, touch2);
-                        initialScale = scale;
-                    }
-
-                    e.preventDefault();
-                }, { passive: false });
-
-                mermaidElement.addEventListener('touchmove', (e) => {
-                    if (e.touches.length === 1 && isDragging && !isPinching) {
-                        // 单指拖动
-                        const touch = e.touches[0];
-                        translateX = touch.clientX - startX;
-                        translateY = touch.clientY - startY;
-                        updateTransform();
-
-                    } else if (e.touches.length === 2 && isPinching) {
-                        // 双指缩放
-                        const touch1 = e.touches[0];
-                        const touch2 = e.touches[1];
-                        const currentDistance = getTouchDistance(touch1, touch2);
-
-                        if (initialDistance > 0) {
-                            const newScale = Math.min(Math.max(
-                                initialScale * (currentDistance / initialDistance),
-                                0.3
-                            ), 4);
-                            scale = newScale;
-                            updateTransform();
-                        }
-                    }
-
-                    e.preventDefault();
-                }, { passive: false });
-
-                mermaidElement.addEventListener('touchend', (e) => {
-                    // 重置状态
-                    if (e.touches.length === 0) {
-                        isDragging = false;
-                        isPinching = false;
-                        initialDistance = 0;
-
-                        // 延迟重置isTouch，避免鼠标事件立即触发
-                        setTimeout(() => {
-                            isTouch = false;
-                        }, 100);
-                    } else if (e.touches.length === 1 && isPinching) {
-                        // 从双指变为单指，切换为拖动模式
-                        isPinching = false;
-                        isDragging = true;
-
-                        const touch = e.touches[0];
-                        startX = touch.clientX - translateX;
-                        startY = touch.clientY - translateY;
-                    }
-
-                    updateTransform();
-                });
-
-                mermaidElement.addEventListener('touchcancel', (e) => {
-                    isDragging = false;
-                    isPinching = false;
-                    initialDistance = 0;
-
-                    setTimeout(() => {
-                        isTouch = false;
-                    }, 100);
-
-                    updateTransform();
-                });
-
-                // Enhanced wheel zoom with better center point handling
-                container.addEventListener('wheel', (e) => {
-                    e.preventDefault();
-                    const rect = container.getBoundingClientRect();
-                    const centerX = rect.width / 2;
-                    const centerY = rect.height / 2;
-
-                    const delta = e.deltaY > 0 ? 0.9 : 1.1;
-                    const newScale = Math.min(Math.max(scale * delta, 0.3), 4);
-
-                    // Adjust translation to zoom towards center
-                    if (newScale !== scale) {
-                        const scaleDiff = newScale / scale;
-                        translateX = translateX * scaleDiff;
-                        translateY = translateY * scaleDiff;
-                        scale = newScale;
-
-                        if (scale <= 1) {
-                            translateX = 0;
-                            translateY = 0;
-                        }
-
-                        updateTransform();
-                    }
-                });
-
-                // Initialize display
-                updateTransform();
-            });
-        }
-
-        // Initialize Mermaid controls after page loads
-        document.addEventListener('DOMContentLoaded', function() {
-            initializeMermaidControls();
-        });
-
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-
-        // Highlight active navigation item
-        window.addEventListener('scroll', () => {
-            const sections = document.querySelectorAll('section[id]');
-            const navLinks = document.querySelectorAll('nav a[href^="#"]');
-            
-            let current = '';
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                const sectionHeight = section.clientHeight;
-                if (scrollY >= (sectionTop - 200)) {
-                    current = section.getAttribute('id');
-                }
-            });
-
-            navLinks.forEach(link => {
-                link.classList.remove('text-deep-blue', 'bg-gray-50');
-                link.classList.add('text-soft-gray');
-                if (link.getAttribute('href') === `#${current}`) {
-                    link.classList.remove('text-soft-gray');
-                    link.classList.add('text-deep-blue', 'bg-gray-50');
-                }
-            });
-        });
-    </script>
-
-  
-
-</body></html>
+      </div>
+    </section>
+
+    <footer class="mt-16 pb-10 text-sm text-neutral-500 flex flex-wrap items-center justify-between gap-3">
+      <div>© <span id="y"></span> maoqiqi-cloud</div>
+      <div class="flex items-center gap-4">
+        <a class="hover:underline" href="#top" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">回到顶部 ↑</a>
+        <a class="hover:underline" href="pages/about.html">关于</a>
+      </div>
+    </footer>
+  </main>
+
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>
