@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>归档 | maoqiqi-cloud</title>
+  <meta name="description" content="maoqiqi-cloud 全部文章归档。" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@600;700&family=Noto+Sans+SC:wght@400;500;600&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            serif: ['Noto Serif SC', 'serif'],
+            sans: ['Noto Sans SC', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-stone-50 text-neutral-900 font-sans">
+  <header class="border-b border-stone-200 bg-stone-50/85 backdrop-blur sticky top-0 z-50">
+    <div class="max-w-5xl mx-auto px-5 py-4 flex items-center justify-between">
+      <a href="index.html" class="font-serif text-xl font-semibold">maoqiqi-cloud</a>
+      <nav class="hidden sm:flex gap-5 text-sm text-neutral-700">
+        <a href="index.html">首页</a>
+        <a href="about.html">关于</a>
+        <a href="research.html">研究</a>
+        <a href="topics.html">专题</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="max-w-4xl mx-auto px-6 py-12">
+    <div class="text-xs text-neutral-500">ARCHIVE</div>
+    <h1 class="mt-3 font-serif text-4xl font-semibold">文章归档</h1>
+    <p class="mt-3 text-neutral-600">按时间顺序查看全部文章。</p>
+
+    <div class="mt-10 rounded-[28px] border border-stone-200 bg-white overflow-hidden shadow-sm divide-y divide-stone-200">
+      <a href="pages/invest-type.html" class="block p-6 hover:bg-stone-50">
+        <div class="flex justify-between gap-4 flex-wrap">
+          <div class="font-medium">投资机构并购生态深度研究报告</div>
+          <div class="text-sm text-neutral-400">2026-03-07</div>
+        </div>
+      </a>
+
+      <a href="pages/business-qxty.html" class="block p-6 hover:bg-stone-50">
+        <div class="flex justify-between gap-4 flex-wrap">
+          <div class="font-medium">全息成像数字技术商业化应用可行性分析报告</div>
+          <div class="text-sm text-neutral-400">2026-03-06</div>
+        </div>
+      </a>
+
+      <a href="pages/xz-fans.html" class="block p-6 hover:bg-stone-50">
+        <div class="flex justify-between gap-4 flex-wrap">
+          <div class="font-medium">肖战与粉丝群体深度研究</div>
+          <div class="text-sm text-neutral-400">2026-02-26</div>
+        </div>
+      </a>
+
+      <a href="pages/xz-algorithm.html" class="block p-6 hover:bg-stone-50">
+        <div class="flex justify-between gap-4 flex-wrap">
+          <div class="font-medium">双向奔赴：一种隐性文化算法的深度解析</div>
+          <div class="text-sm text-neutral-400">2026-02-26</div>
+        </div>
+      </a>
+    </div>
+  </main>
+
+  <footer class="text-center text-xs text-neutral-400 pb-10">
+    © <span id="y"></span> maoqiqi-cloud
+  </footer>
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>
