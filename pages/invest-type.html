@@ -1,0 +1,1700 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>投资机构并购生态深度研究报告</title>
+<script src="https://statics.moonshot.cn/kimi-ppt/html-gen/static/tailwindcss@4_0805.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css" rel="stylesheet"/>
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/echarts@5.4.0/dist/echarts.min.js"></script>
+<script src="https://cdn.jsdmirror.com/npm/mathjax@3.2.2/es5/tex-svg.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<style type="text/tailwindcss">
+        @layer utilities {
+            .ppt-slide {
+                @apply relative w-[1280px] h-[720px] mx-auto p-[40px] box-border overflow-hidden mb-[40px];
+            }
+        }
+    </style>
+<style>
+        body {
+            font-family: 'Noto Sans SC', sans-serif;
+            color: #333;
+            background: #f5f5f5;
+        }
+    </style>
+<base target="_blank">
+</head>
+<body class="bg-gray-50 py-8">
+<!-- Slide 1: 封面 -->
+<div class="ppt-slide !bg-gradient-to-br !from-slate-900 !via-slate-800 !to-slate-700" type="cover">
+<div class="absolute inset-0 opacity-10">
+<div class="absolute top-0 right-0 w-96 h-96 bg-blue-500 rounded-full blur-3xl transform translate-x-1/2 -translate-y-1/2"></div>
+<div class="absolute bottom-0 left-0 w-80 h-80 bg-purple-500 rounded-full blur-3xl transform -translate-x-1/2 translate-y-1/2"></div>
+</div>
+<div class="relative h-full flex flex-col justify-center items-center text-center">
+<div class="mb-8">
+<div class="inline-block px-6 py-2 bg-blue-500/20 border border-blue-400/30 rounded-full mb-6">
+<span class="text-blue-300 text-lg font-medium tracking-wider">PRIVATE EQUITY RESEARCH</span>
+</div>
+<h1 class="text-7xl font-black text-white mb-6 leading-tight">
+                    投资机构并购生态<br/>深度研究报告
+                </h1>
+<div class="w-32 h-1 bg-gradient-to-r from-blue-400 to-purple-500 mx-auto mb-6"></div>
+<p class="text-2xl text-gray-300 font-light">
+                    以黑石基金(Blackstone)模式为核心的并购价值链分析
+                </p>
+</div>
+<div class="mt-12 flex items-center gap-8 text-gray-400">
+<div class="flex items-center gap-2">
+<i class="fas fa-calendar-alt text-blue-400"></i>
+<span class="text-lg">2026年3月</span>
+</div>
+<div class="w-px h-6 bg-gray-600"></div>
+<div class="flex items-center gap-2">
+<i class="fas fa-chart-line text-blue-400"></i>
+<span class="text-lg">专业投资研究</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Slide 2: 目录 -->
+<div class="ppt-slide !bg-white" type="table-of-contents">
+<div class="mb-8">
+<h2 class="text-5xl font-bold text-slate-900 mb-3">报告目录</h2>
+<div class="w-24 h-1.5 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full"></div>
+</div>
+<div class="grid grid-cols-2 gap-6 mt-8">
+<div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-6 border-l-4 border-blue-500 hover:shadow-lg transition-shadow">
+<div class="flex items-start gap-4">
+<div class="w-14 h-14 rounded-xl bg-blue-500 flex items-center justify-center text-white font-bold text-2xl shrink-0">01</div>
+<div>
+<h3 class="text-2xl font-bold text-slate-800 mb-2">投资机构模式概览</h3>
+<p class="text-base text-slate-600 leading-relaxed">PE/VC/并购基金分类、LBO模型、基金结构与 fee 结构</p>
+</div>
+</div>
+</div>
+<div class="bg-gradient-to-br from-purple-50 to-purple-100 rounded-2xl p-6 border-l-4 border-purple-500 hover:shadow-lg transition-shadow">
+<div class="flex items-start gap-4">
+<div class="w-14 h-14 rounded-xl bg-purple-500 flex items-center justify-center text-white font-bold text-2xl shrink-0">02</div>
+<div>
+<h3 class="text-2xl font-bold text-slate-800 mb-2">黑石基金模式深度解析</h3>
+<p class="text-base text-slate-600 leading-relaxed">Blackstone商业模式、运营团队、Portfolio Operations Group</p>
+</div>
+</div>
+</div>
+<div class="bg-gradient-to-br from-emerald-50 to-emerald-100 rounded-2xl p-6 border-l-4 border-emerald-500 hover:shadow-lg transition-shadow">
+<div class="flex items-start gap-4">
+<div class="w-14 h-14 rounded-xl bg-emerald-500 flex items-center justify-center text-white font-bold text-2xl shrink-0">03</div>
+<div>
+<h3 class="text-2xl font-bold text-slate-800 mb-2">并购生态价值链</h3>
+<p class="text-base text-slate-600 leading-relaxed">经营权获取→赋能管理→盈利提升→退出机制全流程</p>
+</div>
+</div>
+</div>
+<div class="bg-gradient-to-br from-amber-50 to-amber-100 rounded-2xl p-6 border-l-4 border-amber-500 hover:shadow-lg transition-shadow">
+<div class="flex items-start gap-4">
+<div class="w-14 h-14 rounded-xl bg-amber-500 flex items-center justify-center text-white font-bold text-2xl shrink-0">04</div>
+<div>
+<h3 class="text-2xl font-bold text-slate-800 mb-2">关键角色与价值创造</h3>
+<p class="text-base text-slate-600 leading-relaxed">卖家律师团、职业经理人、管理咨询机构的协同作用</p>
+</div>
+</div>
+</div>
+<div class="bg-gradient-to-br from-rose-50 to-rose-100 rounded-2xl p-6 border-l-4 border-rose-500 hover:shadow-lg transition-shadow col-span-2">
+<div class="flex items-start gap-4">
+<div class="w-14 h-14 rounded-xl bg-rose-500 flex items-center justify-center text-white font-bold text-2xl shrink-0">05</div>
+<div>
+<h3 class="text-2xl font-bold text-slate-800 mb-2">成功案例与启示</h3>
+<p class="text-base text-slate-600 leading-relaxed">Hilton、Crown Castle等经典并购案例分析及对中国市场的启示</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Slide 3: 投资机构模式概览 -->
+<div class="ppt-slide !bg-white" type="content">
+<div class="mb-6">
+<div class="flex items-center gap-3 mb-2">
+<div class="w-12 h-12 rounded-xl bg-blue-500 flex items-center justify-center text-white font-bold text-xl">01</div>
+<h2 class="text-4xl font-bold text-slate-900">投资机构模式概览</h2>
+</div>
+<div class="w-24 h-1 bg-blue-500 rounded-full ml-15"></div>
+</div>
+<div class="grid grid-cols-3 gap-5 mb-5">
+<div class="bg-gradient-to-br from-blue-50 to-white rounded-xl p-5 border border-blue-100 shadow-sm">
+<div class="flex items-center gap-3 mb-3">
+<div class="w-10 h-10 rounded-lg bg-blue-500 flex items-center justify-center text-white">
+<i class="fas fa-building text-lg"></i>
+</div>
+<h3 class="text-xl font-bold text-slate-800">私募股权基金(PE)</h3>
+</div>
+<p class="text-base text-slate-600 leading-relaxed mb-3">通过收购非上市公司股权，主动参与经营管理，3-7年后通过IPO、并购或二次出售退出</p>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm font-medium">Buyout Fund</span>
+<span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm font-medium">Growth Equity</span>
+</div>
+</div>
+<div class="bg-gradient-to-br from-purple-50 to-white rounded-xl p-5 border border-purple-100 shadow-sm">
+<div class="flex items-center gap-3 mb-3">
+<div class="w-10 h-10 rounded-lg bg-purple-500 flex items-center justify-center text-white">
+<i class="fas fa-rocket text-lg"></i>
+</div>
+<h3 class="text-xl font-bold text-slate-800">风险投资基金(VC)</h3>
+</div>
+<p class="text-base text-slate-600 leading-relaxed mb-3">投资早期创新企业，承担高风险追求高回报，通常不参与日常经营，5-10年退出周期</p>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-sm font-medium">Seed Stage</span>
+<span class="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-sm font-medium">Series A-C</span>
+</div>
+</div>
+<div class="bg-gradient-to-br from-emerald-50 to-white rounded-xl p-5 border border-emerald-100 shadow-sm">
+<div class="flex items-center gap-3 mb-3">
+<div class="w-10 h-10 rounded-lg bg-emerald-500 flex items-center justify-center text-white">
+<i class="fas fa-handshake text-lg"></i>
+</div>
+<h3 class="text-xl font-bold text-slate-800">并购基金(M&amp;A)</h3>
+</div>
+<p class="text-base text-slate-600 leading-relaxed mb-3">专注杠杆收购(LBO)，获取控制权后深度运营改造，2-5年快速退出，强调运营增值</p>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 bg-emerald-100 text-emerald-700 rounded-full text-sm font-medium">LBO</span>
+<span class="px-3 py-1 bg-emerald-100 text-emerald-700 rounded-full text-sm font-medium"> carve-out</span>
+</div>
+</div>
+</div>
+<div class="bg-slate-50 rounded-xl p-5 border border-slate-200">
+<h3 class="text-xl font-bold text-slate-800 mb-4 flex items-center gap-2">
+<i class="fas fa-sitemap text-blue-500"></i>
+                典型PE基金结构：有限合伙制(Limited Partnership)
+            </h3>
+<div class="grid grid-cols-2 gap-6">
+<div class="space-y-3">
+<div class="flex items-start gap-3">
+<div class="w-8 h-8 rounded-full bg-blue-500 flex items-center justify-center text-white font-bold text-sm shrink-0 mt-1">GP</div>
+<div>
+<h4 class="text-lg font-bold text-slate-800">普通合伙人(General Partner)</h4>
+<p class="text-base text-slate-600">基金管理公司，负责投资决策、投后管理，出资2-5%，收取2%管理费+20%业绩分成</p>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<div class="w-8 h-8 rounded-full bg-purple-500 flex items-center justify-center text-white font-bold text-sm shrink-0 mt-1">LP</div>
+<div>
+<h4 class="text-lg font-bold text-slate-800">有限合伙人(Limited Partner)</h4>
+<p class="text-base text-slate-600">机构投资者(养老金、大学捐赠基金、主权基金等)，出资95-98%，承担有限责任</p>
+</div>
+</div>
+</div>
+<div class="bg-white rounded-lg p-4 border border-slate-200">
+<h4 class="text-lg font-bold text-slate-800 mb-3">Fee结构：2 and 20模式</h4>
+<div class="space-y-2 text-base">
+<div class="flex justify-between items-center">
+<span class="text-slate-600">管理费(Management Fee)</span>
+<span class="font-bold text-blue-600">~2%/年</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-slate-600">业绩分成(Carried Interest)</span>
+<span class="font-bold text-purple-600">~20%</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-slate-600">门槛收益率(Hurdle Rate)</span>
+<span class="font-bold text-emerald-600">8%</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Slide 4: 杠杆收购(LBO)模型 -->
+<div class="ppt-slide !bg-white" type="content">
+<div class="mb-5">
+<div class="flex items-center gap-3 mb-2">
+<div class="w-12 h-12 rounded-xl bg-blue-500 flex items-center justify-center text-white font-bold text-xl">01</div>
+<h2 class="text-4xl font-bold text-slate-900">杠杆收购(LBO)模型</h2>
+</div>
+<div class="w-24 h-1 bg-blue-500 rounded-full ml-15"></div>
+</div>
+<div class="grid grid-cols-2 gap-6">
+<div class="space-y-4">
+<div class="bg-gradient-to-br from-blue-50 to-white rounded-xl p-5 border border-blue-100">
+<h3 class="text-xl font-bold text-slate-800 mb-3 flex items-center gap-2">
+<i class="fas fa-lightbulb text-amber-500"></i>
+                        核心逻辑
+                    </h3>
+<p class="text-base text-slate-700 leading-relaxed">
+                        通过大量债务融资(60-80%)收购目标公司，以目标公司现金流偿还债务，<span class="bg-amber-100 px-2 py-1 rounded font-semibold">用别人的钱买公司</span>，放大股权回报率
+                    </p>
+</div>
+<div class="bg-white rounded-xl p-5 border border-slate-200 shadow-sm">
+<h3 class="text-xl font-bold text-slate-800 mb-3">LBO资本结构</h3>
+<div class="space-y-3">
+<div>
+<div class="flex justify-between items-center mb-1">
+<span class="text-base font-semibold text-slate-700">优先级债务(Senior Debt)</span>
+<span class="text-base font-bold text-blue-600">40-60%</span>
+</div>
+<div class="w-full bg-slate-200 rounded-full h-2.5">
+<div class="bg-blue-500 h-2.5 rounded-full" style="width: 50%"></div>
+</div>
+<p class="text-sm text-slate-500 mt-1">银行贷款利率较低，优先偿还</p>
+</div>
+<div>
+<div class="flex justify-between items-center mb-1">
+<span class="text-base font-semibold text-slate-700">次级债务(Mezzanine Debt)</span>
+<span class="text-base font-bold text-purple-600">15-25%</span>
+</div>
+<div class="w-full bg-slate-200 rounded-full h-2.5">
+<div class="bg-purple-500 h-2.5 rounded-full" style="width: 20%"></div>
+</div>
+<p class="text-sm text-slate-500 mt-1">利率较高，可转换股权</p>
+</div>
+<div>
+<div class="flex justify-between items-center mb-1">
+<span class="text-base font-semibold text-slate-700">股权出资(Equity)</span>
+<span class="text-base font-bold text-emerald-600">20-40%</span>
+</div>
+<div class="w-full bg-slate-200 rounded-full h-2.5">
+<div class="bg-emerald-500 h-2.5 rounded-full" style="width: 30%"></div>
+</div>
+<p class="text-sm text-slate-500 mt-1">PE基金自有资本，高风险高回报</p>
+</div>
+</div>
+</div>
+</div>
+<div class="space-y-4">
+<div class="bg-white rounded-xl p-5 border border-slate-200 shadow-sm">
+<h3 class="text-xl font-bold text-slate-800 mb-4">价值创造三大杠杆</h3>
+<div class="space-y-3">
+<div class="flex items-start gap-3 p-3 bg-blue-50 rounded-lg">
+<div class="w-8 h-8 rounded-full bg-blue-500 flex items-center justify-center text-white font-bold shrink-0">1</div>
+<div>
+<h4 class="text-base font-bold text-slate-800">运营改善</h4>
+<p class="text-sm text-slate-600">提升EBITDA、优化成本结构、收入增长</p>
+</div>
+</div>
+<div class="flex items-start gap-3 p-3 bg-purple-50 rounded-lg">
+<div class="w-8 h-8 rounded-full bg-purple-500 flex items-center justify-center text-white font-bold shrink-0">2</div>
+<div>
+<h4 class="text-base font-bold text-slate-800">倍数扩张</h4>
+<p class="text-sm text-slate-600">提升估值倍数(6x→10x)，市场时机把握</p>
+</div>
+</div>
+<div class="flex items-start gap-3 p-3 bg-emerald-50 rounded-lg">
+<div class="w-8 h-8 rounded-full bg-emerald-500 flex items-center justify-center text-white font-bold shrink-0">3</div>
+<div>
+<h4 class="text-base font-bold text-slate-800">杠杆效应</h4>
+<p class="text-sm text-slate-600">债务放大股权回报，税盾效应</p>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-gradient-to-br from-amber-50 to-white rounded-xl p-5 border border-amber-100">
+<h3 class="text-lg font-bold text-slate-800 mb-3">典型交易时间线</h3>
+<div class="flex items-center justify-between text-sm">
+<div class="text-center">
+<div class="w-12 h-12 rounded-full bg-blue-500 flex items-center justify-center text-white font-bold mx-auto mb-2">Y0</div>
+<p class="font-semibold text-slate-700">收购</p>
+</div>
+<div class="flex-1 h-0.5 bg-slate-300 mx-2"></div>
+<div class="text-center">
+<div class="w-12 h-12 rounded-full bg-purple-500 flex items-center justify-center text-white font-bold mx-auto mb-2">Y1</div>
+<p class="font-semibold text-slate-700">百日计划</p>
+</div>
+<div class="flex-1 h-0.5 bg-slate-300 mx-2"></div>
+<div class="text-center">
+<div class="w-12 h-12 rounded-full bg-emerald-500 flex items-center justify-center text-white font-bold mx-auto mb-2">Y2-3</div>
+<p class="font-semibold text-slate-700">价值创造</p>
+</div>
+<div class="flex-1 h-0.5 bg-slate-300 mx-2"></div>
+<div class="text-center">
+<div class="w-12 h-12 rounded-full bg-rose-500 flex items-center justify-center text-white font-bold mx-auto mb-2">Y4-5</div>
+<p class="font-semibold text-slate-700">退出</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Slide 5: 黑石基金商业模式 -->
+<div class="ppt-slide !bg-white" type="content">
+<div class="mb-5">
+<div class="flex items-center gap-3 mb-2">
+<div class="w-12 h-12 rounded-xl bg-purple-500 flex items-center justify-center text-white font-bold text-xl">02</div>
+<h2 class="text-4xl font-bold text-slate-900">黑石基金商业模式</h2>
+</div>
+<div class="w-24 h-1 bg-purple-500 rounded-full ml-15"></div>
+</div>
+<div class="grid grid-cols-3 gap-5 mb-5">
+<div class="bg-gradient-to-br from-slate-800 to-slate-900 rounded-xl p-5 text-white">
+<div class="text-4xl font-black text-blue-400 mb-2">$1.2T</div>
+<p class="text-base text-gray-300 mb-1">资产管理规模(AUM)</p>
+<p class="text-sm text-gray-400">全球最大另类资产管理公司</p>
+</div>
+<div class="bg-gradient-to-br from-blue-600 to-blue-700 rounded-xl p-5 text-white">
+<div class="text-4xl font-black text-white mb-2">250+</div>
+<p class="text-base text-blue-100 mb-1">Portfolio Companies</p>
+<p class="text-sm text-blue-200">主动管理创造价值</p>
+</div>
+<div class="bg-gradient-to-br from-purple-600 to-purple-700 rounded-xl p-5 text-white">
+<div class="text-4xl font-black text-white mb-2">87%</div>
+<p class="text-base text-purple-100 mb-1">机构投资者占比</p>
+<p class="text-sm text-purple-200">养老金/捐赠基金/主权基金</p>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-5">
+<div class="bg-white rounded-xl p-5 border border-slate-200 shadow-sm">
+<h3 class="text-xl font-bold text-slate-800 mb-4">四大核心业务板块</h3>
+<div class="space-y-3">
+<div class="flex items-center gap-3 p-3 bg-blue-50 rounded-lg">
+<div class="w-10 h-10 rounded-lg bg-blue-500 flex items-center justify-center text-white font-bold">26%</div>
+<div>
+<h4 class="text-base font-bold text-slate-800">私募股权(Private Equity)</h4>
+<p class="text-sm text-slate-600">Buyout、Growth、Core策略</p>
+</div>
+</div>
+<div class="flex items-center gap-3 p-3 bg-purple-50 rounded-lg">
+<div class="w-10 h-10 rounded-lg bg-purple-500 flex items-center justify-center text-white font-bold">34%</div>
+<div>
+<h4 class="text-base font-bold text-slate-800">房地产(Real Estate)</h4>
+<p class="text-sm text-slate-600">BREIT、全球地产投资</p>
+</div>
+</div>
+<div class="flex items-center gap-3 p-3 bg-emerald-50 rounded-lg">
+<div class="w-10 h-10 rounded-lg bg-emerald-500 flex items-center justify-center text-white font-bold">20%</div>
+<div>
+<h4 class="text-base font-bold text-slate-800">信贷与保险(Credit)</h4>
+<p class="text-sm text-slate-600">BCRED、直接贷款</p>
+</div>
+</div>
+<div class="flex items-center gap-3 p-3 bg-amber-50 rounded-lg">
+<div class="w-10 h-10 rounded-lg bg-amber-500 flex items-center justify-center text-white font-bold">20%</div>
+<div>
+<h4 class="text-base font-bold text-slate-800">多资产策略(Hedge Fund)</h4>
+<p class="text-sm text-slate-600">对冲基金解决方案</p>
+</div>
+</div>
+</div>
+</div>
+<div class="space-y-4">
+<div class="bg-gradient-to-br from-purple-50 to-white rounded-xl p-5 border border-purple-100">
+<h3 class="text-xl font-bold text-slate-800 mb-3">黑石使命宣言</h3>
+<p class="text-base text-slate-700 leading-relaxed italic">
+                        "To create positive economic impact and long-term value for our investors, the companies we invest in, and the communities in which we work. We do this by using <span class="text-purple-600 font-semibold">extraordinary people</span> and <span class="text-purple-600 font-semibold">flexible capital</span> to help companies solve problems."
+                    </p>
+</div>
+<div class="bg-white rounded-xl p-5 border border-slate-200 shadow-sm">
+<h3 class="text-lg font-bold text-slate-800 mb-3">核心竞争优势</h3>
+<div class="grid grid-cols-2 gap-3 text-sm">
+<div class="flex items-center gap-2">
+<i class="fas fa-check-circle text-emerald-500"></i>
+<span class="text-slate-700">规模效应与议价能力</span>
+</div>
+<div class="flex items-center gap-2">
+<i class="fas fa-check-circle text-emerald-500"></i>
+<span class="text-slate-700">垂直行业专业团队</span>
+</div>
+<div class="flex items-center gap-2">
+<i class="fas fa-check-circle text-emerald-500"></i>
+<span class="text-slate-700">Portfolio协同生态</span>
+</div>
+<div class="flex items-center gap-2">
+<i class="fas fa-check-circle text-emerald-500"></i>
+<span class="text-slate-700">数据驱动投资决策</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Slide 6: 黑石Portfolio Operations Group -->
+<div class="ppt-slide !bg-white" type="content">
+<div class="mb-5">
+<div class="flex items-center gap-3 mb-2">
+<div class="w-12 h-12 rounded-xl bg-purple-500 flex items-center justify-center text-white font-bold text-xl">02</div>
+<h2 class="text-4xl font-bold text-slate-900">Portfolio Operations Group</h2>
+</div>
+<div class="w-24 h-1 bg-purple-500 rounded-full ml-15"></div>
+</div>
+<div class="grid grid-cols-2 gap-6">
+<div class="space-y-4">
+<div class="bg-gradient-to-br from-purple-50 to-white rounded-xl p-5 border border-purple-100">
+<h3 class="text-xl font-bold text-slate-800 mb-3">运营团队定位</h3>
+<p class="text-base text-slate-700 leading-relaxed mb-3">
+                        黑石的"秘密武器"——<span class="bg-purple-100 px-2 py-1 rounded font-semibold">内部咨询团队</span>，由资深行业专家组成，为被投企业提供 hands-on 运营支持
+                    </p>
+<div class="flex items-center gap-2 text-sm text-purple-700">
+<i class="fas fa-users text-purple-500"></i>
+<span class="font-semibold">覆盖250+被投公司，创造真实价值</span>
+</div>
+</div>
+<div class="bg-white rounded-xl p-5 border border-slate-200 shadow-sm">
+<h3 class="text-lg font-bold text-slate-800 mb-3">专业职能团队</h3>
+<div class="grid grid-cols-2 gap-3">
+<div class="flex items-center gap-2 p-2 bg-blue-50 rounded-lg">
+<i class="fas fa-chart-line text-blue-500"></i>
+<span class="text-sm font-semibold text-slate-700">收入增长</span>
+</div>
+<div class="flex items-center gap-2 p-2 bg-purple-50 rounded-lg">
+<i class="fas fa-shopping-cart text-purple-500"></i>
+<span class="text-sm font-semibold text-slate-700">采购优化</span>
+</div>
+<div class="flex items-center gap-2 p-2 bg-emerald-50 rounded-lg">
+<i class="fas fa-leaf text-emerald-500"></i>
+<span class="text-sm font-semibold text-slate-700">ESG可持续</span>
+</div>
+<div class="flex items-center gap-2 p-2 bg-amber-50 rounded-lg">
+<i class="fas fa-shield-alt text-amber-500"></i>
+<span class="text-sm font-semibold text-slate-700">网络安全</span>
+</div>
+<div class="flex items-center gap-2 p-2 bg-rose-50 rounded-lg">
+<i class="fas fa-database text-rose-500"></i>
+<span class="text-sm font-semibold text-slate-700">数据科学/AI</span>
+</div>
+<div class="flex items-center gap-2 p-2 bg-indigo-50 rounded-lg">
+<i class="fas fa-user-tie text-indigo-500"></i>
+<span class="text-sm font-semibold text-slate-700">人才发展</span>
+</div>
+</div>
+</div>
+</div>
+<div class="space-y-4">
+<div class="bg-white rounded-xl p-5 border border-slate-200 shadow-sm">
+<h3 class="text-xl font-bold text-slate-800 mb-4">Group Purchasing Platform</h3>
+<div class="space-y-3">
+<div class="flex justify-between items-center p-3 bg-slate-50 rounded-lg">
+<span class="text-base font-semibold text-slate-700">平台覆盖全球支出</span>
+<span class="text-2xl font-black text-blue-600">$30B+</span>
+</div>
+<div class="flex justify-between items-center p-3 bg-slate-50 rounded-lg">
+<span class="text-base font-semibold text-slate-700">间接采购类别</span>
+<span class="text-2xl font-black text-purple-600">75+</span>
+</div>
+<div class="flex justify-between items-center p-3 bg-slate-50 rounded-lg">
+<span class="text-base font-semibold text-slate-700">被投企业参与度</span>
+<span class="text-2xl font-black text-emerald-600">240+</span>
+</div>
+</div>
+<p class="text-sm text-slate-600 mt-3 leading-relaxed">
+                        通过集中采购规模效应，为被投企业争取更优惠的价格和服务条款，直接提升EBITDA
+                    </p>
+</div>
+<div class="bg-gradient-to-br from-blue-50 to-white rounded-xl p-5 border border-blue-100">
+<h3 class="text-lg font-bold text-slate-800 mb-3">Portfolio协同效应案例</h3>
+<div class="space-y-2 text-sm">
+<div class="flex items-start gap-2">
+<i class="fas fa-arrow-right text-blue-500 mt-1"></i>
+<p class="text-slate-700"><span class="font-semibold">Intelenet</span>获得Hilton Hotels、Travelport等黑石系企业IT外包订单</p>
+</div>
+<div class="flex items-start gap-2">
+<i class="fas fa-arrow-right text-blue-500 mt-1"></i>
+<p class="text-slate-700"><span class="font-semibold">Gokaldas</span>通过精益制造专家提升30%生产效率</p>
+</div>
+<div class="flex items-start gap-2">
+<i class="fas fa-arrow-right text-blue-500 mt-1"></i>
+<p class="text-slate-700"><span class="font-semibold">Allcargo</span>与Gateway Rail共享资源，优化物流网络</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Slide 7: 并购生态价值链全景 -->
+<div class="ppt-slide !bg-white" type="content">
+<div class="mb-5">
+<div class="flex items-center gap-3 mb-2">
+<div class="w-12 h-12 rounded-xl bg-emerald-500 flex items-center justify-center text-white font-bold text-xl">03</div>
+<h2 class="text-4xl font-bold text-slate-900">并购生态价值链全景</h2>
+</div>
+<div class="w-24 h-1 bg-emerald-500 rounded-full ml-15"></div>
+</div>
+<div class="relative">
+<div class="flex items-center justify-between mb-6">
+<div class="flex-1 text-center">
+<div class="w-20 h-20 rounded-full bg-blue-500 flex items-center justify-center text-white mx-auto mb-3 shadow-lg">
+<i class="fas fa-crosshairs text-3xl"></i>
+</div>
+<h3 class="text-xl font-bold text-slate-800">阶段一</h3>
+<p class="text-base font-semibold text-blue-600">获取经营权</p>
+</div>
+<div class="flex-1 flex items-center justify-center">
+<i class="fas fa-arrow-right text-3xl text-slate-400"></i>
+</div>
+<div class="flex-1 text-center">
+<div class="w-20 h-20 rounded-full bg-purple-500 flex items-center justify-center text-white mx-auto mb-3 shadow-lg">
+<i class="fas fa-cogs text-3xl"></i>
+</div>
+<h3 class="text-xl font-bold text-slate-800">阶段二</h3>
+<p class="text-base font-semibold text-purple-600">赋能管理</p>
+</div>
+<div class="flex-1 flex items-center justify-center">
+<i class="fas fa-arrow-right text-3xl text-slate-400"></i>
+</div>
+<div class="flex-1 text-center">
+<div class="w-20 h-20 rounded-full bg-emerald-500 flex items-center justify-center text-white mx-auto mb-3 shadow-lg">
+<i class="fas fa-chart-line text-3xl"></i>
+</div>
+<h3 class="text-xl font-bold text-slate-800">阶段三</h3>
+<p class="text-base font-semibold text-emerald-600">盈利提升</p>
+</div>
+<div class="flex-1 flex items-center justify-center">
+<i class="fas fa-arrow-right text-3xl text-slate-400"></i>
+</div>
+<div class="flex-1 text-center">
+<div class="w-20 h-20 rounded-full bg-rose-500 flex items-center justify-center text-white mx-auto mb-3 shadow-lg">
+<i class="fas fa-door-open text-3xl"></i>
+</div>
+<h3 class="text-xl font-bold text-slate-800">阶段四</h3>
+<p class="text-base font-semibold text-rose-600">退出变现</p>
+</div>
+</div>
+<div class="grid grid-cols-4 gap-4">
+<div class="bg-blue-50 rounded-xl p-4 border-l-4 border-blue-500">
+<h4 class="text-base font-bold text-slate-800 mb-2">关键活动</h4>
+<ul class="space-y-1.5 text-sm text-slate-700">
+<li class="flex items-start gap-2">
+<i class="fas fa-check text-blue-500 mt-1 shrink-0"></i>
+<span>目标筛选与尽职调查</span>
+</li>
+<li class="flex items-start gap-2">
+<i class="fas fa-check text-blue-500 mt-1 shrink-0"></i>
+<span>交易结构设计(LBO)</span>
+</li>
+<li class="flex items-start gap-2">
+<i class="fas fa-check text-blue-500 mt-1 shrink-0"></i>
+<span>谈判与交割</span>
+</li>
+<li class="flex items-start gap-2">
+<i class="fas fa-check text-blue-500 mt-1 shrink-0"></i>
+<span>管理层激励方案</span>
+</li>
+</ul>
+</div>
+<div class="bg-purple-50 rounded-xl p-4 border-l-4 border-purple-500">
+<h4 class="text-base font-bold text-slate-800 mb-2">关键活动</h4>
+<ul class="space-y-1.5 text-sm text-slate-700">
+<li class="flex items-start gap-2">
+<i class="fas fa-check text-purple-500 mt-1 shrink-0"></i>
+<span>百日计划(100-Day Plan)</span>
+</li>
+<li class="flex items-start gap-2">
+<i class="fas fa-check text-purple-500 mt-1 shrink-0"></i>
+<span>运营团队入驻</span>
+</li>
+<li class="flex items-start gap-2">
+<i class="fas fa-check text-purple-500 mt-1 shrink-0"></i>
+<span>KPI体系搭建</span>
+</li>
+<li class="flex items-start gap-2">
+<i class="fas fa-check text-purple-500 mt-1 shrink-0"></i>
+<span>管理咨询介入</span>
+</li>
+</ul>
+</div>
+<div class="bg-emerald-50 rounded-xl p-4 border-l-4 border-emerald-500">
+<h4 class="text-base font-bold text-slate-800 mb-2">关键活动</h4>
+<ul class="space-y-1.5 text-sm text-slate-700">
+<li class="flex items-start gap-2">
+<i class="fas fa-check text-emerald-500 mt-1 shrink-0"></i>
+<span>收入增长计划</span>
+</li>
+<li class="flex items-start gap-2">
+<i class="fas fa-check text-emerald-500 mt-1 shrink-0"></i>
+<span>成本优化项目</span>
+</li>
+<li class="flex items-start gap-2">
+<i class="fas fa-check text-emerald-500 mt-1 shrink-0"></i>
+<span>运营效率提升</span>
+</li>
+<li class="flex items-start gap-2">
+<i class="fas fa-check text-emerald-500 mt-1 shrink-0"></i>
+<span>战略并购(Add-on)</span>
+</li>
+</ul>
+</div>
+<div class="bg-rose-50 rounded-xl p-4 border-l-4 border-rose-500">
+<h4 class="text-base font-bold text-slate-800 mb-2">关键活动</h4>
+<ul class="space-y-1.5 text-sm text-slate-700">
+<li class="flex items-start gap-2">
+<i class="fas fa-check text-rose-500 mt-1 shrink-0"></i>
+<span>退出准备(VDD)</span>
+</li>
+<li class="flex items-start gap-2">
+<i class="fas fa-check text-rose-500 mt-1 shrink-0"></i>
+<span>买家对接</span>
+</li>
+<li class="flex items-start gap-2">
+<i class="fas fa-check text-rose-500 mt-1 shrink-0"></i>
+<span>交易执行</span>
+</li>
+<li class="flex items-start gap-2">
+<i class="fas fa-check text-rose-500 mt-1 shrink-0"></i>
+<span>收益分配</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="mt-5 bg-slate-50 rounded-xl p-4 border border-slate-200">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<i class="fas fa-clock text-2xl text-slate-500"></i>
+<div>
+<p class="text-base font-bold text-slate-800">典型投资周期</p>
+<p class="text-sm text-slate-600">从收购到退出的完整价值链通常需要 <span class="text-emerald-600 font-bold">3-5年</span></p>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<div class="text-center">
+<p class="text-2xl font-black text-blue-600">6-12月</p>
+<p class="text-sm text-slate-600">收购期</p>
+</div>
+<div class="text-center">
+<p class="text-2xl font-black text-purple-600">12-24月</p>
+<p class="text-sm text-slate-600">改造期</p>
+</div>
+<div class="text-center">
+<p class="text-2xl font-black text-emerald-600">12-24月</p>
+<p class="text-sm text-slate-600">增值期</p>
+</div>
+<div class="text-center">
+<p class="text-2xl font-black text-rose-600">6-12月</p>
+<p class="text-sm text-slate-600">退出期</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Slide 8: 阶段一：经营权获取 -->
+<div class="ppt-slide !bg-white" type="content">
+<div class="mb-5">
+<div class="flex items-center gap-3 mb-2">
+<div class="w-12 h-12 rounded-xl bg-blue-500 flex items-center justify-center text-white font-bold text-xl">03</div>
+<h2 class="text-4xl font-bold text-slate-900">阶段一：经营权获取</h2>
+</div>
+<div class="w-24 h-1 bg-blue-500 rounded-full ml-15"></div>
+</div>
+<div class="grid grid-cols-2 gap-6">
+<div class="space-y-4">
+<div class="bg-white rounded-xl p-5 border border-slate-200 shadow-sm">
+<h3 class="text-xl font-bold text-slate-800 mb-4">尽职调查流程</h3>
+<div class="space-y-3">
+<div class="flex items-start gap-3">
+<div class="w-8 h-8 rounded-full bg-blue-500 flex items-center justify-center text-white font-bold text-sm shrink-0">1</div>
+<div class="flex-1">
+<h4 class="text-base font-bold text-slate-800">初步筛选(Exploratory DD)</h4>
+<p class="text-sm text-slate-600">审阅CIM，识别deal-breakers，评估战略契合度</p>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<div class="w-8 h-8 rounded-full bg-blue-500 flex items-center justify-center text-white font-bold text-sm shrink-0">2</div>
+<div class="flex-1">
+<h4 class="text-base font-bold text-slate-800">签署意向书(LOI)</h4>
+<p class="text-sm text-slate-600">非约束性报价，排他期谈判，进入深度尽调</p>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<div class="w-8 h-8 rounded-full bg-blue-500 flex items-center justify-center text-white font-bold text-sm shrink-0">3</div>
+<div class="flex-1">
+<h4 class="text-base font-bold text-slate-800">确认性尽调(Confirmatory DD)</h4>
+<p class="text-sm text-slate-600">财务、法律、商业、运营全方位尽调，风险定价</p>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<div class="w-8 h-8 rounded-full bg-blue-500 flex items-center justify-center text-white font-bold text-sm shrink-0">4</div>
+<div class="flex-1">
+<h4 class="text-base font-bold text-slate-800">签署SPA完成交割</h4>
+<p class="text-sm text-slate-600">最终谈判，资金交割，获得控制权</p>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-gradient-to-br from-blue-50 to-white rounded-xl p-5 border border-blue-100">
+<h3 class="text-lg font-bold text-slate-800 mb-3">尽调关键维度</h3>
+<div class="grid grid-cols-2 gap-3">
+<div class="flex items-center gap-2 p-2 bg-white rounded-lg shadow-sm">
+<i class="fas fa-calculator text-blue-500"></i>
+<span class="text-sm font-semibold text-slate-700">财务尽调</span>
+</div>
+<div class="flex items-center gap-2 p-2 bg-white rounded-lg shadow-sm">
+<i class="fas fa-balance-scale text-blue-500"></i>
+<span class="text-sm font-semibold text-slate-700">法律尽调</span>
+</div>
+<div class="flex items-center gap-2 p-2 bg-white rounded-lg shadow-sm">
+<i class="fas fa-chart-pie text-blue-500"></i>
+<span class="text-sm font-semibold text-slate-700">商业尽调</span>
+</div>
+<div class="flex items-center gap-2 p-2 bg-white rounded-lg shadow-sm">
+<i class="fas fa-cogs text-blue-500"></i>
+<span class="text-sm font-semibold text-slate-700">运营尽调</span>
+</div>
+<div class="flex items-center gap-2 p-2 bg-white rounded-lg shadow-sm">
+<i class="fas fa-laptop-code text-blue-500"></i>
+<span class="text-sm font-semibold text-slate-700">技术尽调</span>
+</div>
+<div class="flex items-center gap-2 p-2 bg-white rounded-lg shadow-sm">
+<i class="fas fa-users text-blue-500"></i>
+<span class="text-sm font-semibold text-slate-700">人力尽调</span>
+</div>
+</div>
+</div>
+</div>
+<div class="space-y-4">
+<div class="bg-white rounded-xl p-5 border border-slate-200 shadow-sm">
+<h3 class="text-xl font-bold text-slate-800 mb-4">交易结构设计</h3>
+<div class="space-y-3">
+<div class="p-3 bg-slate-50 rounded-lg">
+<h4 class="text-base font-bold text-slate-800 mb-2">股权收购 vs 资产收购</h4>
+<div class="grid grid-cols-2 gap-2 text-sm">
+<div>
+<p class="font-semibold text-blue-600 mb-1">股权收购</p>
+<ul class="text-slate-600 space-y-1">
+<li>• 承继全部资产负债</li>
+<li>• 税务处理相对简单</li>
+<li>• 合同自动转移</li>
+</ul>
+</div>
+<div>
+<p class="font-semibold text-purple-600 mb-1">资产收购</p>
+<ul class="text-slate-600 space-y-1">
+<li>• 选择性承接资产</li>
+<li>• 可能产生双重征税</li>
+<li>• 需重新签订合同</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="p-3 bg-slate-50 rounded-lg">
+<h4 class="text-base font-bold text-slate-800 mb-2">对价支付方式</h4>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm">现金</span>
+<span class="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-sm">股票</span>
+<span class="px-3 py-1 bg-emerald-100 text-emerald-700 rounded-full text-sm">Earn-out</span>
+<span class="px-3 py-1 bg-amber-100 text-amber-700 rounded-full text-sm">Rollover Equity</span>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-gradient-to-br from-amber-50 to-white rounded-xl p-5 border border-amber-100">
+<h3 class="text-lg font-bold text-slate-800 mb-3">管理层激励(Management Incentive Plan)</h3>
+<p class="text-base text-slate-700 leading-relaxed mb-3">
+                        PE基金通常要求管理层<span class="bg-amber-100 px-2 py-1 rounded font-semibold">跟投(Rollover)</span>部分股权，并设置基于EBITDA增长的期权池，确保利益一致
+                    </p>
+<div class="flex items-center justify-between text-sm">
+<span class="text-slate-600">典型管理层持股</span>
+<span class="text-xl font-bold text-amber-600">5-15%</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Slide 9: 阶段二：赋能管理 -->
+<div class="ppt-slide !bg-white" type="content">
+<div class="mb-5">
+<div class="flex items-center gap-3 mb-2">
+<div class="w-12 h-12 rounded-xl bg-purple-500 flex items-center justify-center text-white font-bold text-xl">03</div>
+<h2 class="text-4xl font-bold text-slate-900">阶段二：赋能管理</h2>
+</div>
+<div class="w-24 h-1 bg-purple-500 rounded-full ml-15"></div>
+</div>
+<div class="grid grid-cols-2 gap-6">
+<div class="space-y-4">
+<div class="bg-gradient-to-br from-purple-50 to-white rounded-xl p-5 border border-purple-100">
+<h3 class="text-xl font-bold text-slate-800 mb-3">百日计划(100-Day Plan)</h3>
+<p class="text-base text-slate-700 leading-relaxed mb-3">
+                        交割后前100天是价值创造的<span class="bg-purple-100 px-2 py-1 rounded font-semibold">黄金窗口期</span>，必须快速建立信任、诊断问题、启动关键举措
+                    </p>
+<div class="space-y-2">
+<div class="flex items-center gap-3 p-2 bg-white rounded-lg shadow-sm">
+<div class="w-8 h-8 rounded-full bg-purple-500 flex items-center justify-center text-white font-bold text-sm">D30</div>
+<p class="text-sm text-slate-700"><span class="font-semibold">诊断期：</span>深度访谈、数据分析、问题识别</p>
+</div>
+<div class="flex items-center gap-3 p-2 bg-white rounded-lg shadow-sm">
+<div class="w-8 h-8 rounded-full bg-purple-500 flex items-center justify-center text-white font-bold text-sm">D60</div>
+<p class="text-sm text-slate-700"><span class="font-semibold">规划期：</span>Value Creation Plan定稿、KPI设定</p>
+</div>
+<div class="flex items-center gap-3 p-2 bg-white rounded-lg shadow-sm">
+<div class="w-8 h-8 rounded-full bg-purple-500 flex items-center justify-center text-white font-bold text-sm">D100</div>
+<p class="text-sm text-slate-700"><span class="font-semibold">执行期：</span>Quick Wins落地、组织调整、人才到位</p>
+</div>
+</div>
+</div>
+<div class="bg-white rounded-xl p-5 border border-slate-200 shadow-sm">
+<h3 class="text-lg font-bold text-slate-800 mb-3">运营改进方法论</h3>
+<div class="grid grid-cols-2 gap-2 text-sm">
+<div class="flex items-center gap-2 p-2 bg-blue-50 rounded-lg">
+<i class="fas fa-cut text-blue-500"></i>
+<span class="text-slate-700">精益生产(Lean)</span>
+</div>
+<div class="flex items-center gap-2 p-2 bg-purple-50 rounded-lg">
+<i class="fas fa-check-circle text-purple-500"></i>
+<span class="text-slate-700">六西格玛(6σ)</span>
+</div>
+<div class="flex items-center gap-2 p-2 bg-emerald-50 rounded-lg">
+<i class="fas fa-trophy text-emerald-500"></i>
+<span class="text-slate-700">TQM</span>
+</div>
+<div class="flex items-center gap-2 p-2 bg-amber-50 rounded-lg">
+<i class="fas fa-bolt text-amber-500"></i>
+<span class="text-slate-700">敏捷管理</span>
+</div>
+<div class="flex items-center gap-2 p-2 bg-rose-50 rounded-lg">
+<i class="fas fa-balance-scale-right text-rose-500"></i>
+<span class="text-slate-700">标杆管理</span>
+</div>
+<div class="flex items-center gap-2 p-2 bg-indigo-50 rounded-lg">
+<i class="fas fa-project-diagram text-indigo-500"></i>
+<span class="text-slate-700">流程再造(BPR)</span>
+</div>
+</div>
+</div>
+</div>
+<div class="space-y-4">
+<div class="bg-white rounded-xl p-5 border border-slate-200 shadow-sm">
+<h3 class="text-xl font-bold text-slate-800 mb-4">Value Creation Plan核心要素</h3>
+<div class="space-y-3">
+<div class="p-3 bg-blue-50 rounded-lg border-l-4 border-blue-500">
+<h4 class="text-base font-bold text-slate-800 mb-2">收入增长(Revenue Growth)</h4>
+<ul class="text-sm text-slate-700 space-y-1">
+<li>• 定价优化(Pricing Excellence)</li>
+<li>• 销售效率提升(Sales Effectiveness)</li>
+<li>• 新市场/新产品拓展</li>
+<li>• 客户细分与留存</li>
+</ul>
+</div>
+<div class="p-3 bg-purple-50 rounded-lg border-l-4 border-purple-500">
+<h4 class="text-base font-bold text-slate-800 mb-2">成本优化(Cost Optimization)</h4>
+<ul class="text-sm text-slate-700 space-y-1">
+<li>• 采购成本降低(Procurement)</li>
+<li>• 供应链优化</li>
+<li>• SG&amp;A费用控制</li>
+<li>• 共享服务中心</li>
+</ul>
+</div>
+<div class="p-3 bg-emerald-50 rounded-lg border-l-4 border-emerald-500">
+<h4 class="text-base font-bold text-slate-800 mb-2">运营效率(Operational Efficiency)</h4>
+<ul class="text-sm text-slate-700 space-y-1">
+<li>• 营运资本优化(WC)</li>
+<li>• 产能利用率提升</li>
+<li>• 数字化/自动化</li>
+<li>• 质量改进</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="bg-gradient-to-br from-emerald-50 to-white rounded-xl p-5 border border-emerald-100">
+<h3 class="text-lg font-bold text-slate-800 mb-3">KPI仪表盘设计</h3>
+<p class="text-sm text-slate-700 leading-relaxed">
+                        建立<span class="bg-emerald-100 px-2 py-1 rounded font-semibold">周度Flash Report</span>机制，追踪关键指标：收入、EBITDA、现金流、客户满意度、员工敬业度
+                    </p>
+</div>
+</div>
+</div>
+</div>
+<!-- Slide 10: 阶段三：盈利提升 -->
+<div class="ppt-slide !bg-white" type="content">
+<div class="mb-5">
+<div class="flex items-center gap-3 mb-2">
+<div class="w-12 h-12 rounded-xl bg-emerald-500 flex items-center justify-center text-white font-bold text-xl">03</div>
+<h2 class="text-4xl font-bold text-slate-900">阶段三：盈利提升</h2>
+</div>
+<div class="w-24 h-1 bg-emerald-500 rounded-full ml-15"></div>
+</div>
+<div class="grid grid-cols-2 gap-6">
+<div class="space-y-4">
+<div class="bg-white rounded-xl p-5 border border-slate-200 shadow-sm">
+<h3 class="text-xl font-bold text-slate-800 mb-4">EBITDA提升路径</h3>
+<div class="space-y-3">
+<div class="flex items-center gap-4">
+<div class="w-16 h-16 rounded-full bg-blue-100 flex items-center justify-center shrink-0">
+<i class="fas fa-dollar-sign text-2xl text-blue-600"></i>
+</div>
+<div class="flex-1">
+<h4 class="text-base font-bold text-slate-800">定价策略优化</h4>
+<p class="text-sm text-slate-600">2%价格提升可带来更大EBITDA增长</p>
+<div class="mt-1 inline-block px-2 py-0.5 bg-blue-100 text-blue-700 rounded text-xs font-semibold">影响：高</div>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-16 h-16 rounded-full bg-purple-100 flex items-center justify-center shrink-0">
+<i class="fas fa-shopping-basket text-2xl text-purple-600"></i>
+</div>
+<div class="flex-1">
+<h4 class="text-base font-bold text-slate-800">采购成本降低</h4>
+<p class="text-sm text-slate-600">集中采购、供应商谈判、规格优化</p>
+<div class="mt-1 inline-block px-2 py-0.5 bg-purple-100 text-purple-700 rounded text-xs font-semibold">影响：高</div>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-16 h-16 rounded-full bg-emerald-100 flex items-center justify-center shrink-0">
+<i class="fas fa-users-cog text-2xl text-emerald-600"></i>
+</div>
+<div class="flex-1">
+<h4 class="text-base font-bold text-slate-800">人效提升</h4>
+<p class="text-sm text-slate-600">组织扁平化、自动化、流程优化</p>
+<div class="mt-1 inline-block px-2 py-0.5 bg-emerald-100 text-emerald-700 rounded text-xs font-semibold">影响：中</div>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-16 h-16 rounded-full bg-amber-100 flex items-center justify-center shrink-0">
+<i class="fas fa-chart-line text-2xl text-amber-600"></i>
+</div>
+<div class="flex-1">
+<h4 class="text-base font-bold text-slate-800">收入增长</h4>
+<p class="text-sm text-slate-600">新市场、新产品、客户深耕</p>
+<div class="mt-1 inline-block px-2 py-0.5 bg-amber-100 text-amber-700 rounded text-xs font-semibold">影响：中</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="space-y-4">
+<div class="bg-gradient-to-br from-emerald-50 to-white rounded-xl p-5 border border-emerald-100">
+<h3 class="text-xl font-bold text-slate-800 mb-3">战略并购(Add-on Acquisition)</h3>
+<p class="text-base text-slate-700 leading-relaxed mb-3">
+                        通过<span class="bg-emerald-100 px-2 py-1 rounded font-semibold">滚动收购(Roll-up)</span>策略，整合行业碎片化资源，实现规模效应和估值倍数提升
+                    </p>
+<div class="bg-white rounded-lg p-3 border border-emerald-200">
+<h4 class="text-base font-bold text-slate-800 mb-2">Add-on策略优势</h4>
+<ul class="text-sm text-slate-700 space-y-1">
+<li class="flex items-start gap-2">
+<i class="fas fa-check text-emerald-500 mt-1"></i>
+<span>收入协同(交叉销售、客户共享)</span>
+</li>
+<li class="flex items-start gap-2">
+<i class="fas fa-check text-emerald-500 mt-1"></i>
+<span>成本协同(采购、运营、管理费用)</span>
+</li>
+<li class="flex items-start gap-2">
+<i class="fas fa-check text-emerald-500 mt-1"></i>
+<span>估值倍数套利(小估值→大估值)</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="bg-white rounded-xl p-5 border border-slate-200 shadow-sm">
+<h3 class="text-lg font-bold text-slate-800 mb-3">数字化转型价值</h3>
+<div class="grid grid-cols-2 gap-3">
+<div class="p-3 bg-blue-50 rounded-lg text-center">
+<i class="fas fa-robot text-2xl text-blue-500 mb-2"></i>
+<p class="text-sm font-semibold text-slate-700">流程自动化</p>
+<p class="text-xs text-slate-500">RPA/AI降本</p>
+</div>
+<div class="p-3 bg-purple-50 rounded-lg text-center">
+<i class="fas fa-analytics text-2xl text-purple-500 mb-2"></i>
+<p class="text-sm font-semibold text-slate-700">数据驱动决策</p>
+<p class="text-xs text-slate-500">BI/预测分析</p>
+</div>
+<div class="p-3 bg-emerald-50 rounded-lg text-center">
+<i class="fas fa-cloud text-2xl text-emerald-500 mb-2"></i>
+<p class="text-sm font-semibold text-slate-700">云化迁移</p>
+<p class="text-xs text-slate-500">IT成本优化</p>
+</div>
+<div class="p-3 bg-amber-50 rounded-lg text-center">
+<i class="fas fa-shield-alt text-2xl text-amber-500 mb-2"></i>
+<p class="text-sm font-semibold text-slate-700">网络安全</p>
+<p class="text-xs text-slate-500">风险防护</p>
+</div>
+</div>
+</div>
+<div class="bg-gradient-to-br from-amber-50 to-white rounded-xl p-4 border border-amber-100">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-lg font-bold text-slate-800">典型EBITDA提升目标</h3>
+<p class="text-sm text-slate-600">3-5年持有期内</p>
+</div>
+<div class="text-right">
+<p class="text-4xl font-black text-emerald-600">50-100%</p>
+<p class="text-sm text-slate-600">EBITDA增长</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Slide 11: 阶段四：退出机制 -->
+<div class="ppt-slide !bg-white" type="content">
+<div class="mb-5">
+<div class="flex items-center gap-3 mb-2">
+<div class="w-12 h-12 rounded-xl bg-rose-500 flex items-center justify-center text-white font-bold text-xl">03</div>
+<h2 class="text-4xl font-bold text-slate-900">阶段四：退出机制</h2>
+</div>
+<div class="w-24 h-1 bg-rose-500 rounded-full ml-15"></div>
+</div>
+<div class="grid grid-cols-2 gap-6">
+<div class="space-y-4">
+<div class="bg-white rounded-xl p-5 border border-slate-200 shadow-sm">
+<h3 class="text-xl font-bold text-slate-800 mb-4">主要退出路径</h3>
+<div class="space-y-3">
+<div class="p-3 bg-blue-50 rounded-lg border-l-4 border-blue-500">
+<div class="flex items-center justify-between mb-2">
+<h4 class="text-base font-bold text-slate-800">战略出售(Strategic Sale)</h4>
+<span class="px-2 py-1 bg-blue-100 text-blue-700 rounded text-xs font-bold">最常见</span>
+</div>
+<p class="text-sm text-slate-700">出售给行业买家，获取协同溢价，通常估值最高</p>
+</div>
+<div class="p-3 bg-purple-50 rounded-lg border-l-4 border-purple-500">
+<div class="flex items-center justify-between mb-2">
+<h4 class="text-base font-bold text-slate-800">二次收购(Secondary Buyout)</h4>
+<span class="px-2 py-1 bg-purple-100 text-purple-700 rounded text-xs font-bold">增长中</span>
+</div>
+<p class="text-sm text-slate-700">出售给另一家PE基金，速度快、监管少，2024年占退出50%</p>
+</div>
+<div class="p-3 bg-emerald-50 rounded-lg border-l-4 border-emerald-500">
+<div class="flex items-center justify-between mb-2">
+<h4 class="text-base font-bold text-slate-800">IPO上市</h4>
+<span class="px-2 py-1 bg-emerald-100 text-emerald-700 rounded text-xs font-bold">高回报</span>
+</div>
+<p class="text-sm text-slate-700">公开市场退出，流动性最佳，但周期长、成本高</p>
+</div>
+<div class="p-3 bg-amber-50 rounded-lg border-l-4 border-amber-500">
+<div class="flex items-center justify-between mb-2">
+<h4 class="text-base font-bold text-slate-800">管理层回购(MBO)</h4>
+<span class="px-2 py-1 bg-amber-100 text-amber-700 rounded text-xs font-bold">平稳</span>
+</div>
+<p class="text-sm text-slate-700">现有管理层收购，保持业务连续性，但融资能力有限</p>
+</div>
+</div>
+</div>
+</div>
+<div class="space-y-4">
+<div class="bg-gradient-to-br from-rose-50 to-white rounded-xl p-5 border border-rose-100">
+<h3 class="text-xl font-bold text-slate-800 mb-3">退出准备流程</h3>
+<div class="space-y-2">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-rose-500 flex items-center justify-center text-white font-bold text-sm">1</div>
+<p class="text-sm text-slate-700"><span class="font-semibold">退出准备(VDD)：</span>卖方尽调，准备材料</p>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-rose-500 flex items-center justify-center text-white font-bold text-sm">2</div>
+<p class="text-sm text-slate-700"><span class="font-semibold">估值定价：</span>聘请投行，确定价格区间</p>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-rose-500 flex items-center justify-center text-white font-bold text-sm">3</div>
+<p class="text-sm text-slate-700"><span class="font-semibold">买家对接：</span>Teaser发送，NDA签署，CIM分发</p>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-rose-500 flex items-center justify-center text-white font-bold text-sm">4</div>
+<p class="text-sm text-slate-700"><span class="font-semibold">竞标流程：</span>Indication of Interest → 管理层演示 → Final Bid</p>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-rose-500 flex items-center justify-center text-white font-bold text-sm">5</div>
+<p class="text-sm text-slate-700"><span class="font-semibold">交易执行：</span>SPA谈判、交割、收益分配</p>
+</div>
+</div>
+</div>
+<div class="bg-white rounded-xl p-5 border border-slate-200 shadow-sm">
+<h3 class="text-lg font-bold text-slate-800 mb-3">Vendor Due Diligence价值</h3>
+<ul class="space-y-2 text-sm text-slate-700">
+<li class="flex items-start gap-2">
+<i class="fas fa-check-circle text-emerald-500 mt-1"></i>
+<span>缩短交易周期(4-6周完成)</span>
+</li>
+<li class="flex items-start gap-2">
+<i class="fas fa-check-circle text-emerald-500 mt-1"></i>
+<span>增强买家信心，减少价格谈判</span>
+</li>
+<li class="flex items-start gap-2">
+<i class="fas fa-check-circle text-emerald-500 mt-1"></i>
+<span>管理层可专注于业务运营</span>
+</li>
+<li class="flex items-start gap-2">
+<i class="fas fa-check-circle text-emerald-500 mt-1"></i>
+<span>识别并提前解决潜在问题</span>
+</li>
+</ul>
+</div>
+<div class="bg-gradient-to-br from-blue-50 to-white rounded-xl p-4 border border-blue-100">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="text-lg font-bold text-slate-800">目标IRR</h3>
+<p class="text-sm text-slate-600">扣除费用后净回报</p>
+</div>
+<div class="text-right">
+<p class="text-4xl font-black text-blue-600">20-30%</p>
+<p class="text-sm text-slate-600">年化收益率</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Slide 12: 关键角色：卖家律师团 -->
+<div class="ppt-slide !bg-white" type="content">
+<div class="mb-5">
+<div class="flex items-center gap-3 mb-2">
+<div class="w-12 h-12 rounded-xl bg-amber-500 flex items-center justify-center text-white font-bold text-xl">04</div>
+<h2 class="text-4xl font-bold text-slate-900">关键角色：卖家律师团</h2>
+</div>
+<div class="w-24 h-1 bg-amber-500 rounded-full ml-15"></div>
+</div>
+<div class="grid grid-cols-2 gap-6">
+<div class="space-y-4">
+<div class="bg-white rounded-xl p-5 border border-slate-200 shadow-sm">
+<h3 class="text-xl font-bold text-slate-800 mb-4">M&amp;A律师核心职责</h3>
+<div class="space-y-3">
+<div class="flex items-start gap-3 p-3 bg-amber-50 rounded-lg">
+<div class="w-8 h-8 rounded-full bg-amber-500 flex items-center justify-center text-white font-bold text-sm shrink-0">1</div>
+<div>
+<h4 class="text-base font-bold text-slate-800">交易结构设计</h4>
+<p class="text-sm text-slate-600">股权vs资产收购、税务优化、监管合规评估</p>
+</div>
+</div>
+<div class="flex items-start gap-3 p-3 bg-amber-50 rounded-lg">
+<div class="w-8 h-8 rounded-full bg-amber-500 flex items-center justify-center text-white font-bold text-sm shrink-0">2</div>
+<div>
+<h4 class="text-base font-bold text-slate-800">条款谈判</h4>
+<p class="text-sm text-slate-600">Purchase Agreement、Representations &amp; Warranties、Indemnification</p>
+</div>
+</div>
+<div class="flex items-start gap-3 p-3 bg-amber-50 rounded-lg">
+<div class="w-8 h-8 rounded-full bg-amber-500 flex items-center justify-center text-white font-bold text-sm shrink-0">3</div>
+<div>
+<h4 class="text-base font-bold text-slate-800">法律尽调</h4>
+<p class="text-sm text-slate-600">合同审查、诉讼风险评估、IP合规、劳动法</p>
+</div>
+</div>
+<div class="flex items-start gap-3 p-3 bg-amber-50 rounded-lg">
+<div class="w-8 h-8 rounded-full bg-amber-500 flex items-center justify-center text-white font-bold text-sm shrink-0">4</div>
+<div>
+<h4 class="text-base font-bold text-slate-800">监管审批</h4>
+<p class="text-sm text-slate-600">反垄断申报、行业监管、跨境交易合规</p>
+</div>
+</div>
+<div class="flex items-start gap-3 p-3 bg-amber-50 rounded-lg">
+<div class="w-8 h-8 rounded-full bg-amber-500 flex items-center justify-center text-white font-bold text-sm shrink-0">5</div>
+<div>
+<h4 class="text-base font-bold text-slate-800">交割与整合</h4>
+<p class="text-sm text-slate-600">Closing条件、文件签署、Post-closing事项</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="space-y-4">
+<div class="bg-gradient-to-br from-amber-50 to-white rounded-xl p-5 border border-amber-100">
+<h3 class="text-xl font-bold text-slate-800 mb-3">关键法律文件</h3>
+<div class="space-y-2">
+<div class="p-2 bg-white rounded-lg shadow-sm">
+<p class="text-sm font-semibold text-slate-800">NDA (保密协议)</p>
+</div>
+<div class="p-2 bg-white rounded-lg shadow-sm">
+<p class="text-sm font-semibold text-slate-800">LOI (意向书)</p>
+</div>
+<div class="p-2 bg-white rounded-lg shadow-sm">
+<p class="text-sm font-semibold text-slate-800">SPA (股权购买协议)</p>
+</div>
+<div class="p-2 bg-white rounded-lg shadow-sm">
+<p class="text-sm font-semibold text-slate-800">Disclosure Schedule (披露附表)</p>
+</div>
+<div class="p-2 bg-white rounded-lg shadow-sm">
+<p class="text-sm font-semibold text-slate-800">Employment Agreements (高管雇佣协议)</p>
+</div>
+<div class="p-2 bg-white rounded-lg shadow-sm">
+<p class="text-sm font-semibold text-slate-800">Non-compete (竞业禁止协议)</p>
+</div>
+</div>
+</div>
+<div class="bg-white rounded-xl p-5 border border-slate-200 shadow-sm">
+<h3 class="text-lg font-bold text-slate-800 mb-3">律师在交易中的价值</h3>
+<ul class="space-y-2 text-sm text-slate-700">
+<li class="flex items-start gap-2">
+<i class="fas fa-shield-alt text-amber-500 mt-1"></i>
+<span>风险识别与防范(Representations &amp; Warranties)</span>
+</li>
+<li class="flex items-start gap-2">
+<i class="fas fa-balance-scale text-amber-500 mt-1"></i>
+<span>交易条款平衡，保护卖方利益</span>
+</li>
+<li class="flex items-start gap-2">
+<i class="fas fa-clock text-amber-500 mt-1"></i>
+<span>加速交易进程，减少谈判摩擦</span>
+</li>
+<li class="flex items-start gap-2">
+<i class="fas fa-handshake text-amber-500 mt-1"></i>
+<span>促成交易达成，降低失败率</span>
+</li>
+</ul>
+</div>
+<div class="bg-gradient-to-br from-blue-50 to-white rounded-xl p-4 border border-blue-100">
+<p class="text-base text-slate-700 leading-relaxed">
+<i class="fas fa-lightbulb text-amber-500 mr-2"></i>
+                        顶尖M&amp;A律师团队(如Kirkland &amp; Ellis、Latham &amp; Watkins)能够<span class="bg-blue-100 px-2 py-1 rounded font-semibold">显著提升交易成功率</span>并为客户争取更优条款
+                    </p>
+</div>
+</div>
+</div>
+</div>
+<!-- Slide 13: 关键角色：职业经理人 -->
+<div class="ppt-slide !bg-white" type="content">
+<div class="mb-5">
+<div class="flex items-center gap-3 mb-2">
+<div class="w-12 h-12 rounded-xl bg-amber-500 flex items-center justify-center text-white font-bold text-xl">04</div>
+<h2 class="text-4xl font-bold text-slate-900">关键角色：职业经理人</h2>
+</div>
+<div class="w-24 h-1 bg-amber-500 rounded-full ml-15"></div>
+</div>
+<div class="grid grid-cols-2 gap-6">
+<div class="space-y-4">
+<div class="bg-gradient-to-br from-blue-50 to-white rounded-xl p-5 border border-blue-100">
+<h3 class="text-xl font-bold text-slate-800 mb-3">PE所有权下的高管挑战</h3>
+<p class="text-base text-slate-700 leading-relaxed mb-3">
+<span class="bg-red-100 px-2 py-1 rounded font-semibold text-red-700">50-70%</span> 的被投企业CEO在持有期内被更换，PE对绩效要求极为严苛
+                    </p>
+<div class="bg-white rounded-lg p-3 border border-blue-200">
+<h4 class="text-base font-bold text-slate-800 mb-2">PE期望的CEO特质</h4>
+<ul class="text-sm text-slate-700 space-y-1">
+<li class="flex items-start gap-2">
+<i class="fas fa-star text-blue-500 mt-1"></i>
+<span>使命驱动、结果导向</span>
+</li>
+<li class="flex items-start gap-2">
+<i class="fas fa-star text-blue-500 mt-1"></i>
+<span>敢于承担风险、快速决策</span>
+</li>
+<li class="flex items-start gap-2">
+<i class="fas fa-star text-blue-500 mt-1"></i>
+<span>具备逆境韧性(Resilience)</span>
+</li>
+<li class="flex items-start gap-2">
+<i class="fas fa-star text-blue-500 mt-1"></i>
+<span>数据驱动、执行力强</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="bg-white rounded-xl p-5 border border-slate-200 shadow-sm">
+<h3 class="text-lg font-bold text-slate-800 mb-3">CEO生存指南</h3>
+<div class="space-y-2">
+<div class="flex items-start gap-2 p-2 bg-slate-50 rounded-lg">
+<i class="fas fa-check-circle text-emerald-500 mt-1"></i>
+<p class="text-sm text-slate-700"><span class="font-semibold">快速对齐投资逻辑：</span>深度理解Investment Thesis</p>
+</div>
+<div class="flex items-start gap-2 p-2 bg-slate-50 rounded-lg">
+<i class="fas fa-check-circle text-emerald-500 mt-1"></i>
+<p class="text-sm text-slate-700"><span class="font-semibold">制定VCP：</span>3-5个价值创造杠杆，明确KPI</p>
+</div>
+<div class="flex items-start gap-2 p-2 bg-slate-50 rounded-lg">
+<i class="fas fa-check-circle text-emerald-500 mt-1"></i>
+<p class="text-sm text-slate-700"><span class="font-semibold">保持透明度：</span>定期汇报，主动沟通问题</p>
+</div>
+<div class="flex items-start gap-2 p-2 bg-slate-50 rounded-lg">
+<i class="fas fa-check-circle text-emerald-500 mt-1"></i>
+<p class="text-sm text-slate-700"><span class="font-semibold">建立信任：</span>与Board、Operating Partner紧密合作</p>
+</div>
+</div>
+</div>
+</div>
+<div class="space-y-4">
+<div class="bg-white rounded-xl p-5 border border-slate-200 shadow-sm">
+<h3 class="text-xl font-bold text-slate-800 mb-4">Operating Partner角色</h3>
+<p class="text-base text-slate-700 leading-relaxed mb-3">
+                        PE基金派驻的<span class="bg-purple-100 px-2 py-1 rounded font-semibold">运营合伙人</span>，作为CEO的教练与合作伙伴，提供行业最佳实践和资源支持
+                    </p>
+<div class="space-y-2">
+<div class="p-3 bg-purple-50 rounded-lg">
+<h4 class="text-base font-bold text-slate-800 mb-1">投前支持</h4>
+<p class="text-sm text-slate-600">商业尽调、运营诊断、投资假设验证</p>
+</div>
+<div class="p-3 bg-purple-50 rounded-lg">
+<h4 class="text-base font-bold text-slate-800 mb-1">投后赋能</h4>
+<p class="text-sm text-slate-600">VCP制定、KPI追踪、最佳实践分享</p>
+</div>
+<div class="p-3 bg-purple-50 rounded-lg">
+<h4 class="text-base font-bold text-slate-800 mb-1">董事会角色</h4>
+<p class="text-sm text-slate-600">通常担任Chairman或Lead Director</p>
+</div>
+</div>
+</div>
+<div class="bg-gradient-to-br from-emerald-50 to-white rounded-xl p-5 border border-emerald-100">
+<h3 class="text-lg font-bold text-slate-800 mb-3">人才管理关键举措</h3>
+<ul class="space-y-2 text-sm text-slate-700">
+<li class="flex items-start gap-2">
+<i class="fas fa-user-plus text-emerald-500 mt-1"></i>
+<span>评估现有团队能力缺口</span>
+</li>
+<li class="flex items-start gap-2">
+<i class="fas fa-search text-emerald-500 mt-1"></i>
+<span>关键岗位招聘(CFO、CMO等)</span>
+</li>
+<li class="flex items-start gap-2">
+<i class="fas fa-graduation-cap text-emerald-500 mt-1"></i>
+<span>管理层培训与能力建设</span>
+</li>
+<li class="flex items-start gap-2">
+<i class="fas fa-gift text-emerald-500 mt-1"></i>
+<span>股权激励计划设计</span>
+</li>
+<li class="flex items-start gap-2">
+<i class="fas fa-exchange-alt text-emerald-500 mt-1"></i>
+<span>Portfolio间人才流动</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<!-- Slide 14: 关键角色：管理咨询机构 -->
+<div class="ppt-slide !bg-white" type="content">
+<div class="mb-5">
+<div class="flex items-center gap-3 mb-2">
+<div class="w-12 h-12 rounded-xl bg-amber-500 flex items-center justify-center text-white font-bold text-xl">04</div>
+<h2 class="text-4xl font-bold text-slate-900">关键角色：管理咨询机构</h2>
+</div>
+<div class="w-24 h-1 bg-amber-500 rounded-full ml-15"></div>
+</div>
+<div class="grid grid-cols-2 gap-6">
+<div class="space-y-4">
+<div class="bg-white rounded-xl p-5 border border-slate-200 shadow-sm">
+<h3 class="text-xl font-bold text-slate-800 mb-4">咨询机构在PE生态中的价值</h3>
+<p class="text-base text-slate-700 leading-relaxed mb-3">
+                        顶级咨询公司(McKinsey、BCG、Bain等)为PE提供<span class="bg-blue-100 px-2 py-1 rounded font-semibold">全周期支持</span>，从尽调到退出，是价值创造的重要推手
+                    </p>
+<div class="space-y-3">
+<div class="p-3 bg-blue-50 rounded-lg border-l-4 border-blue-500">
+<h4 class="text-base font-bold text-slate-800 mb-2">商业尽调(CDD)</h4>
+<p class="text-sm text-slate-700">市场分析、竞争格局、增长假设验证、风险评估</p>
+</div>
+<div class="p-3 bg-purple-50 rounded-lg border-l-4 border-purple-500">
+<h4 class="text-base font-bold text-slate-800 mb-2">Value Creation Plan</h4>
+<p class="text-sm text-slate-700">制定详细的价值创造路线图，量化EBITDA提升潜力</p>
+</div>
+<div class="p-3 bg-emerald-50 rounded-lg border-l-4 border-emerald-500">
+<h4 class="text-base font-bold text-slate-800 mb-2">投后运营支持</h4>
+<p class="text-sm text-slate-700">定价优化、采购降本、组织转型、数字化转型</p>
+</div>
+<div class="p-3 bg-rose-50 rounded-lg border-l-4 border-rose-500">
+<h4 class="text-base font-bold text-slate-800 mb-2">退出准备</h4>
+<p class="text-sm text-slate-700">Vendor Due Diligence、买家材料、管理层路演</p>
+</div>
+</div>
+</div>
+</div>
+<div class="space-y-4">
+<div class="bg-gradient-to-br from-blue-50 to-white rounded-xl p-5 border border-blue-100">
+<h3 class="text-xl font-bold text-slate-800 mb-3">典型咨询项目类型</h3>
+<div class="grid grid-cols-2 gap-3">
+<div class="p-3 bg-white rounded-lg shadow-sm text-center">
+<i class="fas fa-search-dollar text-2xl text-blue-500 mb-2"></i>
+<p class="text-sm font-semibold text-slate-700">CDD/ODD</p>
+<p class="text-xs text-slate-500">商业/运营尽调</p>
+</div>
+<div class="p-3 bg-white rounded-lg shadow-sm text-center">
+<i class="fas fa-chart-line text-2xl text-purple-500 mb-2"></i>
+<p class="text-sm font-semibold text-slate-700">Growth Strategy</p>
+<p class="text-xs text-slate-500">增长战略</p>
+</div>
+<div class="p-3 bg-white rounded-lg shadow-sm text-center">
+<i class="fas fa-cut text-2xl text-emerald-500 mb-2"></i>
+<p class="text-sm font-semibold text-slate-700">Cost Reduction</p>
+<p class="text-xs text-slate-500">成本优化</p>
+</div>
+<div class="p-3 bg-white rounded-lg shadow-sm text-center">
+<i class="fas fa-laptop-code text-2xl text-amber-500 mb-2"></i>
+<p class="text-sm font-semibold text-slate-700">Digital</p>
+<p class="text-xs text-slate-500">数字化转型</p>
+</div>
+<div class="p-3 bg-white rounded-lg shadow-sm text-center">
+<i class="fas fa-sitemap text-2xl text-rose-500 mb-2"></i>
+<p class="text-sm font-semibold text-slate-700">Organization</p>
+<p class="text-xs text-slate-500">组织设计</p>
+</div>
+<div class="p-3 bg-white rounded-lg shadow-sm text-center">
+<i class="fas fa-handshake text-2xl text-indigo-500 mb-2"></i>
+<p class="text-sm font-semibold text-slate-700">PMI</p>
+<p class="text-xs text-slate-500">并购后整合</p>
+</div>
+</div>
+</div>
+<div class="bg-white rounded-xl p-5 border border-slate-200 shadow-sm">
+<h3 class="text-lg font-bold text-slate-800 mb-3">咨询 vs 内部运营团队</h3>
+<div class="space-y-2 text-sm">
+<div class="flex items-center justify-between p-2 bg-slate-50 rounded-lg">
+<span class="text-slate-700">外部咨询</span>
+<span class="text-slate-600">专业深度、客观视角、项目制</span>
+</div>
+<div class="flex items-center justify-between p-2 bg-slate-50 rounded-lg">
+<span class="text-slate-700">内部Operating Partner</span>
+<span class="text-slate-600">持续支持、深度嵌入、执行导向</span>
+</div>
+</div>
+<p class="text-sm text-slate-600 mt-3 leading-relaxed">
+                        领先PE基金(如KKR、Bain Capital)采用<span class="font-semibold text-blue-600">混合模式</span>，内部团队+外部咨询协同
+                    </p>
+</div>
+<div class="bg-gradient-to-br from-emerald-50 to-white rounded-xl p-4 border border-emerald-100">
+<p class="text-base text-slate-700 leading-relaxed">
+<i class="fas fa-quote-left text-emerald-500 mr-2"></i>
+                        咨询机构的核心价值在于<span class="bg-emerald-100 px-2 py-1 rounded font-semibold">将战略转化为可执行的行动计划</span>，并通过数据驱动的方法论确保结果交付
+                    </p>
+</div>
+</div>
+</div>
+</div>
+<!-- Slide 15: 成功案例：Hilton收购案 -->
+<div class="ppt-slide !bg-white" type="content">
+<div class="mb-5">
+<div class="flex items-center gap-3 mb-2">
+<div class="w-12 h-12 rounded-xl bg-rose-500 flex items-center justify-center text-white font-bold text-xl">05</div>
+<h2 class="text-4xl font-bold text-slate-900">成功案例：Hilton收购案</h2>
+</div>
+<div class="w-24 h-1 bg-rose-500 rounded-full ml-15"></div>
+</div>
+<div class="grid grid-cols-3 gap-5">
+<div class="col-span-2 space-y-4">
+<div class="bg-gradient-to-br from-blue-50 to-white rounded-xl p-5 border border-blue-100">
+<h3 class="text-xl font-bold text-slate-800 mb-3">交易概览</h3>
+<div class="grid grid-cols-2 gap-4">
+<div>
+<p class="text-sm text-slate-600 mb-1">交易时间</p>
+<p class="text-lg font-bold text-slate-800">2007年(金融危机前夜)</p>
+</div>
+<div>
+<p class="text-sm text-slate-600 mb-1">交易金额</p>
+<p class="text-lg font-bold text-blue-600">$26 Billion</p>
+</div>
+<div>
+<p class="text-sm text-slate-600 mb-1">融资结构</p>
+<p class="text-lg font-bold text-slate-800">高杠杆LBO</p>
+</div>
+<div>
+<p class="text-sm text-slate-600 mb-1">退出方式</p>
+<p class="text-lg font-bold text-slate-800">2013年IPO</p>
+</div>
+</div>
+</div>
+<div class="bg-white rounded-xl p-5 border border-slate-200 shadow-sm">
+<h3 class="text-xl font-bold text-slate-800 mb-3">黑石价值创造举措</h3>
+<div class="space-y-2">
+<div class="flex items-start gap-3 p-2 bg-blue-50 rounded-lg">
+<i class="fas fa-expand-arrows-alt text-blue-500 mt-1"></i>
+<div>
+<h4 class="text-base font-bold text-slate-800">品牌组合扩张</h4>
+<p class="text-sm text-slate-700">推出Canopy、Curio、Tru等新品牌，覆盖细分市场</p>
+</div>
+</div>
+<div class="flex items-start gap-3 p-2 bg-purple-50 rounded-lg">
+<i class="fas fa-globe text-purple-500 mt-1"></i>
+<div>
+<h4 class="text-base font-bold text-slate-800">全球化布局</h4>
+<p class="text-sm text-slate-700">加速亚太、中东、欧洲市场拓展</p>
+</div>
+</div>
+<div class="flex items-start gap-3 p-2 bg-emerald-50 rounded-lg">
+<i class="fas fa-mobile-alt text-emerald-500 mt-1"></i>
+<div>
+<h4 class="text-base font-bold text-slate-800">数字化转型</h4>
+<p class="text-sm text-slate-700">HHonors会员计划升级、移动应用、智能客房</p>
+</div>
+</div>
+<div class="flex items-start gap-3 p-2 bg-amber-50 rounded-lg">
+<i class="fas fa-chart-line text-amber-500 mt-1"></i>
+<div>
+<h4 class="text-base font-bold text-slate-800">运营效率提升</h4>
+<p class="text-sm text-slate-700">RevPAR增长、成本优化、特许经营比例提升</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="space-y-4">
+<div class="bg-gradient-to-br from-emerald-50 to-white rounded-xl p-5 border border-emerald-100">
+<h3 class="text-xl font-bold text-slate-800 mb-4">投资回报</h3>
+<div class="text-center mb-4">
+<p class="text-5xl font-black text-emerald-600 mb-2">~$14B</p>
+<p class="text-base text-slate-700">总利润(PE史上最赚钱交易之一)</p>
+</div>
+<div class="space-y-2 text-sm">
+<div class="flex justify-between items-center p-2 bg-white rounded-lg shadow-sm">
+<span class="text-slate-700">IRR</span>
+<span class="font-bold text-emerald-600">~35%</span>
+</div>
+<div class="flex justify-between items-center p-2 bg-white rounded-lg shadow-sm">
+<span class="text-slate-700">Multiple</span>
+<span class="font-bold text-emerald-600">~2.5x</span>
+</div>
+<div class="flex justify-between items-center p-2 bg-white rounded-lg shadow-sm">
+<span class="text-slate-700">持有期</span>
+<span class="font-bold text-emerald-600">6年</span>
+</div>
+</div>
+</div>
+<div class="bg-white rounded-xl p-5 border border-slate-200 shadow-sm">
+<h3 class="text-lg font-bold text-slate-800 mb-3">关键成功因素</h3>
+<ul class="space-y-2 text-sm text-slate-700">
+<li class="flex items-start gap-2">
+<i class="fas fa-star text-amber-500 mt-1"></i>
+<span>危机中逆势投资，长期视角</span>
+</li>
+<li class="flex items-start gap-2">
+<i class="fas fa-star text-amber-500 mt-1"></i>
+<span>轻资产模式转型(特许经营)</span>
+</li>
+<li class="flex items-start gap-2">
+<i class="fas fa-star text-amber-500 mt-1"></i>
+<span>品牌组合战略升级</span>
+</li>
+<li class="flex items-start gap-2">
+<i class="fas fa-star text-amber-500 mt-1"></i>
+<span>运营卓越与数字化创新</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<!-- Slide 16: 对中国市场的启示 -->
+<div class="ppt-slide !bg-white" type="content">
+<div class="mb-5">
+<div class="flex items-center gap-3 mb-2">
+<div class="w-12 h-12 rounded-xl bg-rose-500 flex items-center justify-center text-white font-bold text-xl">05</div>
+<h2 class="text-4xl font-bold text-slate-900">对中国市场的启示</h2>
+</div>
+<div class="w-24 h-1 bg-rose-500 rounded-full ml-15"></div>
+</div>
+<div class="grid grid-cols-2 gap-6">
+<div class="space-y-4">
+<div class="bg-white rounded-xl p-5 border border-slate-200 shadow-sm">
+<h3 class="text-xl font-bold text-slate-800 mb-4">中国PE市场现状</h3>
+<div class="space-y-3">
+<div class="flex items-center justify-between p-3 bg-slate-50 rounded-lg">
+<span class="text-base font-semibold text-slate-700">AUM规模</span>
+<span class="text-xl font-bold text-blue-600">~$1.5T</span>
+</div>
+<div class="flex items-center justify-between p-3 bg-slate-50 rounded-lg">
+<span class="text-base font-semibold text-slate-700">基金管理人</span>
+<span class="text-xl font-bold text-purple-600">15,000+</span>
+</div>
+<div class="flex items-center justify-between p-3 bg-slate-50 rounded-lg">
+<span class="text-base font-semibold text-slate-700">主要LP构成</span>
+<span class="text-sm font-bold text-emerald-600">政府引导基金/国企/高净值</span>
+</div>
+</div>
+<p class="text-sm text-slate-600 mt-3 leading-relaxed">
+                        中国市场PE渗透率仍低，但增长迅速。与成熟市场相比，<span class="bg-amber-100 px-2 py-1 rounded font-semibold">投后管理能力</span>是最大短板
+                    </p>
+</div>
+<div class="bg-gradient-to-br from-blue-50 to-white rounded-xl p-5 border border-blue-100">
+<h3 class="text-xl font-bold text-slate-800 mb-3">黑石模式的中国适应性</h3>
+<div class="space-y-2">
+<div class="flex items-start gap-2">
+<i class="fas fa-check-circle text-emerald-500 mt-1"></i>
+<p class="text-sm text-slate-700"><span class="font-semibold">可借鉴：</span>Portfolio Operations Group模式、行业专业化、数据驱动</p>
+</div>
+<div class="flex items-start gap-2">
+<i class="fas fa-times-circle text-red-500 mt-1"></i>
+<p class="text-sm text-slate-700"><span class="font-semibold">需调整：</span>杠杆使用受限、退出渠道单一、职业经理人市场不成熟</p>
+</div>
+<div class="flex items-start gap-2">
+<i class="fas fa-exclamation-circle text-amber-500 mt-1"></i>
+<p class="text-sm text-slate-700"><span class="font-semibold">挑战：</span>政策不确定性、跨境资本流动、估值泡沫</p>
+</div>
+</div>
+</div>
+</div>
+<div class="space-y-4">
+<div class="bg-white rounded-xl p-5 border border-slate-200 shadow-sm">
+<h3 class="text-xl font-bold text-slate-800 mb-4">实践建议</h3>
+<div class="space-y-3">
+<div class="p-3 bg-blue-50 rounded-lg border-l-4 border-blue-500">
+<h4 class="text-base font-bold text-slate-800 mb-1">1. 建立专业投后团队</h4>
+<p class="text-sm text-slate-700">招聘行业专家，设立Operating Partner角色，不要仅依赖投资经理</p>
+</div>
+<div class="p-3 bg-purple-50 rounded-lg border-l-4 border-purple-500">
+<h4 class="text-base font-bold text-slate-800 mb-1">2. 深耕细分行业</h4>
+<p class="text-sm text-slate-700">选择2-3个优势行业，建立行业洞察和人脉网络，形成护城河</p>
+</div>
+<div class="p-3 bg-emerald-50 rounded-lg border-l-4 border-emerald-500">
+<h4 class="text-base font-bold text-slate-800 mb-1">3. 强化价值创造能力</h4>
+<p class="text-sm text-slate-700">从"资金提供者"转型为"价值创造者"，提供战略、运营、人才支持</p>
+</div>
+<div class="p-3 bg-amber-50 rounded-lg border-l-4 border-amber-500">
+<h4 class="text-base font-bold text-slate-800 mb-1">4. 构建生态协同</h4>
+<p class="text-sm text-slate-700">学习黑石Portfolio协同模式，促进被投企业间资源共享</p>
+</div>
+</div>
+</div>
+<div class="bg-gradient-to-br from-emerald-50 to-white rounded-xl p-5 border border-emerald-100">
+<h3 class="text-lg font-bold text-slate-800 mb-3">未来趋势</h3>
+<ul class="space-y-2 text-sm text-slate-700">
+<li class="flex items-start gap-2">
+<i class="fas fa-arrow-trend-up text-emerald-500 mt-1"></i>
+<span>从财务投资向产业投资转型</span>
+</li>
+<li class="flex items-start gap-2">
+<i class="fas fa-arrow-trend-up text-emerald-500 mt-1"></i>
+<span>投后管理专业化、数字化</span>
+</li>
+<li class="flex items-start gap-2">
+<i class="fas fa-arrow-trend-up text-emerald-500 mt-1"></i>
+<span>S基金/Secondary市场兴起</span>
+</li>
+<li class="flex items-start gap-2">
+<i class="fas fa-arrow-trend-up text-emerald-500 mt-1"></i>
+<span>ESG投资成为标配</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<!-- Slide 17: 总结 -->
+<div class="ppt-slide !bg-gradient-to-br !from-slate-900 !via-slate-800 !to-slate-700" type="final">
+<div class="absolute inset-0 opacity-10">
+<div class="absolute top-0 right-0 w-96 h-96 bg-blue-500 rounded-full blur-3xl transform translate-x-1/2 -translate-y-1/2"></div>
+<div class="absolute bottom-0 left-0 w-80 h-80 bg-purple-500 rounded-full blur-3xl transform -translate-x-1/2 translate-y-1/2"></div>
+</div>
+<div class="relative h-full flex flex-col justify-center">
+<div class="mb-8">
+<h2 class="text-5xl font-black text-white mb-4">核心结论</h2>
+<div class="w-32 h-1 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full"></div>
+</div>
+<div class="grid grid-cols-2 gap-5 mb-8">
+<div class="bg-white/10 backdrop-blur-sm rounded-xl p-5 border border-white/20">
+<div class="flex items-center gap-3 mb-3">
+<div class="w-10 h-10 rounded-lg bg-blue-500 flex items-center justify-center text-white font-bold">01</div>
+<h3 class="text-xl font-bold text-white">并购生态是系统工程</h3>
+</div>
+<p class="text-base text-gray-300 leading-relaxed">
+                        从经营权获取到退出，每个环节都需要专业能力和资源整合，律师、职业经理人、咨询机构缺一不可
+                    </p>
+</div>
+<div class="bg-white/10 backdrop-blur-sm rounded-xl p-5 border border-white/20">
+<div class="flex items-center gap-3 mb-3">
+<div class="w-10 h-10 rounded-lg bg-purple-500 flex items-center justify-center text-white font-bold">02</div>
+<h3 class="text-xl font-bold text-white">运营能力是核心竞争力</h3>
+</div>
+<p class="text-base text-gray-300 leading-relaxed">
+                        黑石的成功不仅在于资金规模，更在于Portfolio Operations Group的专业赋能能力
+                    </p>
+</div>
+<div class="bg-white/10 backdrop-blur-sm rounded-xl p-5 border border-white/20">
+<div class="flex items-center gap-3 mb-3">
+<div class="w-10 h-10 rounded-lg bg-emerald-500 flex items-center justify-center text-white font-bold">03</div>
+<h3 class="text-xl font-bold text-white">价值创造是生存之本</h3>
+</div>
+<p class="text-base text-gray-300 leading-relaxed">
+                        仅靠财务杠杆和估值套利的时代已过，必须通过运营改善、战略升级创造真实价值
+                    </p>
+</div>
+<div class="bg-white/10 backdrop-blur-sm rounded-xl p-5 border border-white/20">
+<div class="flex items-center gap-3 mb-3">
+<div class="w-10 h-10 rounded-lg bg-amber-500 flex items-center justify-center text-white font-bold">04</div>
+<h3 class="text-xl font-bold text-white">中国市场机遇与挑战并存</h3>
+</div>
+<p class="text-base text-gray-300 leading-relaxed">
+                        学习黑石模式需本土化改造，投后管理能力建设是突破关键
+                    </p>
+</div>
+</div>
+<div class="text-center">
+<p class="text-2xl text-gray-300 font-light italic">
+                    "用 extraordinary people 和 flexible capital 帮助公司解决问题"
+                </p>
+<p class="text-lg text-gray-400 mt-2">— 黑石使命宣言</p>
+</div>
+</div>
+</div>
+</body>
+</html>
