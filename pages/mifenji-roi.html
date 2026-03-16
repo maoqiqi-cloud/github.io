@@ -1,141 +1,397 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <title>海科佳米粉生产线投资回报(ROI)分析系统</title>
-    <style>
-        :root { --hicoca-red: #e60012; --dark-blue: #002b5c; }
-        body { font-family: "Microsoft YaHei", sans-serif; background-color: #f4f7f9; color: #333; margin: 0; padding: 20px; }
-        .container { max-width: 1000px; margin: 0 auto; background: #fff; padding: 30px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
-        h1 { color: var(--hicoca-red); text-align: center; border-bottom: 2px solid var(--hicoca-red); padding-bottom: 10px; }
-        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 20px; }
-        .input-section { background: #fafafa; padding: 20px; border-radius: 6px; border-left: 4px solid var(--dark-blue); }
-        .result-section { background: var(--dark-blue); color: #fff; padding: 20px; border-radius: 6px; }
-        .form-group { margin-bottom: 15px; }
-        label { display: block; margin-bottom: 5px; font-weight: bold; font-size: 0.9em; }
-        input { width: 90%; padding: 8px; border: 1px solid #ccc; border-radius: 4px; }
-        .card { background: rgba(255,255,255,0.1); padding: 15px; margin-bottom: 15px; border-radius: 4px; }
-        .highlight { color: #ffeb3b; font-size: 1.5em; font-weight: bold; }
-        .footer { text-align: center; margin-top: 20px; font-size: 0.8em; color: #777; }
-        .btn { background: var(--hicoca-red); color: white; border: none; padding: 10px 20px; cursor: pointer; width: 100%; border-radius: 4px; font-size: 1.1em; }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>海科佳米粉生产线 ROI 计算器 | 营销工具 Demo</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<style>
+:root{
+  --hicoca-red:#e60012;
+  --dark-blue:#002b5c;
+}
+.calculator{
+  max-width:1000px;
+  margin:auto;
+  background:#fff;
+  padding:30px;
+  border-radius:16px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
+.grid2{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:30px;
+  margin-top:20px;
+}
+.input-section{
+  background:#fafafa;
+  padding:20px;
+  border-radius:12px;
+  border-left:5px solid var(--dark-blue);
+}
+.result-section{
+  background:var(--dark-blue);
+  color:white;
+  padding:20px;
+  border-radius:12px;
+}
+.form-group{margin-bottom:15px;}
+input{
+  width:92%;
+  padding:10px;
+  border:1px solid #ccc;
+  border-radius:8px;
+}
+.card{
+  background:rgba(255,255,255,0.1);
+  padding:15px;
+  margin-bottom:15px;
+  border-radius:10px;
+}
+.highlight{
+  color:#ffeb3b;
+  font-size:1.6em;
+  font-weight:bold;
+}
+.btn{
+  background:var(--hicoca-red);
+  color:white;
+  border:none;
+  padding:12px;
+  cursor:pointer;
+  width:100%;
+  border-radius:10px;
+  font-size:1.05em;
+}
+.bar-wrap{
+  display:flex;
+  align-items:flex-end;
+  gap:18px;
+  height:220px;
+}
+.bar-col{
+  flex:1;
+  text-align:center;
+}
+.bar{
+  border-radius:12px 12px 0 0;
+  background:#0f766e;
+  min-height:8px;
+  transition:all .3s ease;
+}
+.bar-label{
+  margin-top:10px;
+  font-size:13px;
+  color:#666;
+}
+.bar-value{
+  margin-bottom:8px;
+  font-size:13px;
+  color:#333;
+  font-weight:600;
+}
+@media (max-width: 900px){
+  .grid2{grid-template-columns:1fr;}
+}
+</style>
 </head>
-<body>
 
-<div class="container">
-    <h1>HICOCA 海科佳 | 米粉生产线 ROI 计算器</h1>
-    <p style="text-align: center; color: #666;">—— 别卖机器，卖“回本周期”与确定性盈利方案 ——</p>
+<body class="bg-stone-50 text-neutral-900">
 
-    <div class="grid">
-        <!-- 输入端 -->
-        <div class="input-section">
-            <h3 style="color: var(--dark-blue);">1. 基础参数输入 (Input)</h3>
-            <div class="form-group">
-                <label>设备总投资额 (元):</label>
-                <input type="number" id="investment" value="10000000">
-            </div>
-            <div class="form-group">
-                <label>传统线单班用工 (人):</label>
-                <input type="number" id="tradLabor" value="27">
-            </div>
-            <div class="form-group">
-                <label>海科佳单班用工 (人) - <small>建议值: 8人</small>:</label>
-                <input type="number" id="hicocaLabor" value="8">
-            </div>
-            <div class="form-group">
-                <label>当地平均月薪 (元/人):</label>
-                <input type="number" id="salary" value="5000">
-            </div>
-            <div class="form-group">
-                <label>年产量 (吨):</label>
-                <input type="number" id="annualProd" value="5000">
-            </div>
-            <div class="form-group">
-                <label>传统线 vs 海科佳损耗差 (%):</label>
-                <input type="number" id="lossGap" value="3" step="0.1">
-            </div>
-            <div class="form-group">
-                <label>米粉销售单价 (元/吨):</label>
-                <input type="number" id="price" value="6000">
-            </div>
-            <button class="btn" onclick="calculateROI()">立即生成盈利分析报告</button>
-        </div>
+<header class="border-b bg-white sticky top-0 z-50">
+  <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+    <div class="font-serif text-xl font-semibold">maoqiqi-cloud</div>
+    <nav class="text-sm space-x-6 text-neutral-700 hidden sm:block">
+      <a href="../index.html">首页</a>
+      <a href="../research.html">研究</a>
+      <a href="../topics.html">专题</a>
+      <a href="../archive.html">归档</a>
+    </nav>
+  </div>
+</header>
 
-        <!-- 输出端 -->
-        <div class="result-section">
-            <h3>2. 年度运营收益预估 (Annual Savings)</h3>
-            <div class="card">
-                <label>人工成本节省 (年):</label>
-                <div id="saveLabor" class="highlight">¥ 0</div>
-                <small>计算逻辑：(传统27人 - 海科佳8人) × 薪资 × 2班次 [3]</small>
-            </div>
-            <div class="card">
-                <label>原材料减损增益 (年):</label>
-                <div id="saveMaterial" class="highlight">¥ 0</div>
-                <small>计算逻辑：利用自动化控制降低3%损耗率 [3]</small>
-            </div>
-            <div class="card">
-                <label>年度总利润增量:</label>
-                <div id="totalGain" class="highlight" style="color: #4caf50; font-size: 2em;">¥ 0</div>
-            </div>
+<main class="max-w-6xl mx-auto px-6 py-12">
 
-            <hr style="border: 0.5px solid rgba(255,255,255,0.2);">
-            
-            <h3>3. 核心决策指标 (Key Metrics)</h3>
-            <div style="display: flex; justify-content: space-between;">
-                <div>
-                    <label>投资回收期:</label>
-                    <div id="payback" style="font-size: 1.8em; font-weight: bold; color: #ffeb3b;">0 年</div>
-                </div>
-                <div>
-                    <label>静态年度 ROI:</label>
-                    <div id="roiPercent" style="font-size: 1.8em; font-weight: bold; color: #ffeb3b;">0 %</div>
-                </div>
-            </div>
-            <p style="margin-top: 20px; font-size: 0.85em; opacity: 0.8;">
-                * 注：以上计算包含海科佳24小时服务规避停机损失的价值估算。
-            </p>
-        </div>
+  <!-- 标题 -->
+  <section class="mb-10">
+    <div class="flex flex-wrap gap-2 text-xs">
+      <span class="rounded-full bg-sky-50 text-sky-700 px-3 py-1">商业洞察</span>
+      <span class="rounded-full bg-stone-100 text-stone-700 px-3 py-1">营销工具</span>
+      <span class="rounded-full bg-stone-100 text-stone-700 px-3 py-1">ROI模型</span>
+      <span class="rounded-full bg-stone-100 text-stone-700 px-3 py-1">Demo原型</span>
     </div>
 
-    <div class="footer">
-        © 2026 青岛海科佳智能科技股份有限公司 | 营销管理中心 数字化工具包
+    <h1 class="mt-5 text-3xl font-serif font-semibold">
+      海科佳米粉生产线 ROI 计算器
+    </h1>
+
+    <p class="mt-3 text-neutral-600 max-w-3xl leading-relaxed">
+      这是一个面向销售与客户决策场景的营销工具 Demo。  
+      它把“设备参数”转译为“投资回收期、年度 ROI 与盈利确定性”，
+      帮助客户从采购思维转向经营思维。
+    </p>
+  </section>
+
+  <!-- 客户视角 -->
+  <section class="bg-white border border-stone-200 rounded-3xl p-6 shadow-sm mb-10">
+    <h2 class="font-serif text-xl font-semibold">客户为什么需要这个工具</h2>
+    <div class="mt-4 grid md:grid-cols-3 gap-4 text-sm text-neutral-700">
+      <div class="rounded-2xl bg-stone-50 p-4">
+        <div class="font-medium">从“买设备”转向“算经营账”</div>
+        <p class="mt-2 text-neutral-600">客户真正关心的不是机器参数本身，而是多久回本、能多赚多少钱。</p>
+      </div>
+      <div class="rounded-2xl bg-stone-50 p-4">
+        <div class="font-medium">把复杂价值翻译成直观数字</div>
+        <p class="mt-2 text-neutral-600">人工节省、损耗降低、能耗优化、品质溢价，都需要被量化呈现。</p>
+      </div>
+      <div class="rounded-2xl bg-stone-50 p-4">
+        <div class="font-medium">辅助销售形成场景化说服</div>
+        <p class="mt-2 text-neutral-600">同一套设备，在不同客户场景下可快速形成可讨论的盈利逻辑。</p>
+      </div>
     </div>
-</div>
+  </section>
+
+  <!-- 计算器 -->
+  <div class="calculator">
+    <h2 class="text-2xl font-bold text-center text-red-600 mb-2">
+      HICOCA 海科佳 | 米粉生产线 ROI 计算器
+    </h2>
+    <p class="text-center text-gray-500 mb-6">
+      别卖机器，卖“回本周期”与确定性盈利方案
+    </p>
+
+    <div class="grid2">
+      <div class="input-section">
+        <h3 class="font-bold mb-4">1. 参数输入</h3>
+
+        <div class="form-group">
+          <label>设备总投资额</label>
+          <input type="number" id="investment" value="10000000">
+        </div>
+
+        <div class="form-group">
+          <label>传统线单班用工</label>
+          <input type="number" id="tradLabor" value="27">
+        </div>
+
+        <div class="form-group">
+          <label>海科佳单班用工</label>
+          <input type="number" id="hicocaLabor" value="8">
+        </div>
+
+        <div class="form-group">
+          <label>平均月薪</label>
+          <input type="number" id="salary" value="5000">
+        </div>
+
+        <div class="form-group">
+          <label>年产量（吨）</label>
+          <input type="number" id="annualProd" value="5000">
+        </div>
+
+        <div class="form-group">
+          <label>损耗差 (%)</label>
+          <input type="number" id="lossGap" value="3" step="0.1">
+        </div>
+
+        <div class="form-group">
+          <label>米粉售价（元/吨）</label>
+          <input type="number" id="price" value="6000">
+        </div>
+
+        <button class="btn" onclick="calculateROI()">
+          生成盈利分析
+        </button>
+      </div>
+
+      <div class="result-section">
+        <h3 class="mb-4 font-bold">2. 年度收益</h3>
+
+        <div class="card">
+          人工成本节省
+          <div id="saveLabor" class="highlight">¥0</div>
+        </div>
+
+        <div class="card">
+          原材料减损收益
+          <div id="saveMaterial" class="highlight">¥0</div>
+        </div>
+
+        <div class="card">
+          年度利润增量
+          <div id="totalGain" class="highlight">¥0</div>
+        </div>
+
+        <hr class="my-4 opacity-40">
+
+        <h3 class="font-bold mb-2">3. 核心指标</h3>
+
+        <div class="flex justify-between gap-6">
+          <div>
+            回收期
+            <div id="payback" class="highlight">0年</div>
+          </div>
+          <div>
+            年度ROI
+            <div id="roiPercent" class="highlight">0%</div>
+          </div>
+        </div>
+
+        <p class="mt-5 text-sm opacity-80">
+          注：当前模型已综合人工节省、减损收益、能耗优化与品质溢价的示意性估算。
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 三种场景 -->
+  <section class="mt-14 bg-white border border-stone-200 rounded-3xl p-6 shadow-sm">
+    <h2 class="font-serif text-xl font-semibold">三种情景对比</h2>
+    <p class="mt-3 text-neutral-600 text-sm">
+      用于会议演示时，可以帮助客户理解：在不同经营假设下，这套设备仍然具有怎样的盈利弹性。
+    </p>
+
+    <div class="mt-6 grid md:grid-cols-3 gap-5">
+      <div class="rounded-2xl bg-stone-50 p-5">
+        <div class="text-sm text-neutral-500">保守情景</div>
+        <div class="mt-2 font-semibold">产量较低 / 薪资较低</div>
+        <p class="mt-3 text-sm text-neutral-600">适合谨慎客户，用来建立“即便保守也能算得过来”的底线信心。</p>
+      </div>
+      <div class="rounded-2xl bg-stone-50 p-5">
+        <div class="text-sm text-neutral-500">基准情景</div>
+        <div class="mt-2 font-semibold">当前默认参数</div>
+        <p class="mt-3 text-sm text-neutral-600">适合作为主讲口径，展示设备投资回报的标准版本。</p>
+      </div>
+      <div class="rounded-2xl bg-stone-50 p-5">
+        <div class="text-sm text-neutral-500">乐观情景</div>
+        <div class="mt-2 font-semibold">产量较高 / 品质溢价更明显</div>
+        <p class="mt-3 text-sm text-neutral-600">适合对标头部客户场景，展示自动化与品质稳定性的上限价值。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 回收期图 -->
+  <section class="mt-14 bg-white border border-stone-200 rounded-3xl p-6 shadow-sm">
+    <h2 class="font-serif text-xl font-semibold">投资回收期对比图</h2>
+    <p class="mt-3 text-neutral-600 text-sm">
+      这是一个示意性展示模块，适合在会议上直观呈现不同情景下的回本周期。
+    </p>
+
+    <div class="mt-8 bar-wrap">
+      <div class="bar-col">
+        <div class="bar-value" id="barConservativeText">3.2 年</div>
+        <div id="barConservative" class="bar" style="height: 160px;"></div>
+        <div class="bar-label">保守</div>
+      </div>
+      <div class="bar-col">
+        <div class="bar-value" id="barBaseText">2.4 年</div>
+        <div id="barBase" class="bar" style="height: 120px; background:#1d4ed8;"></div>
+        <div class="bar-label">基准</div>
+      </div>
+      <div class="bar-col">
+        <div class="bar-value" id="barOptimisticText">1.8 年</div>
+        <div id="barOptimistic" class="bar" style="height: 90px; background:#dc2626;"></div>
+        <div class="bar-label">乐观</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 销售话术 -->
+  <section class="mt-14 bg-white border border-stone-200 rounded-3xl p-6 shadow-sm">
+    <h2 class="font-serif text-xl font-semibold">结论与销售话术</h2>
+
+    <div class="mt-5 space-y-4 text-neutral-700 leading-relaxed">
+      <p>
+        这个工具的核心，不是证明“设备贵不贵”，而是帮助客户看到：
+        <strong>一条自动化生产线，本质上是一套更稳定、更省人、更低损耗的盈利系统。</strong>
+      </p>
+
+      <p>
+        在销售表达上，可以把话术从“设备参数介绍”升级为：
+        <strong>如果按您的产量、人工成本和售价结构来算，这套线大约多少时间能回本，之后每年会多贡献多少利润。</strong>
+      </p>
+
+      <p>
+        对管理层来说，这类工具还有一个更深的意义：
+        它说明海科佳不只是在卖设备，而是在尝试把行业 know-how 变成客户可感知的数字化营销资产。
+      </p>
+    </div>
+  </section>
+
+  <!-- 推荐阅读 -->
+  <section class="mt-14">
+    <h2 class="font-serif text-xl font-semibold mb-6">相关阅读</h2>
+    <div class="grid md:grid-cols-3 gap-6">
+      <a href="business-qxty.html" class="bg-white border rounded-xl p-5 hover:shadow">
+        <div class="font-medium">全息成像商业化分析</div>
+        <p class="text-sm text-neutral-500 mt-2">从技术突破到商业落地</p>
+      </a>
+
+      <a href="invest-type.html" class="bg-white border rounded-xl p-5 hover:shadow">
+        <div class="font-medium">投资机构并购生态</div>
+        <p class="text-sm text-neutral-500 mt-2">Blackstone 并购价值链</p>
+      </a>
+
+      <a href="../index.html" class="bg-white border rounded-xl p-5 hover:shadow">
+        <div class="font-medium">返回首页</div>
+        <p class="text-sm text-neutral-500 mt-2">查看全部文章</p>
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="text-center text-sm text-neutral-500 py-10">
+  © 2026 maoqiqi-cloud · 商业洞察与研究工具
+</footer>
 
 <script>
-function calculateROI() {
-    // 获取输入
-    const invest = parseFloat(document.getElementById('investment').value);
-    const tradL = parseFloat(document.getElementById('tradLabor').value);
-    const hicocaL = parseFloat(document.getElementById('hicocaLabor').value);
-    const salary = parseFloat(document.getElementById('salary').value);
-    const prod = parseFloat(document.getElementById('annualProd').value);
-    const lossGap = parseFloat(document.getElementById('lossGap').value) / 100;
-    const price = parseFloat(document.getElementById('price').value);
+function calculateROI(){
+  const invest = parseFloat(document.getElementById('investment').value);
+  const tradL = parseFloat(document.getElementById('tradLabor').value);
+  const hicocaL = parseFloat(document.getElementById('hicocaLabor').value);
+  const salary = parseFloat(document.getElementById('salary').value);
+  const prod = parseFloat(document.getElementById('annualProd').value);
+  const lossGap = parseFloat(document.getElementById('lossGap').value)/100;
+  const price = parseFloat(document.getElementById('price').value);
 
-    // 1. 人工节省 (双班制计算)
-    const laborSaving = (tradL - hicocaL) * salary * 12 * 2;
-    // 2. 减损收益
-    const materialSaving = prod * lossGap * price;
-    // 3. 能耗提升 (估算值：传统能耗约200万，节省25%)
-    const energySaving = 2000000 * 0.25; 
-    // 4. 品牌溢价 (仿生揉面提升口感带来100元/吨溢价)
-    const qualityPremium = prod * 100;
+  const laborSaving = (tradL - hicocaL) * salary * 12 * 2;
+  const materialSaving = prod * lossGap * price;
+  const energySaving = 2000000 * 0.25;
+  const qualityPremium = prod * 100;
 
-    const totalAnnualGain = laborSaving + materialSaving + energySaving + qualityPremium;
-    const paybackPeriod = invest / totalAnnualGain;
-    const roi = (totalAnnualGain / invest) * 100;
+  const totalAnnualGain = laborSaving + materialSaving + energySaving + qualityPremium;
+  const paybackPeriod = invest / totalAnnualGain;
+  const roi = (totalAnnualGain / invest) * 100;
 
-    // 更新界面
-    document.getElementById('saveLabor').innerText = "¥ " + laborSaving.toLocaleString();
-    document.getElementById('saveMaterial').innerText = "¥ " + materialSaving.toLocaleString();
-    document.getElementById('totalGain').innerText = "¥ " + totalAnnualGain.toLocaleString();
-    document.getElementById('payback').innerText = paybackPeriod.toFixed(2) + " 年";
-    document.getElementById('roiPercent').innerText = roi.toFixed(1) + " %";
+  document.getElementById('saveLabor').innerText = "¥ " + laborSaving.toLocaleString();
+  document.getElementById('saveMaterial').innerText = "¥ " + materialSaving.toLocaleString();
+  document.getElementById('totalGain').innerText = "¥ " + totalAnnualGain.toLocaleString();
+  document.getElementById('payback').innerText = paybackPeriod.toFixed(2) + " 年";
+  document.getElementById('roiPercent').innerText = roi.toFixed(1) + " %";
+
+  // 用基准情景自动生成图表高度
+  const base = paybackPeriod;
+  const conservative = base * 1.25;
+  const optimistic = base * 0.75;
+
+  const maxVal = Math.max(conservative, base, optimistic);
+  const h1 = (conservative / maxVal) * 180;
+  const h2 = (base / maxVal) * 180;
+  const h3 = (optimistic / maxVal) * 180;
+
+  document.getElementById('barConservative').style.height = h1 + 'px';
+  document.getElementById('barBase').style.height = h2 + 'px';
+  document.getElementById('barOptimistic').style.height = h3 + 'px';
+
+  document.getElementById('barConservativeText').innerText = conservative.toFixed(2) + " 年";
+  document.getElementById('barBaseText').innerText = base.toFixed(2) + " 年";
+  document.getElementById('barOptimisticText').innerText = optimistic.toFixed(2) + " 年";
 }
 
-// 初始计算一次
 calculateROI();
 </script>
 
